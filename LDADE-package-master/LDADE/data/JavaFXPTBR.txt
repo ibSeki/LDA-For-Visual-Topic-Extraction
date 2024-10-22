@@ -1,0 +1,434 @@
+﻿sim fábio varanda e o objetivo deste 
+vídeo a criar um projeto java fx com a 
+navegação entre duas janelas então vamos 
+utilizar o netbeans 11.3 e o simbuilder 
+que tenham como objetivo a ajudarmos na 
+criação dos atrás vamos lá começar então 
+pode ficar com um novo projeto em um 
+projeto temos que já ver x e vamos 
+querer java fx fx ml application grande 
+seguinte vamos criar aqui um projeto 
+navegação ok pênis fazer elas é o nome 
+bastante intuitivo 
+nós estamos em fins ele vai criar o 
+projeto 
+e aí 
+nós já temos aqui o projeto criar 
+nós temos uma primeira janela que ela 
+criada que fxml ótima respondo fxml que 
+está aqui 
+bom então o que é que ele vai fazer 
+queria uma cena atribuir essa cena a 16 
+é o nosso algo 
+bom e depois mostra a cena então vamos 
+então correr por gente 
+e o que é que nós temos temos uma 
+primeira janela que tem um único botão 
+ao clicar nesse botão aparece escrito 
+numa levou na janela ela ou e aparece no 
+através do system of lincoln em aparece 
+também esta mensagem que eu clico no 
+vamos lá ver como é que isto está 
+programado era da janela 
+nós estamos aqui a nossa 
+o controlador não fxml ok mas controla 
+ok vemos que existe uma loiro decorada 
+temos que temos aqui uma função nesse 
+fresco nem neste momento temos aqui com 
+um procedimento chamado and button 
+action é este procedimento é representa 
+o clique do botão e o que é que ele vai 
+fazer escreve na consola e o clipe de 
+mim foi aquela mensagem que temos a 
+pouco e alterar o texto da lei ou para 
+ela ou então vamos em primeiro lugar 
+é modificar aqui um bocadinho a nossa 
+janela 
+um duplo clique 
+ó e vai abrir no singular temos aqui a 
+nossa janela nós vimos aqui nem era aqui 
+temos aqui um botão fica estacionado e 
+temos a língua o que então a primeira 
+coisa que temos que fazer é adicionar um 
+menu para podemos navegar entre tabelas 
+então vamos aqui à procura dele 
+g1 
+já está comendo vá 
+o ok então vamos lá aqui com o carro não 
+é no bairro quintino no lado direito 
+temos aqui o nosso layout e vamos 
+indicar que o menu bar tá encostado à 
+esquerda tem que estar ao topo e tenho 
+estado a direita não temos aqui zero 
+para ele ocupar todo o topo da nossa 
+janela é bem aquele fica comprido então 
+porque anos aqui nesta certinha não mais 
+veremos que temos aqui as três opções do 
+
+
+
+nosso mesmo então vamos ver o que vamos 
+também não acredito e o não precisamos 
+dela por isso vamos fazer delito 
+e aí dentro do fael temos aqui uma opção 
+galos duplicar e vamos escrever o janela 
+1 
+em manaus bairro um e janela dois aqui 
+ele diz faz um lugar para que cheiro é 
+esse cartão em português ele diz clique 
+em mim 
+e também vamos mudar vamos aqui onde diz 
+para o parte isso e clica aqui ó 
+é o que então vemos que a nossa janela 
+já tem o menu continua a ter o botão e 
+então levou que está escondida essa leva 
+o que está escondida vamos jogar nela e 
+vamos escrever um texto por me chamar de 
+janela um e assim nós sabemos que 
+estamos na janela e eles por aqui em 
+cima 
+oi quem é 
+o cheiro gravar em e se voltarmos ao 
+netbeans e fizemos 
+a correr novamente o problema vamos ver 
+que a janela já vai ter o aspecto de 
+acordo com as nossas alterações 
+e aí 
+nós temos aqui já temos aqui o menu com 
+as duas opções do menu temos a nossa 
+leva a dizer a janela um e temos aqui o 
+nosso botão então agora que já temos a 
+primeira janela objetivo era criar uma 
+navegação entre menus vamos então criar 
+a nossa segunda janela aqui o nosso 
+servi-la vou lá buscar está criado 
+fazendo aqui um funil o que é eu queria 
+um novo uma nova janela porque neste 
+momento ainda não está gravada e não tem 
+nada vamos começar porque o carro em 
+camping seja que a nossa janela e dentro 
+desta esta janela desta nossa âncora 
+vamos colocar todos os controles que nós 
+pretendemos então o primeiro control era 
+o nosso mesmo ok então o menu não vamos 
+colocar vamos depois aproveitar mesmo 
+primeiro menu que já está feito vamos 
+fazer um cockpit 
+bom então vamos colocar apenas aqui uma 
+label 
+o que indica que estamos na segunda 
+janela só para nós conseguimos 
+distinguir uma janela e outra eu deixo 
+desta levam para ser de janela dos 
+carros agora podemos ficheiro 61 
+e vamos à procura do nosso projeto que 
+já que está e vamos chamar fx ml aliás 
+me chamar de janela dois ponto é preciso 
+dela 
+e gravamos minimizamos aqui o 
+o símbolo e vamos ver que já aqui está o 
+ficheiro agora reparem a cada ficheiro 
+de destino é preciso é melhor nós 
+precisamos de um controlador ok então 
+reparem o é preciso ml de ao comando 
+controle é o controlador que vai estar 
+diretamente relacionado com o fxml e 
+
+
+
+como é que é feita esta relação mais 
+clicamos aqui um disco tão um botão 
+direito do rato no ficheiro clicamos em 
+ad hoc temos aqui o código todo 
+necessário para criar cada um dos 
+elementos que estão na janela e fomos 
+andando aqui para a direita vamos ver 
+que diz aqui fx controla e depois tem o 
+nome do nosso projeto que é um navegação 
+entre janelas ponto fxml obviamente 
+pontual então vamos fazer aqui um copo 
+um 
+a informação vamos para aqui podemos é 
+dito e 
+é barros local no fundo o nosso 
+controladores não não pode ser que o 
+mesmo assim eu fiquei sentada certificar 
+o seu final do controlador não pode ser 
+o mesmo nós vamos ter que criar aqui uma 
+nova classe para ser o controlador desta 
+janela então poder torrado java classe a 
+janela chama-se ela dois então nossa 
+passe também que vai chamar janela por 
+aqui com maiúsculo 
+o e temos aqui ok janela 2 janelas hoje 
+agora vou fazer aquilo game pois também 
+ficar com letra maiúscula 
+e quer ficar aqui é inscrito então o 
+novo controlador tem como objetivo tem 
+que encomendar sempre inicial vamos 
+colocar o que implemente inicial só 
+querem importar a biblioteca necessária 
+bom e o que é que eu preciso também 
+precisa também sempre 
+é neste momento que eu inicializo tem 
+que fazer o rei então está ok é importar 
+as bibliotecas necessárias e temos aqui 
+a nossa janela de hoje editamos o código 
+da janela através do netv devemos voltar 
+aqui ao sendo vila vou fechar as janelas 
+dos indivíduos estiverem abertas ou quer 
+e vamos fazer novamente o clica aqui 
+para eu voltar a abrir no centro vila e 
+já ter as alterações que nós fizemos 
+aqui carregados lá vamos voltar ok e 
+agora subir aqui no canto inferior 
+esquerdo isso que controla e o controle 
+já ter ser aquele novo controlador que 
+nós indicamos só que nós como não 
+alteramos o nome alteramos agora aqui 
+a chamar-me janela 2 ok e vamos fazer 
+sempre 
+a change is a fictional dois então 
+voltamos cá vamos ao nosso é dito que já 
+cá estão e vem o controle já foi altar 
+agora reparo temos que adicionar que o 
+menu a esta janela então vamos aqui é um 
+disso é dito na primo na nossa primeira 
+janela e vamos à procura do menu cá está 
+ele 
+a galinha que eu torci a linha 23 e 
+vamos fazer um coque perfeito 
+e para a janela de hoje e colocamos aqui 
+neste ciclo a 
+a quem estes erros que é que estão é a 
+falta 
+
+
+
+não é falta de importação destas 
+bibliotecas pontos só fazer aqui e 
+importação das bibliotecas aqui tá vendo 
+ó 
+em ok e os erros desaparecem gravamos 
+estamos novamente o símbolo da fazemos 
+nossos olhos que eu não vê lá de cima 
+das nossas alteração é duplo clique aqui 
+oh e vamos ver que a janela de hoje já 
+cá tem o menu criado ok e o menu é igual 
+em ambas da janela 
+e agora temos que ver uma coisa né 
+porque cada um destes itens tem que ter 
+um clique nós temos que ter cada um 
+destes itens que tem que ter uma ação 
+bom então vamos novamente aos and build 
+1 
+o que no menu 
+e vamos colher aqui onde janela um quer 
+temos aqui as propriedades do lado 
+direito 
+o que nós queremos é o caso do meu lugar 
+vamos identificar o seu id então eu vou 
+lhe chamar de janela 1 e one direction é 
+o nosso clique então vamos chamar bt 
+janela um clique 
+e com quem e foi podemos a olha antes de 
+gravarmos vamos fazer exatamente a mesma 
+coisa para a gente para o botão da 
+janela do bp 
+a janela 2 click 
+oi e o irei vai ser 
+o pt já não há 
+nós fazemos sério 
+o misterio recheio e se voltarmos aqui 
+vemos que já temos aqui os dois eventos 
+criados para cada uma destas opções do 
+médico agora este evento deverá estar 
+programado no controlador então nós 
+vamos ao nosso controlador 
+e quem o tec voice o nome do nosso ver 
+estão action é vendo é 
+o catarro 
+em baixo no evento tem que ser importado 
+e o q e vamos ok confirmado com o 
+controlador u 
+o nosso em todos os cliques temos que 
+indicado fxml vamos o carro aqui 
+o creme até janela um e agora podemos 
+exatamente igual mas para a janela dois 
+temos aqui os dois eventos e se voltar 
+buscar 
+e o erro desaparecer agora o que é que 
+temos que copiar estes eventos para 
+meter na outra janela porque o menu 
+é igual praia mas a janela janela janela 
+dois como 2 - e temos os cliques mas os 
+cliques não existem ainda no primeiro 
+controlador de criado então 
+e já agora vamos mudar aqui o nome deste 
+controlador em vez de ser é fiz a minha 
+avó que mandou controla vamos fazer aqui 
+um e nem reflector e name e vamos chamar 
+janela janela 1 
+a fazer algum fazer mais sentido do 
+carro e não precisa damião mas não está 
+
+
+
+janela a temos aqui os dois criados 
+janela 1 
+nós vamos precisar dos dois eventos 
+criados na janela de hoje para o mesmo 
+olá pessoal como é que temos o sabemos 
+que nos vão permitir navegar então vamos 
+voltar então parar para a classe a 
+e para costa azul nosso projeto que é 
+navegação entre janela e temos que 
+começar por criar a rir os recursos para 
+ambas a as janelas ok então vamos lá 
+e vamos criar um é preciso ml logo é 
+aqui que o objetivo é guardar a nossa 
+primeira janela só vou lhe chamar janela 
+1 
+quem é que vai ser um novo 
+e é precisa né logo a 
+ah e tem que ir buscar 
+e o recurso referente a janela play 
+store 
+e agora aqui com o campo do caminho o 
+nosso cada janela um ponto é preciso é 
+melhor 
+e vai fazer a mesma coisa só que para já 
+não há 22 horas 
+em qualquer 
+e agora para cada uma destas janelas 
+temos que pegar uma cena ok então 
+nós vamos definir o 
+e as nossas cenas como estáticas é que 
+para poderem ser exibidas a partir da 
+classe sem objeto criado então está tipo 
+sim vamos chamar a sc5 janela e que sim 
+janela dois quem tal como a cena tem que 
+ser estática o nosso trade também tem 
+que ser estático então raiva estático 
+esteios e vamos chamar vai médico três 
+seja o palco onde vão ser guardadas as 
+cenas também tem que ser estático para 
+poder ser a seguir atravessa quase e sem 
+objeto 
+e aí 
+e o nosso país recebido aqui tem que ser 
+guardado dentro do nosso texto estático 
+então vamos colocar primeiro sei igual a 
+cidade recebido aqui como parar de 
+cimento 
+e depois disto 
+e depois disto vamos definir um título 
+para o nosso paulo vamos chamar 
+navegação entre janelas 
+o uber por tu sabe qual é 
+g1 
+a boca aquele título atribuído ao nosso 
+palco e temos que definir qual é que a 
+janela inicial neste caso a janela 
+inicial 
+e a janela inicial aquecer 
+é a nossa primeira janela ok então 
+e vamos criar aqui um espera para de 
+chamar espera-se janela um igual e agora 
+vamos carregar 
+em geral vol 
+e o fé e agora fazemos a mesma coisa 
+para 
+o valor 
+
+
+
+já está criado uma com a outra agora 
+vamos definir 
+o que a nossa cena neste carro sim da 
+primeira janela ok para ser uma nova 
+cena 
+ó e vai ser uma nova cena a partir deste 
+era e vamos dizer que tem o tamanho 480 
+porque zero e fazer exatamente a mesma 
+coisa para a janta hoje 
+o pé 
+e depois disto 
+e vamos apagar está embaixo é a pagar 
+depois disso vamos dizer que o nosso 
+esteja vai iniciar com a janela um então 
+com assim janela com e quando ele 
+arranca vai arrancar com este também 
+para a janela e 
+e é a partir daqui o que é que nós 
+podemos fazer 
+nós podemos fazer uma um método 
+eu vou lhe chamar jenny's cryin' oh oh 
+e ele vai receber a 
+a interrupção por exemplo ok então acho 
+que isso um é fazer ela 12 é para janela 
+dois estivéssemos na janela escolhemos a 
+cada uma delas atribuído um número 
+inteiro então temos aqui um suítes opção 
+o que é isso um baque fez dois leque 
+então se não estiveres no caso um creme 
+definir como a janela principal para o 
+nosso primeiro isso 3.7 sim e agora 
+atribuímos o quê 
+e aí 
+é sim janela 1 
+é isso não estiveres no caso dois a 
+dizer assim janela dois e isto vai 
+permitir que nós ou vejamos uma tabela 
+ou vejamos obtemos uma janela ou então a 
+outra janela o que temos aqui as nossas 
+duas janelas criadas temos aqui um metro 
+estático e para tudo isto é estático 
+para poder ser acedido fora fora da 
+desta classe ok então agora se nós 
+formos aqui pela janela um ponto java 
+bom então eu adoro quiser mudar a 
+relação entre temos amizade janela vou 
+aqui chama a classe navegação entre a 
+janela e agora vem conseguimos 
+conseguimos aceder ao médico se 
+inscrever e como temos no bt da janela 
+um enviamos o valor um e se formos para 
+o peito da janela dois enviamos do valor 
+de dois então eu vou copiar daqui e 
+vamos colocar exatamente igual na outra 
+janela e vamos estar a neste momento já 
+estamos aqui a janela a correr e se 
+formos ver aqui o menu clicando em 
+janela dois é uma vega para a segunda 
+janela janela um navega para a primeira 
+janela 
+e agora a nívelde programação reparamos 
+que temos uma classe janela dois como na 
+classe janela temos código repetir e 
+isto não é a boa programação então como 
+é que a gente pode resolver este 
+problema vamos criar aqui uma nova 
+
+
+
+classe ou ele chamar menu 
+eu quero 
+é a única coisa que esta classe vai ser 
+são esses dois metros 
+e aqui está lá agora não é quase janela 
+2 os métodos foram retirados e vamos 
+dizer que esta quase que vai herdar os 
+métodos da classe menu e fazemos 
+exatamente o mesmo para a classe janelão 
+ou seja apagamos estes dois métodos e 
+colocamos a herdade de menos voltamos a 
+correr por gênero 
+oh e vamos ver que a navegação continua 
+a funcionar exatamente da mesma forma 
+nós temos aqui hoje o projeto a correr 
+janela de hoje navega para a janela dois 
+janela um navega para a janela e 
+deixamos de ter duplicação dos 
+necessária de código muito obrigado por 
+ter assistido o

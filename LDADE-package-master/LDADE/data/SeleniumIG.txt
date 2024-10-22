@@ -1,0 +1,281 @@
+﻿hello everyone welcome to a study 
+automation today I'm going to show you 
+how to automate flipcart.com so what we 
+are going to do is we can just search 
+here iPhone let's say 
+iPhone 
+15 Pro Max and once we will get the list 
+we can click any link from here so let's 
+say I'll just click on Apple iPhone 15 
+Max Pro Blue version and then it will 
+open in the next tab so we need to learn 
+how to switch to the next tab as well 
+and after that once we are here we can 
+just try to uh get some information like 
+product details or whatever things you 
+can see highlights we can get highlights 
+and we can click on add to card button 
+so let's get it 
+started here we have already installed 
+selenium in our system like you can go 
+here in pom.xml you can just create May 
+project and add dependency latest 
+dependency make sure that you are using 
+14.16 and upper version so that you will 
+not be you you you don't need to install 
+any extra 
+driver here I have written get flip 
+cart.com and manage driver. manage. 
+window. maximize so it will open in 
+maximize window so let's try to see if 
+it's working or not I'll just click 
+run and we can wait few 
+seconds you can see flipcart.com is 
+opened through automation selenium 
+automation here it is saying Chrome is 
+being controlled by automated test 
+software now we need to search here 
+iPhone 15 Max Pro so what I'll do I will 
+go here in our code and then next I'll 
+write driver. find element by 
+dot right so before going to find we 
+have to you know let me close this 
+browser so we need to type this I'll 
+just copy text so we have to first find 
+this search box and then click submit so 
+for that I'll just go 
+to inspect element 
+and from 
+here now you can see this is our input 
+box once I'm moving cursor here it's 
+directly going here so in this case you 
+can see I have here name equal to Q so I 
+can use this name equal to Q to locate 
+this text box I'll go here again and 
+then I'll say by name and then here I 
+will put 
+Q so this is one thing I have 
+return let me just import 
+it so to import either you can move 
+cursor on it or just press control shift 
+o Now find element will return web 
+driver so I'll just search here 
+web driver and then I'll say 
+search box equal to this one so web web 
+element sorry web element 
+it should be web element and then now we 
+
+
+
+can see we have the search boox element 
+available what we need to do we have to 
+write searchbox do send and then we have 
+to send keys in this key I can say that 
+I need to search iPhone 15 Pro Max once 
+I'm able to search then what we do next 
+is suppose if I have typed something 
+here I we are just clicking enter so 
+that click enter to click cck enter what 
+we have to do we have to write here 
+searchbox do 
+submit and then once we will open now 
+you can see we have all the list of 
+iPhone 15 so let's try to run it again 
+make sure that you are closing it 
+again and run 
+it browser opened and in this browser we 
+have flipcart.com we are able to search 
+we have list so till now it's automated 
+now let's say I need to click on iPhone 
+Apple iPhone 15 Pro Max so for this one 
+we need to locate this element so I'll 
+just go to our browser and here we have 
+we need to click on this link so I'll 
+first click on this icon we'll go here 
+this is our text right so either I can 
+use input uh by link text or what I can 
+do I have just click here and we'll 
+select selector Hub so I have installed 
+selectors Hub which is one tool um in 
+our browser and then we are able to get 
+this so now in selector Hub I can use 
+relative index I'll just copy it 
+relative xath and then we'll go again 
+here and then write here uh driver do 
+find element by do X path and here in 
+this x path I'll just paste 
+this dot 
+click since this is link text anchor tag 
+so I need to do click and by doing click 
+what we will have it will happen it will 
+select this 
+particular phone model let's CL close 
+again and run it 
+again 
+you can see it clicked on that 
+particular model as well blue model as 
+well blue titanium model and it's opened 
+in new tab so we need to handle tab as 
+well from here and to handle tab what we 
+have to do we have basically our uh 
+script web driver is still in this page 
+we have just clicked on this and it 
+moved to our new tab but still 
+controller is on this page only so we 
+have to say compile uh slum web driver 
+now you have to move to the newly opened 
+browser and for that what we have to do 
+is we have to first get the browser ID 
+for main window and then we have to jump 
+to the child window so so for that 
+before going to click on this one we 
+need to get the window ID so I'll write 
+here so if you use get window handle it 
+will return you the current current page 
+ID so it is it is basically ID so if I 
+
+
+
+will type here and then say uh main 
+page equal to main page ID equal to I'll 
+say main page then it will print some ID 
+and then after clicking on the link it 
+will open a new window that means we 
+will have now total two tabs instead of 
+page we can say main Tab and and uh then 
+we have child tab so you will have two 
+type two tabs so basically what we need 
+to do 
+is we have to jump or we have to switch 
+to the another tab once we have clicked 
+on it after that we can write code to 
+jump so basically we have to write um 
+driver 
+dot get window handles one is window 
+handle which will return only one ID and 
+then window handles it will return more 
+than one ID and if you see it's type of 
+set so I have to use set and then I'll 
+say a string and I'll say all 
+pages let's import it and then after 
+that what we need to do we can add here 
+uh let's say Loop I'll say for and a 
+string page column all pages and then 
+here we have to say that 
+if uh current page is not equals to 
+equals I'll say main page right that 
+means it's the another page if current 
+page is not equals to this then in that 
+case what we have to do we have to say 
+driver Dot 
+uh switch to We have basically switch to 
+do window and in this window we have to 
+just write here page so now after this 
+it will switch to the just another 
+page we have two tabs tab one tab two 
+and then we are saying that tab one 
+current tab should not be equal to main 
+Tab and if that is true then we have to 
+just switch to the new tab and then we 
+can just say break right now after doing 
+this thing we are now into the next page 
+and if you just wanted to see the title 
+then you can uh I mean URL you can just 
+say driver. get current URL so this is 
+the URL after clicking the button so 
+let's see again so I'll just click on 
+it 
+we have 
+searched now we need to click on it we 
+have clicked as well and then we are 
+into next page now let's go and see URL 
+so this is main page ID and then we have 
+URL after switching to the next page so 
+it's saying iPhone 15 Pro Max Blue 
+titanium that means we are into we are 
+into this page not in this URL but we 
+are into this URL and here if you want 
+to get anything for example if you just 
+wanted to click on add to button you can 
+do that if you want to get the 
+Highlights you can get as well so for 
+example if I need to get the Highlights 
+what I need to do I will go here and 
+these highlights basically okay let's 
+
+
+
+first click on it we have clicked here 
+and I need to get the highlights this 
+these highlights so I'll just right 
+click and inspect 
+element we can see we have Li class 
+right so I can use this class as well 
+but before that I just need to go to 
+selector Hub and see right so we have 
+um class name right so class name is 
+this one which is total four so I just 
+click on it class name just to copy it 
+we'll go here and 
+then we can 
+say driver dot find element now instead 
+of element what we have to do we have to 
+say element since it's list of elements 
+so I'll just say by dot class name and 
+here I will put class 
+name and after that what we need to do 
+we can just say list of web El element 
+so it will return US list of web 
+elements products so basically products 
+description I can 
+say and then let's see how how many uh 
+elements are there so I'll just print 
+out products do 
+size so it will say total 
+four basically we have 1 2 3 and four 
+right so we it will it should return 
+four and if that is the correct then 
+what we can do we can iterate it so I'll 
+just use for and I will say web 
+element 
+product colum products so from products 
+I'm just getting product and then I can 
+just print it s 
+Out product 
+dot uh get text I'll just get the text 
+from there let's close it and then try 
+to run it again 
+so I hope you are able to get this how 
+we can automate any website it doesn't 
+matter whether it is flip cart or Amazon 
+you can automate any website any 
+particular type of 
+website so here I'll just go and see 
+right so you can see here we have total 
+four and then we get all these 
+information if you have used uh test NG 
+you can better add here condition right 
+if product is equal to uh product size 
+is equal to 256 GB R and if if it is 
+matching these 
+description then just go and click next 
+which is add to cut and to do this add 
+to cut you can just click here and 
+select add to cut this is our button so 
+either I can get the um xath so here 
+this is xath I can just copy it and then 
+I will go go and write driver. find 
+element by do XPath and then we'll put 
+the xath here add to cut dot click so 
+now we have clicked on this add to cut 
+button so it will added in that product 
+product card 
+list so I hope this is clear and you are 
+
+
+
+able to automate flipcart.com if you 
+have any question anything just do let 
+me 
+know thank you so much for watching the 
+video

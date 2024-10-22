@@ -1,0 +1,408 @@
+﻿fala pessoal tudo bom Rogério Napoleão 
+Júnior falando e agora nós vamos para o 
+outro vídeo aqui da nossa sequência de 
+vídeos aí de como criar um sistema né do 
+zero ao tudo e nesse vídeo nós vamos 
+entender o que são as operações crude 
+certo e como implementar no springboot 
+Então vamos lá o crude é a sigla né são 
+as letras que representam 
+as seguintes palavras Creation 
+read update e de Elite então basicamente 
+quando a gente vai tratar um dado e uma 
+aplicação no sistema Essas são as quatro 
+operações básicas que nós temos perante 
+aos dados né Aos dados 
+manipulando no banco de dados então o 
+Create basicamente né é o nosso Inserir 
+a gente vai inserir dados né no banco de 
+dados a gente tem essa operação de 
+cliente depois read é a nossa o nosso é 
+como se fosse o nosso select Lá do banco 
+de dados de dados 
+mas é a nossa consulta daquele dado 
+então sempre quando a gente faz uma 
+leitura um read né a gente faz uma 
+consulta em determinado dados tá update 
+a nossa atualização dos dados então 
+depois que eu inserir um dado Eu quero 
+alterar eu posso fazer 
+um update dos dados Tá e por fim de 
+Elite a nossa exclusão né então a gente 
+quer excluir um dado do banco de dado a 
+gente acaba chamando uma operação de 
+delite basicamente essas operações 
+utilizam tudo quanto é sistema né todo 
+sistema tem essas funcionalidades é de 
+manipular os dados né E como é que a 
+gente pode implementar isso aqui no 
+spring boot tá o Spring boot do projeto 
+que nós estamos fazendo a gente para 
+essas operações básicas aqui a gente não 
+precisa escrever nenhum comando SQL isso 
+que é interessante porque através de da 
+própria anotação do próprio hibernante 
+nós já temos métodos que a gente 
+consegue chamar baseado no mapeamento 
+que a gente fez já consegue 
+operacionalizar essas 
+essas quatro operações aqui tá e como é 
+que a gente pode implementar Então nós 
+vamos implementar as opções de Create 
+Reed update de Elite para o usuário 
+certo o nosso projeto já tá com usuário 
+dto pronto e o usuário entity Tá e agora 
+nós vamos começar a criar as outras 
+camadas então por exemplo aqui eu vou 
+criar uma interface aqui no repositor é 
+não falei errado interface mesmo porque 
+o hypernate JPA aqui ele acaba usando 
+uma Interface para definir a aquelas 
+configurações daquela entidade para o 
+banco de dados né Então vem aqui ó 
+depository botão direito do mouse New 
+localizem interface aqui ó interface 
+então se você não sabe o que é interface 
+não é interface do usuário né o 
+
+
+
+interface do Java coloca um comentário 
+depois até grava um vídeo auxiliar mais 
+ou menos explicando o que é o conceito 
+de interface Mas você que já passou pelo 
+básico do Java já vai saber então eu 
+creio eu crio aqui usuário repositoring 
+ou seja essa interface vai ser 
+responsável pelas operações de banco de 
+dados de usuário tá que a gente fez até 
+agora que a gente está montando né E 
+aqui o que que eu vou fazer eu vou 
+fazer um extremes 
+JPA 
+repository certo JPA repositor Quando eu 
+der um extende JPA repositor ele vai me 
+pedir duas informações aqui eu preciso 
+dizer qual a entidade que eu tô tratando 
+esse repositor que no caso é usuário 
+einste ok que a gente fez e depois o 
+tipo de dado que é o ID do usuário ente 
+então Se nós formos lá no usuário ente 
+ver qual é o tipo aqui ó tipo é long 
+então aqui no meu usuário 
+repositor eu posso botar o long aqui 
+pronto então assim para as operações 
+padrões ali de cliente update 
+todas as operações essas operações 
+básicas já estão implementadas para o 
+usuário repositor porque porque eu 
+herdei né eu herdei de uma classe pai 
+essas operações 
+básicas então ele já tá implementado 
+pode ser que vocês queiram criar uma 
+operação um pouquinho mais específica 
+que não tem no na classe pai daí Vocês 
+poderiam implementar aqui e esses 
+exemplos nós vamos ver nos vídeos mais 
+avançados aí do nosso da nossa sequência 
+tá bom e Beleza então criei o repositor 
+agora o que que acontece ela na por 
+aquela Nossa arquitetura né então nós 
+temos basicamente três camadas aqui 
+dentro da arquitetura do back end que é 
+o repositor service o controle o crude 
+desse vídeo nós vamos se limitar apenas 
+ao repositório e ao service Tá então 
+vamos lá vamos fazer esse teste aqui 
+certo teste não desenvolvimento né 
+porque a gente ainda tá fazendo Criei um 
+repositor agora eu vou lá para o meu 
+Service 
+lá no meu service eu vou criar agora uma 
+classe tá 
+usuário 
+usuário service Ok usuário Service 
+aqui no usuário service nós vamos 
+começar a implementação E deste service 
+então tem uma anotação 
+do springboot que eu ponho nessa classe 
+que é o arroba service é uma anotação 
+que a gente precisa entender é que é uma 
+anotação que representa esse arroba vai 
+vai falar para o Spring dizendo ó esse 
+aqui é uma camada service daí segue aí 
+teu fluxo de implementação de execução 
+que daí por aí vai para a gente tá 
+
+
+
+começando agora é só botar uma arroba 
+service ali e seguir o baile depois 
+disso nós temos também 
+como o service ele acaba chamando o 
+repository nós vamos declarar aqui uma 
+classe do meu repositor certo 
+e eu falo aqui usuário reposito 
+o speembolt ele tem uma uma gestão de 
+dependência que a gente chama que ele 
+acaba estanciando automático as classes 
+para nós a gente não precisa se 
+preocupar com isso basta a gente fazer 
+uma anotação aqui em cima da classe que 
+a gente quer e o springbuth gerencia 
+então basta botar esse auto-wide ele 
+automaticamente vai fazer a instanciação 
+desse cara para nós tá eu vou declarar 
+nesse formato que é o formato assim mais 
+simples de trabalhar mas no futuro eu 
+vou mostrar para vocês que tem outros 
+tipos de autowide aqui e talvez esse 
+aqui não seja nem o mais recomendado mas 
+é o mais prático aqui de entender num 
+primeiro momento e a gente pode usar 
+agora que não vai ter nenhum problema 
+certo ok feito isso agora nós vamos 
+criar as operações crude certo e nessas 
+operações grude que nós vamos criar aqui 
+ela tem que fazer o quê Nós temos que ir 
+lá no repositor e consultar os dados por 
+exemplo inserir ou atualizar o excluir e 
+na hora de retornar a gente vai ter que 
+pegar essa entidade e converter para o 
+DPO porque o DPO é o cara que depois vai 
+para o controle para jogar esses dados 
+lá para o meu front-end tá então nós 
+vamos criar agora aqui o método listar 
+todos o método listar todos Apesar de 
+ele por exemplo buscar no banco de dados 
+o 
+entity ele tem que retornar ao DPO 
+porque o controle vai jogar o meu dto lá 
+para o meu front então eu acabo 
+que eu retorno aqui uma lista de usuário 
+dto e ponho listar todos aqui ok está 
+todos aqui agora vou implementar esse 
+cara aqui como é que eu posso fazer 
+então ele ele vai receber 
+uma lista de usuário DPO desculpa de 
+usuário ente porque ele ele vai lá no 
+banco de dados com os tais e Tinta então 
+aqui ó é usuários e como é que eu faço a 
+busca usando o usuário reposito ele para 
+buscar é muito simples basta aqui ó 
+usuário reposito ele já tô pegando 
+direto essa variável que eu criei aqui ó 
+usuário repositor tá 
+depois disso eu uso find ao principal 
+de forma automática o usuário para mim 
+tá eu poderia botar aqui algumas 
+alguns critérios para eles já vir 
+ordenado e tal mas como é o primeiro que 
+a gente está fazendo eu vou deixar falha 
+de ar vai vindo do banco do jeito que tá 
+e tudo certo né porque cada vez que a 
+gente põe mais coisas pode ser um 
+
+
+
+complicador de erro aí para vocês que 
+pode estourar em alguma coisa então 
+vamos fazendo né o passo a passo a gente 
+tá fazendo esse curso bem detalhado Sem 
+pressa e daí então vamos aprender em 
+todos esses conceitos passo a passo para 
+não ser atropelar então depois agora o 
+que que eu vou fazer eu já posso jogar 
+um returner aqui né que eu já vou fazer 
+um atalho mas na verdade esse atalho é 
+que eu já vou fazer aqui ó vou usar a 
+biblioteca string tendo Windows do 
+Windows do Java eu consigo percorrer 
+essa lista e já fazer determinado 
+operação então eu com esse comando aqui 
+ó eu consigo automaticamente percorrer a 
+lista de usuários que buscou certo e 
+retornar e converter para o usuário deto 
+tá então esses stream depois eu posso 
+até fazer um vídeo explicando a 
+biblioteca screen mapa é que daí a gente 
+já talvez via um pouco do das coisas 
+mais importantes aqui do springbuth 
+talvez eu ponha um vídeo isolado 
+explicando isso vou pensar mais para 
+frente tá mas por via de regra esse 
+usuário stream ó ele tá percorrendo 
+usuários usuário tá aí depois ele chama 
+o método map que aí que ele cria um 
+usuário dto baseado no usuário 
+percorrido e depois converte para uma 
+lista para retornar Então por via de 
+regra o listar todos 
+é esse comportamento que vai ter Tá bom 
+vamos lá agora para o nosso inserir né 
+porque do grude né Nós temos o ide a 
+gente já fez falta agora o cliente vamos 
+fazer o cliente aqui então por exemplo 
+eu vou mandar um usuário deto aqui no 
+Create desculpa não vai retornar nada 
+mas eu vou mandar para o parâmetro 
+usuário dto 
+porque o controle vai me mandar um dto 
+certo e o que que eu faço aqui eu 
+simplesmente converto o usuário é em ti 
+usuário enche 
+e usuário ente mandando por parâmetro 
+usuário detox lembra que a gente no 
+vídeo passado a gente fez é o Construtor 
+lá dentro de usuário entt certo então 
+aqui eu tô chamando Construtor mandando 
+usuário deto então ele vai converter 
+parente e para nós fazermos 
+Create né basta chamar usuário repositor 
+save e eu mando usuário ente para salvar 
+eu vejo 
+o listar fiz o criar né o cliente aqui 
+tem nenhum comando SQL já faz tudo 
+automático para nós tá bom Agora vamos 
+para o alterar o alterar o alterar segue 
+a mesma linha a mesma linha tá usuário 
+DPO manda o usuário posso fazer a 
+conversão também posso fazer a conversão 
+única coisa que que é legal fazer no 
+alterar É talvez retornar o usuário DPO 
+porque o que que acontece quando eu 
+
+
+
+altero eu posso querer ir lá buscar os 
+dados 
+salvos e me retornar poderia fazer no 
+inserir também né mas não é tão comum 
+quanto não alterar o usuário dto eu vou 
+retornar o usuário aqui só para mostrar 
+que foi alterado depois se eu for usar 
+ou não isso aqui é uma questão que eu 
+posso trocar também mas por via de regra 
+a gente também cria usuário entity 
+mandando por parâmetro usuário DTA 
+para o para este retorno aqui né como é 
+que eu posso fazer eu posso dar um 
+retorno de usuário dto né porque eu vou 
+retornar um usuário Detran mandando por 
+parâmetro aqui ó o nosso 
+o comando usuário repository certo ponto 
+save o save ele funciona tanto para 
+cadastrar quanto para alterar a 
+diferença é que se eu mandar o atributo 
+ID né o atributo aqui ó você mandar esse 
+atributo aí de preenchido ele não vai 
+deixar cadastrar ele vai alterar porque 
+ele vai ver que aquele ID já existe 
+então aqui no JPA um hypernate o save 
+ele funciona tanto para criar quanto 
+para alterar né então o critério sempre 
+é esse aí de preenchido vai alterar e de 
+não preenchido ele vai criar um novo Tá 
+bom então aqui por fim eu mando usuário 
+OK depois então nós temos aqui o listar 
+Todos nós temos os inserir e o alterar 
+vamos fazer agora o excluir então o 
+excluir Não precisa retornar nada que eu 
+vou apagar do banco e deu tchau 
+excluir eu vou mandar o que eu não 
+preciso mandar o objeto inteiro eu posso 
+mandar só o ID do usuário se eu tiver o 
+ID do usuário eu posso 
+deletar tá e como é que a gente acaba 
+deletando esse cara aqui antes de eu 
+deletar eu preciso consultar ele para 
+ver se ele existe no banco de dados 
+então aqui eu posso fazer um usuário 
+repository ponto find byed ou seja 
+buscar pelo I Dick vem por parâmetro 
+certo aqui eu tenho que pegar o cara e 
+depois que eu peguei o cara eu posso 
+excluir 
+de Elite 
+mandando usuário 
+que eu busquei tá E também aqui para 
+Então eu tenho aqui o listar todos tem o 
+inserir tenho alterar e eu excluir certo 
+então esse cara são as operações crude 
+eu posso fazer mais um aqui de lambuja 
+que é interessante que é buscar por aí 
+né esse próprio find byed eu posso fazer 
+aqui ó também então eu poderia fazer 
+esse mesmo mecanismo né que é o nosso 
+público só que ele vai retornar o 
+usuário 
+que é o nosso buscar por ID onde eu 
+mando o id e vai me retornar o usuário 
+DPO eu posso direto jogar um retorno 
+aqui mil usuário 
+
+
+
+eto e aqui eu chamo o meu usuário 
+repositor e que faz de digital 
+Não se preocupem se isso aqui não a 
+professor fez mas ah tô vendo aqui ó que 
+o professor fez já vai dar erro já vai 
+dar algum problema ou talvez é porque eu 
+fiz aqui conforme Eu lembro que é e fui 
+fazendo né Se for dar um erro mais para 
+frente ou não nós vamos pegar depois 
+quando tiver executando esses caras lá 
+tá que não vai ser nesse vídeo para não 
+ficar muito longo Vai ser no próximo 
+então por via de regra nós implementamos 
+o crood então na nossa arquitetura aqui 
+do da nossa arquitetura que nós fizemos 
+até o momento 
+Tá mas beleza por via de regra 
+vou trazer para cá Só um minuto tá na 
+outra tela não tá funcionando aqui 
+é agora funcionou por via de regra o que 
+que acontece Desce a nossa arquitetura 
+back-endi nós já fizemos repositor de 
+usuário é o nosso repositor e nós já 
+fizemos as operações crude aqui no 
+service certo tá aqui ele corre ente 
+que a gente converte para DPO tá 
+nessa arquitetura que nós desenvolvemos 
+já tem esses caras aqui certo agora no 
+próximo vídeo nós vamos ver o controle a 
+como a gente expõe esses caras para fora 
+tá Então no próximo vídeo vai ficar 
+controle nós terminamos 
+esse cara até aqui deixa até testar um 
+negócio antes de finalizar o vídeo mesmo 
+se eu rodar esse cara aqui vamos ver se 
+não vai estourar nenhum erro não é para 
+estourar vamos ver se vai funcionar aqui 
+vamos iniciar o Spring 
+ó beleza é a princípio se rodar aqui vai 
+funcionar mas essas operações cru de nós 
+não temos como testar ainda porque nós 
+não fizemos a interface com front-end 
+para consumir tá bom isso aí nós vamos 
+conferir no próximo vídeo Então se ficou 
+alguma dúvida coloque com aqui no 
+comentário Se conseguiu também coloca ó 
+já consegui fazer aí vamos lá para o 
+próximo e tal ajuda um comentário aí 
+nesse vídeo eu também vou pedir que se 
+você não está inscrito se inscreve no 
+canal que pelas estatísticas que eu tô 
+vendo que tem muita gente ouvir vendo 
+vídeo e não tá inscrito então às vezes 
+não acompanha tudo que eu crio de novo 
+talvez é né então para manter esse 
+atualizado aí escreve no canal para para 
+a gente 
+percorrer esse nosso projeto Tá bom 
+então até o próximo vídeo que daí 
+complementando a parte que manda essas 
+operações crude para fora para o nosso 
+front vamos dizer assim tá bom Um abraço 
+até mais tchau tchau

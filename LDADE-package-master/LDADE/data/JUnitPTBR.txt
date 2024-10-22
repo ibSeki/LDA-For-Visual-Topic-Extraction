@@ -1,0 +1,681 @@
+﻿Oi e aí pessoal aqui Stephanie é o gente 
+vai fazer um vídeo sobre testes 
+unitários eu já tô aqui com apetite 
+Aposta que foi aplicação que a gente fez 
+nos últimos vídeos Então bora lá 
+pesquisando aqui inicialmente no Google 
+sente pesquisar aqui ó teste unitário 
+ele já mostra para gente mais ou menos 
+um pouquinho do que é aquele fala o 
+teste unitário consiste em verificar o 
+comportamento das melhores unidades e 
+sua aplicação O que significa Como o 
+próprio nome já diz teste unitário para 
+você testar pequenas partes da sua 
+aplicação para você ver comportamentos 
+Quais os tipos de comportamento que 
+aquele aquela sua implementação pode 
+pode ter no caso né então vamos lá que 
+eu vou mostrar na prática para vocês 
+quem não tiver ainda essa aplicação aqui 
+que a pide apostas que eu já tenho aqui 
+na minha máquina eu vou deixar o link 
+para vocês clonarem fazer a parte dela 
+se você não quiser esse podem fazer a 
+partir de outra não tem problema mas 
+vamos iniciar então 
+eu tô sem saber aqui ó 
+e ela já tem nenhuma estrutura Ela já 
+foi finalizada essa aplicação Então ela 
+móveis de apostas ela realiza apostas 
+cadastro apostador e tudo mais e aí na 
+estrutura dela ela já tem um teste uma 
+caixinha de teste que é o próprio Spring 
+boot ele já era para gente isso então 
+vamos utilizar este recurso para fazer 
+nossos testes unitários vamos fazer da 
+Controller vamos começar aqui ó do 
+apostador Beleza então 
+vamos dar uma analisada aqui nesse 
+código para a gente entender o que que a 
+gente precisa testar como o nome diz 
+teste unitário para você testar pequenas 
+partes o que seria uma pequena parte 
+esse método aqui da controla a gente vai 
+testar Qual é a 
+qual é a reação o que como que ele 
+interage com o nosso código e se ele 
+executa do jeito que a gente previu como 
+eu falei anteriormente a nossa controla 
+ela tem o intuito de pegar a informação 
+que tá vindo na requisição e mandar para 
+outra classe e no final se tudo der e 
+ela vai responder uma mensagem de 
+sucesso para o usuário final se der 
+falha não é é o intuito dela não é 
+responsabilidade dela quem vai vai dar 
+essa mensagem de falha Vai ser lá na 
+service outra coisa que for ser chamada 
+lá dentro do nosso código Beleza então o 
+que a gente quer testar que ele vai 
+salvar o apostador e que vai ser com 
+sucesso que eu tenho a nossa controle e 
+faça ele passa informação se der tudo 
+certo ele vai retornar isso daqui para 
+gente que a mensagem sucesso que foi 
+criado Beleza então vamos lá o que que a 
+
+
+
+gente precisa inicialmente Esse precisa 
+criar uma classe com as parecido com o 
+nome dessa daqui da controle aqui dentro 
+da nossa caixinha de teste o teste Java 
+aí ele já tem uma estrutura já tem um 
+teste de que ele gera automaticamente 
+quando a gente já era o projeto se você 
+clicar com o botão direito ó Java você 
+cola o nome dessa o Controller se 
+escreve teste no final que é uma 
+convenção mesmo mas aí fica a seu 
+critério 
+um ok a gente vai fazer o que a gente 
+vai 
+e colocar o ex tendinite para a gente 
+entender do mosquito ex tentation 
+mosquito 
+expansion porque o que é esse mosquito o 
+mosquito ele ele consegue como próprio 
+nome diz ele Moka é retornos para gente 
+então por exemplo a nossa Controller a 
+gente quer testar a reação dela o que 
+ela vai fazer só que dentro dela chama 
+service e a gente depende da service to 
+sucesso da service para conseguir 
+retornar essa mensagem aqui que foi 
+criado o apostador então o mosquito 
+serve para que a gente consegue utilizar 
+o mosquito para simular como se fosse 
+uma chamada real da service lá hoje 
+qualquer outro método que tem dentro do 
+seu teste que você vai testar e ele vai 
+simular E vai retornar o que a gente 
+pedir lá que é o nosso que o nosso 
+método retornaria se fosse na execução 
+normal da aplicação bom então vocês vão 
+entender só mais para frente um 
+pouquinho então aqui 
+Ah então beleza então a gente vai 
+colocar o que agora 
+Project Box 
+é porque eu injectmocks injectmocks é 
+para dizer que aquela classe que a gente 
+vai testar então eu tô falando que ali 
+eu vou fazer uma injeção dela para fazer 
+os testes unitários que eu preciso Então 
+privet 
+acha que seu colar aqui já até tenha 
+apostador contra 
+O Thomas é importar a classe 
+Ah beleza então eu já tinha classe de 
+teste e já tenho aqui 
+a referência da classe que eu quero 
+testar né Então bora para o nosso teste 
+real Então o que a gente quer testar que 
+nossa controla ela tem um único método e 
+elas vai ser só retorna de sucesso que é 
+de criado então a gente pode ter copiar 
+aqui ó 
+o hiper convenção é legal você colocar 
+no seu teste é sempre como um verbo de 
+ação sabe então por exemplo deve 
+e deve salvar apostador porque são 
+equipe do seu neto daquele método ali 
+ele vai fazer aquilo então ele deve 
+salvar o apostador aí não tem problema 
+
+
+
+se você coloca em inglês você coloca em 
+de outra forma é de acordo com o que 
+você tá acostumado aí o que é mais 
+e o padrão da sua empresa por exemplo 
+você vai trabalhar numa empresa que eles 
+colocam de um jeito você vai colocar 
+dinheiro eles colocam Claro mas é legal 
+colocar sempre assim no no verbo na 
+questão de ação sabe então aqui a gente 
+pode colocar 
+teste né aqui o teste ele é do 
+dia e origem no caso era a gente não tem 
+a dependência no projeto mas como a 
+gente está utilizando Spring é dentro do 
+Spring ele já vem embutido esse para a 
+gente então a gente não precisa colocar 
+dependência a não ser que seja algo 
+específico que você queira Testar algo 
+específico então sim você tem que 
+colocar a dependência com a versão lá 
+específica para você utilizar mas o 
+nosso caso de como são teste simples a 
+gente não vai precisar colocar 
+dependência real 
+Ah então tá deve salvar apostador o que 
+eu começo fazendo eu chamo método 
+a salvo apostador beleza até aí tudo bem 
+encher tá no começo legal só que aqui 
+ele precisa de um parâmetro ali ele já 
+tá falando eu espero o apostador in e 
+ele tem que ser válido ou seja não pode 
+ser nulo nem nada então por que que a 
+gente vai fazer a gente vai criar que 
+tem uma variável e 
+E aí E aí hoje eu vou ensinar de uma 
+forma bem simples para vocês só para 
+vocês entenderem mesmo para ser mais 
+fácil mas futuramente Quando vocês 
+tiverem tipo mais contato com isso aí 
+você tem outras formas de fazer um 
+formas mais fáceis até tipo mais fáceis 
+e complexos assim mas mais fáceis ver 
+mais bonitas de fazer então eu quero 
+ensinar de uma forma bem simples só para 
+vocês entenderem o conceito como que é 
+cada parte mesmo então aqui a gente pode 
+colocar 
+o pivete aí a gente coloca a voz 
+você tá pedindo aqui pode ser qualquer 
+nome percebi fora isso significa o quê 
+que para cada teste que ele executar ele 
+vai inicializar as variáveis para a 
+gente utilizar dentro dos nossos testes 
+então eu vou colocar que 
+e em 
+o meu 
+o apostador em beleza então beleza A 
+gente colocou aqui o apostador inho E aí 
+a gente precisa passar as informações 
+dele né então o que ele espera ele 
+espera o nome do apostador Vou colocar 
+aqui o meu nome 
+Oi e ele espera o e-mail do postador 
+então 
+e colocar aqui um e-mail beleza 
+Stephanie@gmail.com e meu nome eu sou 
+
+
+
+apostador Então a gente vai passar essa 
+variável aqui ó 
+o apostador in a gente faz assim para 
+você não precisar passar tudo isso aqui 
+dentro do seu teste para ficar algo para 
+não ficar algo feio sabe então você sabe 
+aqui ó ele salva apostador e recebe o 
+apostador nha O que é esse cara você 
+clicar aqui olha mostrar o está 
+recebendo esse daqui então dentro desse 
+aposentadoria em tem Stephanie tem 
+Stephanie@gmail.com beleza colocar um 
+break-point aqui ó na linha 26 é só você 
+clicar aqui nessa parte cinza 
+fica na playzinho clicar na segunda 
+opção que é o The Book the book on 
+Ah beleza então ele caiu aqui na que a 
+gente colocou para ele parar aqui quando 
+ele executasse seja entrar nessa segunda 
+certinho aqui ó que é o F7 ele vai 
+entrar lá no método da nossa controla e 
+como se ele tivesse executando real 
+então se você clicar aqui ó ele entrou 
+Então nossa apostador in ele tá 
+recebendo Stephanie e meio 
+Stephanie@gmail.com beleza só que aqui ó 
+ele tá dando no Pointer porque porque no 
+nosso método a gente só chamou o metro 
+da Controller a gente não se preocupou 
+com outras coisas que tá lá dentro só 
+que para o nosso método dá certo a gente 
+precisa do que tomou Quito E aí que 
+entrou um mosquito a gente vai simular 
+como se ele chamasse a nossa service e 
+fizesse as inserção do apostador lá no 
+banco e aí se tudo der certo lá na que 
+vai ser o que ele tivéssemos lá que vai 
+dar certo ele vai cair aqui e a tornar o 
+status de criado Beleza então vamos 
+parar aqui eu vou tá no nosso teste e a 
+gente pode já começar a fazendo uma 
+coisa 
+a gente vai precisar tá service ó 
+apostador service então a gente copia 
+esse cara 
+oi vem aqui embaixo do injectmocks que 
+coloca presente e cola ele 
+apostador serve sempre que você precisar 
+amor cara algo é assim você chama a 
+classe que você precisa almocar e coloca 
+a rouba moto em cima dela que é o do 
+mosquito Tá vendo 
+só que só isso aqui 
+na verdade isso daqui ele já vai 
+funcionar porque porque ele só tá 
+salvando tá vendo ele não tem retorno se 
+você passar o mouse aqui ó presente 
+final pasta service abusador service aí 
+aqui ó Public void salva apostador então 
+como ele tem o vosso significa que ele 
+não vai ter retorno então a gente não 
+precisa lá colocar o Enem o de retorno e 
+nem nada é problema de vocês não viram a 
+isso ainda mas eu vou mostrar no próximo 
+método que eu vou fazer para vocês para 
+vocês entenderem melhor então como a 
+
+
+
+gente já colocou um boque nele e ele não 
+vai ter nenhum tipo de retorno então ele 
+já vai passar aqui e ele vai cair aqui 
+para gente falando que foi criado por 
+que a gente simulou e tô falando que ele 
+vai marcar o apostador service Então 
+tudo meta do kit gás dentro dele que não 
+tiver retorno ele já tá mocando se a 
+gente executar aqui 
+como colocar no modo de por aqui para 
+vocês verem 
+a serem Central ele não vai dar mais no 
+Pointer porque se você colocar uma o 
+clicar aqui ó ele vai falar uma Akita 
+intercenter significa o quê que ele já 
+tá sendo um bocado como a gente não 
+precisa de um retorno ele vai passar 
+tranquilamente por aqui como se ele 
+tivesse chamado a service salvado salvo 
+lá no banco então se você for aqui ó ele 
+já passou esse a gente dá o playzinho 
+ele vai dar sucesso faça o nosso teste 
+mas até E beleza só que a gente não tá É 
+realmente validando nada só chamou o 
+método e deu sucesso a gente tem que 
+fazer validações que que geralmente eu 
+faço a gente vai criar aqui uma variável 
+a response 
+a beleza e a gente vai falar 
+E aí 
+é que esse método de controle a gente 
+está afirmando que ele não não vai 
+lançar exceção quando ele executar 
+Porque como é um teste de sucesso não 
+faz sentido ele lançar uma exceção então 
+está garantido que esse método que a 
+gente está chamando não vai uma sessão 
+nosso teste unitário então a gente ir Oi 
+passa aqui ó 
+que ele tá vermelhinho que ele não 
+importou ainda tá importar é esse aqui ó 
+a certinho sacerti 12 na estrutura de It 
+On 
+Ah beleza então ele retorna para que o 
+que para gente Eu response em ti quero 
+que igual aqui na nossa controle também 
+não ele retorna responseentity status 
+escritas de pontomias a gente pode até 
+copiar esse cara aqui para a gente fazer 
+uma outra validação aqui já é uma 
+validação ele tá falando que não vai 
+lançar exceção só se de repente passar 
+lá na controle lançar exceção ele já não 
+vai passar no nosso teste então o outro 
+que a gente vai validar é a certe 
+o encosto 
+a gente pode colocar o que a gente 
+copiou lá ó que é o esperado essa 
+mensagem aqui e a gente vai lidar com 
+que tá vindo se é a mesma coisa então o 
+esperado ela spaciente de estado escrita 
+de ponto bild e o que tá vindo aqui que 
+é o atual é o que tá vindo do nosso 
+método que a gente chama lá e a gente 
+vai comparar se os dois forem Iguais 
+significa que passou no teste na 
+
+
+
+validação né porque o teste seria essas 
+duas variações aqui então vamos rodar 
+vamos dar o Play 
+e ele passou então voltando lá a gente 
+simulou simula não né A gente só o cocô 
+o service E aí ele passou aqui recebeu a 
+informação e deu sucesso Então Significa 
+o quê que a gente conseguiu testar 
+unitariamente só esse método aqui dentro 
+da controlo então podem ver que é bem 
+simples sabe é só fazer passo a passo do 
+bonitinho que dá tudo certo e agora eu 
+quero fazer um outro método com você só 
+para vocês verem a parte do em e do dem 
+do mosquito Então vamos fechar aqui ó 
+Oh e vamos no apostador não considerar 
+que a gente tava aposta controle e aí a 
+gente vai fazer Qual a gente vai fazer 
+esse daqui ó 
+Oi e aí os outros dada do restante da 
+aplicação deixa como desafio aí para 
+você sentar em fazer e vocês comentem no 
+vídeo se vocês conseguiram fazer ou não 
+então vamos fazer desse cara aqui ó 
+salvar posta então como é uma outra 
+classe aposta controla a gente vai 
+precisar criar aqui também 
+o teste 
+e a gente vai estender 
+já tomou crackstation 
+o ponto cresce a gente vai chamar qual 
+classe aqui que a gente quer prestar 
+e também gente vai chamar o bilhete 
+a aposta Controller aposta contrário 
+vamos importar esse cara 
+E aí 
+Ah beleza então qual o método que tem 
+dentro do aposta contra a dor que a 
+gente vai testar tem esses dois eu vou 
+testar só isso com vocês e aí eu deixo 
+para vocês como desafio textual recente 
+da aplicação Beleza se vocês não 
+conseguirem eu vou eu vou deixar também 
+na aplicação todos os testes unitários 
+prontos para vocês terem uma base de 
+como fazer e tudo mais então qual vai 
+ser o nome do nosso método 
+bom então Lloyd deve 
+E aí 
+em salvar 
+aposta beleza sempre 
+e em ação 
+o teste deve salvar aposta ou então como 
+outro a gente vai chamar aqui aposta 
+controllers salva aposta eles para 
+receber o que uma aposta em certo então 
+vamos criar aqui ó já ou 
+before it 
+void setup 
+E aí gente vai precisar de 
+Que bosta hein 
+Que bosta hein e aqui dentro a gente vai 
+chamar o aposta ganha igual New aposta 
+em eles para receber o edigas postador 
+eu vou passar um um eu coloco com l 
+maiúsculo para entender que é um long 
+
+
+
+Então nossa passador Controller. Salva 
+aposta aposta controle repondo salva 
+aposta ele espera como parâmetro uma 
+aposta aí foi que a gente fez aqui a 
+gente cria uma variável e a gente 
+colocou nela uma nova aposta em com as 
+informações que ele precisa que é um o 
+ajuda a prestadora então a gente pode 
+passar aqui aposta em 
+Oh e vamos executar no modo debug para a 
+gente entender 
+Ah então beleza vamos entrar lá na nossa 
+controla E aí a gente vê após tenho tá 
+recebendo hoje do apostador um Beleza 
+então até aí Ok só que aqui se vocês 
+forem ver no outro método Ele não 
+mostrou o meu Pointer por quê Porque a 
+nossa service lá ela não tinha um 
+retorno então só com arroba moro aqui em 
+cima dela já funcionou Só que nesse caso 
+aqui ele espera um retorno então ele 
+espera uma aposta Out para passar aqui 
+no bode quando ele for falar que foi 
+criado o aposta então a gente precisa 
+fazer o quê vamos parar aqui nosso teste 
+vamos voltar no teste e a gente vai 
+precisar 
+em locais ficar aqui só que agora de uma 
+forma diferente como ele tem um retorno 
+a gente vai na hora de declarar é a 
+mesma coisa 
+é só que aqui dentro do nosso método a 
+gente faz assim ó tá ruim 
+a 
+aposta service ponto que tava aposta e 
+ele já tem uma 
+a aposta né então a gente vai importar 
+aqui ó é isso importe aqui aqui ó do 
+rock Park 
+mosquito. Ok 
+então aquele importou doido tá falando o 
+quê que para cada vez que ele executar 
+quando ele executar esse aposta service 
+ponto salva aposta ele tem que retornar 
+é uma postal ti beleza só que a gente 
+não tem esse objeto ainda então a gente 
+vai fazer igual outro presente 
+a costa 
+eu não tinha aposta Audi e que a gente 
+faz a mesma coisa 
+aposta out 
+a aposta out 
+Oi e aí ele espera o quê 
+e vamos ver ele espera o número de 
+aposta que a gente pode colocar qualquer 
+nunca vi qualquer número a gente fizeram 
+um apostador Então vou colocar aqui 
+Stephanie e ele espera 
+o e-mail apostador Então eu vou passar 
+aqui 
+Stephanie@gmail.com beleza então beleza 
+ele tá simulando o que que ele foi lá na 
+serve se ele executou esse método só que 
+ele não executou agente está simulando 
+com o mosquito então a gente está 
+simulando aquele foi lá Executor e que 
+
+
+
+ele me retornou o que o método retornar 
+em caso de sucesso que eu aposto áudio 
+então composta Audi 
+e agora Vamos divulgar de novo 
+eu tô ciente entrar lá na Controller 
+está recebendo aposta em ainda e agora 
+ele não tá dando mais no Pointer porque 
+porque aqui no nosso teste a gente 
+marcou o retorno dele a gente falou que 
+quando ele quando ele executasse esse 
+método aqui ele retornaria o a postal 
+aqui pra gente e foi que aconteceu então 
+se a gente pular aqui ó 
+Ah e não posta aos ele vai ele vai 
+mostrar exatamente o que a gente pediu 
+para ele retornar lá no nosso Ok então é 
+um dois três quatro cinco seis Stephanie 
+Stephanie@gmail.com 
+Então se a gente dá um playzinho aqui ó 
+ele vai dar sucesso porque ele passou em 
+todos os pontos sucesso só que ainda a 
+gente não estava lidando a gente só 
+executou método Então a gente vai fazer 
+igual outra response 
+E aí 
+E aí 
+E aí 
+E aí 
+E aí 
+E aí 
+ó e aqui a gente importa 
+ele acerte 29 juro vou bater mar, aqui 
+então aqui a gente pa garantindo também 
+que nesse método não vai lançar uma 
+exceção 
+outra coisa que a gente vai garantir é 
+que o nosso retorno não vai ser nulo que 
+nós response não vai ser nulo Beleza 
+então está garantido do que quando ele 
+for executar esse teste não vai ser não 
+vai lançar exceção que o nosso retorno 
+não vai ser nulo que mais que a gente 
+pode validar a tem a mensagem de criado 
+Oi e ele retorna o áudio então a gente 
+pode validar o que é 
+e acerte em qual a gente pode colar esse 
+carinha aqui a gente tá falando que o 
+retorno dele vai ser 
+uma mensagem de criado né que foi criado 
+no banco e ele vai retornar o aposta 
+áudio e o que que a gente vai utilizar 
+para comparar o que tá vindo lá no nosso 
+método response porque ele é um response 
+em Tite aposta out que é exatamente o 
+que a gente espera que ele retorna Então 
+se o retorno do nosso método aqui em 
+cima for igual ao que a gente tá 
+esperando aqui ele vai passar e vai dar 
+sucesso então a gente tem três 
+validações desse método a gente está 
+garantindo que ele não é uma sensação 
+que o nosso retorno não vai ser nulo e 
+que o que a gente espera é que a 
+mensagem seja de sucesso e que ele 
+retorna e o a postal de pra gente e a 
+gente tá colocando aqui para ele 
+
+
+
+comparar se realmente vai ser isso agora 
+vamos executar E aí 
+Oi 
+e ele passou então vamos dar uma 
+olhadinha a gente fez o que a gente 
+chama criou uma classe de teste para 
+controlar a gente criou um método 
+falando que deve salvar aposta a gente 
+criou os objetos de entrada de saída 
+dentro do nosso teste simulamos como se 
+ele tivesse chamado a service retornado 
+após tal de presente e validamos se o 
+retorno que a gente esperava era o mesmo 
+que tava vindo da execução do nosso 
+teste então no final deu tudo certo e aí 
+o nosso teste passou agora eu quero 
+mostrar para vocês além dessa questão do 
+teste é uma curiosidade você clicar em 
+aqui ó no playzinho tem uma terceira 
+opção que hum aí tem o nome do seu 
+método which covered você clicar aqui 
+vai acontecer uma mágica 
+e ele vai mostrar para gente a cobertura 
+do nosso código da classe que a gente 
+está testando então a cada teste que 
+você faz ele mostra a cobertura para 
+você Geralmente as empresas pedem no 
+mínimo oitenta por cento de cobertura do 
+seu código então Toda vez que você 
+desenvolve e implementa algo eles 
+esperam que você tem a cobertura do seu 
+código que significa o quê que você 
+testou o que realmente o seu teste tá 
+agindo como você esperava que você sabe 
+no caso de exceção e você tá vendo casos 
+que tá vindo lá ou não você pagar 
+antindo realmente que o seu método ali 
+ele é ele é fiel ao que ele prega ali 
+para ele tá falando que vai salvar 
+aposta nas o Controller E é só isso vai 
+acontecer ele vai salvar com sucesso 
+então você tem que provar no seu teste 
+unitário que realmente está acontecendo 
+Então a cada linha que você faz teste se 
+por exemplo vou mostrar para vocês se 
+vocês clicarem aqui ó na pastinha ele 
+vai mostrar todas as pastas vocês podem 
+ver que tá zero Ó lá ele mostra em 
+porcentagem tá tudo zero quer dizer 
+esses dois aqui tem 10 esse é 
+mas eu vou mostrar para vocês o porquê 
+que que ele mostra zero e o porquê que 
+ele mostra a porcentagem Então qual foi 
+a que a gente testou Controller e a 
+gente testou aposta controla Beleza 
+então se a gente entrar aqui ó 
+e ele tá falando que a gente tem 75 por 
+cento de cobertura do nosso código só 
+significa que setenta por cento e 
+setenta e cinco porcento do nosso código 
+ele ta coberto a gente testou a gente tá 
+garantido que ele está executando tudo 
+certinho com forma esperada ele não tá 
+sem por cento porque a gente ainda não 
+testou outro métodos pode ver que ele 
+mostra a vermelhinha aqui ó as linhas 
+
+
+
+que foram testadas ele mostra verdinho 
+tá vendo 
+ó e aqui não foi vermelho o apostador 
+Controller não apareceu aqui porque eu 
+só rodei uma classe só mas se você 
+quiser testar todo o seu código para ver 
+a cobertura você vai vir aqui olha a 
+pastinha na raiz aqui do teste botão 
+direito Run tests which cover image Oi e 
+aí ele vai ver a cobertura de todos os 
+testes que você fez ali se ele realmente 
+está testando em quais linhas ele pegou 
+não é bem legal 
+o terr 
+e aqui ele vai executar todos os testes 
+né antes de te mostrar 
+é tão aqui ele subiu o contexto da 
+aplicação ele executou os testes 
+unitários aí se você pode clicar nesse 
+botãozinho aqui 
+aí se você clicar aqui olha tá falando 
+aqui 
+e o antes disso na primeira passe ele 
+fala que o nosso projeto só tem 26 por 
+cento de cobertura a gente só tá 
+testando 15 linhas de 56 você gente tem 
+que aumentar isso a gente tem que testar 
+todos os os métodos possíveis então se 
+você entrar mais na caixinha e na 
+Controller agora tá vendo ela tá 
+mostrando que tá 85 porcento Se Você 
+entrava ela tá falando que eu postei dor 
+Controller tá com 100 porcento de 
+cobertura porque ele só tinha um método 
+para testar tá vendo essa verdinho aqui 
+ó significa a gente já testei esse 
+método então ele já tá sem por cento 
+coberto já o aposta controla a gente 
+testou um só duas metas ele até mostra 
+que o método 2 de 2 testado aí no de 
+aposta Controller dois e três tá vendo 
+Então é bem legal então conforme vocês 
+forem fazendo teste forem 
+aprendendo e tudo mais e ou finalizando 
+os seus testes é legal vocês voltarem 
+para ter uma noção de cobertura assim 
+Lembrando que é super importante as 
+empresas pedem no mínimo oitenta por 
+cento de cobertura em e se atentem a 
+isso e sempre que vocês fizerem 
+implementação faça um teste unitário 
+porque o teste unitário aqui vai provar 
+que o seu código realmente funciona da 
+forma que você espera e é isso gente que 
+eu queria trazer para vocês 
+espero que vocês gostem é sugestões e 
+elogios podem deixar nos comentários se 
+vocês gostarem Deixa uns curtir também e 
+é isso gente espero que vocês curtam 
+mesmo muito muito muito e até a próxima

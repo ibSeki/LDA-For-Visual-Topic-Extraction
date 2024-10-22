@@ -1,0 +1,808 @@
+﻿fala pessoal sejam bem-vindos ao 
+didáticatec no vídeo de hoje a gente vai 
+aprender a criar nossa primeira rede 
+neural utilizando Python a gente vai 
+usar pouquíssimas linhas de código vai 
+ser muito fácil apesar do assunto redes 
+neurais depilane ser bastante 
+complexo né e misterioso é Tem tantas 
+informações por trás tanta matemática 
+mas na prática programação Como já 
+existem frameworking bibliotecas para 
+gente a parte de colocar né isso em 
+operação ali produção é relativamente 
+Simples então não precisa se preocupar 
+não precisa se assustar nesse vídeo vai 
+ser bem prático né A gente vai ver como 
+é possível entender mesmo processo os 
+parâmetros ali e como com poucas linhas 
+de código a gente consegue ter 
+resultados muito interessantes já para 
+treinar o nosso a nossa primeira rede 
+neural na vela aprendendo na prática Tá 
+Pré-requisitos 
+certo então esse tipo de computador ali 
+pra gente começar a instalar as 
+bibliotecas e utilizar na prática essas 
+ferramentas eu só queria deixar claro 
+aqui que o ideal seja que você tenha 
+assistido pelo menos o vídeo onde eu 
+explico o que são redes neurais Tá eu 
+vou deixar aqui relacionado aqui em cima 
+é só clicar e assistir esse vídeo com 
+calma é um vídeo um pouco longo mas é um 
+vídeo onde não explica a teoria sobre 
+como as redes neurais funcionam de uma 
+forma relativamente superficial sem 
+entrar tanto na matemática da coisa mas 
+que já é suficiente para entender bem o 
+funcionamento dessas arquiteturas tá 
+depois para quem tiver mais interesse e 
+tem um conhecimento mínimo ali de 
+cálculo pode ir para o segundo vídeo que 
+é o vídeo onde eu entro na matemática 
+das redes neurais que também seria legal 
+né vocês terem esse conhecimento mas 
+caso não tenha muito conhecimento de 
+cálculo e querer ficar né só com uma 
+parte mais holística assim e superficial 
+pode ficar só com esse vídeo iniciar 
+onde eu comento aqui que são redes 
+neurais e depois vem aqui já para cá 
+para esse vídeo para ver a programação 
+na parte como ela funciona e o que já 
+vai dar para conectar os pontos muito 
+bem e entender o que tá acontecendo por 
+baixo dos fãs Tá certo então feita essa 
+ressalva desse pré-requisito a gente 
+pode ir aqui para programação para 
+colocar na prática esse conhecimento bom 
+Instalando o Keras 
+ou então como a gente vai estar 
+utilizando o Framework keras para 
+trabalhar aqui na criação de redes 
+neurais a gente primeiro precisa 
+instalar esse Framework e essa 
+instalação é muito simples independente 
+
+
+
+do sistema operacional que vocês tiverem 
+utilizando pode ser o Windows pode ser 
+Mac pode ser Linux basta abrir o 
+terminal no caso do Windows ali é só 
+digitar CMD ou equivalente para Mac para 
+Linux e digitar PIP install 
+depois da entra ao escrever pipisal que 
+eras e pressionar entre ele já vai 
+automaticamente iniciar a instalação do 
+que elas pode levar ali algum minutinho 
+dependendo da conexão de vocês e logo em 
+seguida já vai estar instalado se por 
+acaso vocês não possuem o Python 
+instalado na máquina de vocês aí eu 
+recomendo primeiro obviamente instalar o 
+parto na versão 3 para cima Então tem um 
+vídeo vou deixar relacionado aqui em 
+cima também na descrição do vídeo tá 
+para quem quiser seguir o passo a passo 
+para instalação do Pai então Caso tu não 
+tenha nem o Python ainda no teu 
+computador tá certo inclusive aqui na 
+descrição do vídeo todos os detalhes tá 
+inclusive o próprio data 7 que a gente 
+tá trabalhando já vou falar sobre ele 
+aqui logo na sequência mas antes aqui só 
+para mostrar o código rapidinho daqui o 
+código da criação da nossa rede neural 
+tá essa parte aqui ó então a gente pode 
+ver que são apenas cinco linhas de 
+código onde a gente cria a nossa rede 
+neural além da importação dessas duas 
+bibliotecas tá E antes aqui rapidinho só 
+vai trabalhar um pouquinho com a 
+manipulação do nosso data 7 tá e Isso 
+evidentemente Depende de qual data 7 que 
+a gente está utilizando se for nota 7 
+que não tá muito lapidado ainda a gente 
+teria que trabalhar mais nele mas nesse 
+caso aqui eu já preparei um j7 que tá 
+bem lapidado tá bem bonitinho a gente já 
+pode usar de cara sempre sabe fazer 
+nenhuma manipulação Extra eu deixei isso 
+tá 7 pronto aqui nessa URL tá também tá 
+na descrição do vídeo é só clicar ali ao 
+clicar nessa URL não precisa fazer 
+nenhum cadastro nem nada já vai baixar 
+automaticamente Exatamente esse mesmo da 
+série que eu vou estar usando e 
+mostrando aqui para vocês Tá então vamos 
+começar aqui do início né então para 
+quem importou que era tinha ele no 
+computador ainda e quer fazer um teste 
+digitando aqui em podcast né de dando 
+enter ele vai mostrar que tá usando o 
+tensor Flow com back end tá porque é um 
+outro Framework que serve como back end 
+para o que eras vai dar alguns warners 
+aqui dependendo da versão que tiver 
+utilizando tá Não precisa se preocupar 
+Mas se não der nenhuma mensagem de erro 
+Extra significa que está instalado com 
+sucesso Tá certo então muito bem já pode 
+aqui começar a trabalhar com o nosso 
+data 7 antes de criar a nossa primeira 
+rede neural para trabalhar com o data 7 
+
+
+
+Analisando o dataset com Pandas 
+geralmente a gente utiliza a biblioteca 
+pandas né como a gente já fez várias 
+vezes aqui no canal no nossos cursos 
+então eu vou estar importando aqui o 
+pandas como o apelido pd né Eu também tô 
+importando é que isso aqui não é 
+necessário Tá mas eu tô importando a 
+biblioteca warnens para filtrar e pedir 
+para ele ignorar que essas mensagens de 
+Warner tá para não ficar poluindo a tela 
+principalmente no meu caso aqui que 
+estão mostrando uma aula né não é muito 
+legal ficar com isso visualmente para 
+vocês tá então muito bem aqui uma vez 
+tem porta do pano a gente pode importar 
+o nosso data 7 é que basta colocar usar 
+função ruídos e sv né E passar aqui o 
+caminho onde esse j7 está no computador 
+de vocês aqui eu já estou mostrando como 
+exemplo o caminho onde está nesse 
+notebook eu tô utilizando vocês podem só 
+colocar aqui o caminho do computador de 
+vocês Onde está esse arquivo que é 
+exatamente esse mesmo nome tá que se 
+vocês baixaram aí dessa url que eu 
+disponibilizei Tá certo então eu vou dar 
+um ano aqui nessa célula já foi 
+importado que o j7 bem pequenininho né 
+de proposta pegando j7 pequena para todo 
+mundo consiga executar o seu computador 
+de forma bem rápida possa ver o 
+resultado Então vamos dar uma olhadinha 
+nele aqui eles vão estar sede que tem 
+apenas 400 linhas tá e 8 colunas sendo 
+que uma das colunas já é a variável 
+target aqui né que é variável que a 
+gente vai tentar prever as outras Sete 
+Colunas aqui são variáveis para Editora 
+são as variáveis que vão nos dados 
+informações para a gente tentar prever 
+aqui essa outra coluna essa coluna na 
+realidade ela é a probabilidade de 
+admissão numa faculdade tá então aqui 
+são Dados onde cada linha são dados de 
+um estudante diferente e esse estudante 
+ele fez algumas provas alguns testes 
+aqui tem alguns indicadores onde a 
+partir dessas informações é calculado 
+aqui a probabilidade dele ser admitido 
+na faculdade tá então a ideia 
+basicamente essa tentar achar se tem 
+algum padrão onde a partir desses 
+indicadores a gente pode calcular a 
+probabilidade do Estudante ser admitido 
+para fazer isso né para tentar achar 
+esses padrões de maneira que imagina que 
+aqui eu treinei com 400 linhas mas no 
+futuro depois eu vou usar isso aqui com 
+outras 400 ou Mil ainda muito mais dados 
+de estudantes tá onde eu não vou ter 
+esse valor aqui eu não vou ter a 
+probabilidade dele ser admitido eu só 
+tenho a qualidade de ser admitido de 400 
+estudantes e tenho muitos outros sem 
+esse essa informação eu posso treinar 
+
+
+
+uma regeneral com esses valores e depois 
+utilizar essa rede neural já treinada 
+para estimar esses valores aqui dos 
+outros estudantes tá esse é o conceito 
+por trás do aprendizado de máquina de 
+treino ou modelo para depois utilizar 
+ele em produção alguma coisa do nosso 
+interesse Tá certo então para a gente 
+fazer isso ele precisa dividir os nossos 
+dados em treinamento e teste tá porque 
+treinamento porque parte dos dados vão 
+ser usados para treinar o modelo mas à 
+medida que eu treino eu preciso testar 
+para ver se meu modelo não está sofrendo 
+de over Fit né que seria o modelo tá 
+sendo tendo resultado muito bom para os 
+anos de treino mas quando eu testo ele 
+com dados que o modelo nunca viu ainda 
+ele performa mal então isso não é um bom 
+sinal quer dizer que o modelo tá 
+saturado né Ele tá muito específico para 
+os dados de treino mas não está 
+generalista o bastante para dados que 
+ele nunca viu ainda então para a gente 
+poderia acompanhar se ele realmente está 
+prevendo bem Tanto dados que ele tá 
+treinando como dados que ele nunca viu 
+ainda a gente separou os dados entre 
+treino e teste tá então aqui nesse caso 
+eu vou dividir primeiro separar as 
+variáveis x e y onde o y vai ser nossa 
+variável né tinha esse admito e a nossa 
+variável x vão ser todas as demais 
+colunas desse data 7 tá então para 
+separar basta colocar aqui né o DF que a 
+nossa j7 selecionar que informar qual é 
+a coluna que vai ser essa variável 
+tablet um detalhezinho aqui importante é 
+que essa coluna ela tem um espaço aqui 
+depois dessa frase da Champions aí tem 
+facinho tá se não colocar esse paciente 
+pode dar um erro aqui tá bom Aqui pode 
+não ficar muito visível isso nesse ponto 
+aqui de cima quando a gente mostra o j7 
+né direto aqui no júpite notebook mas 
+tem esse detalhe que é importante 
+considerar aqui tá Então essa coluna tá 
+selecionada na variável Y as demais 
+colunas estão selecionadas na variável x 
+porque eu tô selecionando o datas 7 aqui 
+excluindo essa coluna aqui né eu 
+informei usei o comando ponto drop 
+informei com a coluna que eu quero 
+excluir informei aqui que é o eixo u né 
+ou seja das colunas e com isso ele vai 
+excluir essa coluna e vai manter todo o 
+resto né Essa variável x Então agora eu 
+tô com a vara um X as variadas 
+expeditoras e na variável Y está meia 
+tarde aqui agora eu tenho essas duas 
+Separando treino e teste 
+Arábias separadas posso separar os dados 
+em treino de teste então eu vou dizer 
+que as primeiras 300 linhas vão servir 
+como treino e as demais linhas ou seja 
+as últimas 100 linhas vão servir como 
+
+
+
+teste então isso aqui também claro nessa 
+nessas duas linhas a primeira tá fazendo 
+isso com as variáveis X então x treino x 
+teste o teste né vai sendo 3 até o fim 
+ou seja as últimas sem linhas e o treino 
+vai ser de 0 a 300 isso vale tanto para 
+o x e y de treino como x e y de teste tá 
+então se eu rodar essa célula aqui agora 
+eu já posso conferir por exemplo a nossa 
+variável X3 como é que tá o tamanho dela 
+usando o comando ponto chave eu posso 
+ver tem 300 linhas e 7 colunas que é 
+exatamente que a gente queria né as 
+primeiras 300 linhas aqui e a Sete 
+Colunas apenas excluindo a variável 
+target Eu posso também verificar que o 
+nosso x teste qual é o tamanho dele 
+então vão ser 100 linhas né e Sete 
+Colunas exatamente que a gente esperava 
+ver Tá bom então muito bem agora a gente 
+Criando a rede neural 
+já tá com a nossa j7 bem separadinho 
+pronta para ser treinado né separei Ele 
+entrei no teste tá tudo bonitinho agora 
+como é que eu faço para criar a nossa 
+rede neural com a principal objetivo 
+dessa aula uma vez que ela já está 
+instalada a gente pode importar as 
+bibliotecas que a gente vai estar 
+utilizando nesse caso aqui a gente vai 
+estar usando as funções sequestion e 
+dance tá essas duas funções a gente tá 
+utilizando Caps a gente vai importar 
+elas conforme essas duas linhas aqui em 
+cima tá de dentro do que elas.modas a 
+gente importa sequestion e de dentro de 
+Cash layers a gente importa a função 
+dentes então inicialmente a gente 
+precisa criar arquitetura da nossa rede 
+neural para criar arquitetura da rede 
+neural primeiro a gente vai selecionar 
+aqui o módulo sequestion tá o sequestion 
+é para criar uma camada após a outra de 
+forma sequencial então por isso a gente 
+cria ele primeiro eu vou chamar Aqui 
+essa rede neural de modelo tá então eu 
+digo o modelo igual a sequênciation ele 
+já está ansiou aqui preparou arquitetura 
+para a gente criar a nossa rede General 
+agora basta que a gente vai adicionando 
+as nossas camadas tá então primeiro a 
+gente usa aqui modelo ponto Ed né e aqui 
+eu adiciono ou vai ser a primeira camada 
+a primeira camada vai ser quantos 
+neurônios eu quero colocar né eu informo 
+isso nesse caso vou fazer uma rede bem 
+pequena que só vou mostrar para você 
+assim mesmo com uma rede muito pequena 
+com poucos pesos né é possível trabalhar 
+tem um bom resultado para um modelo 
+quando é fácil de encontrar a relação 
+dos dados ao aos poucos dados tá então a 
+gente precisa informar também qual é a 
+função de ativação que a gente vai estar 
+utilizando nesse caso aqui eu vou usar 
+uma das funções de ativação mais 
+
+
+
+populares que a função relu isso aqui 
+para quem viu as aulas teóricas ele vai 
+ficar mais claro né E também eu preciso 
+informar qual é a dimensão de entrada ou 
+seja quantas variáveis eu tenho que 
+quantas variáveis preditoras nesse caso 
+a gente já sabe que são sete variáveis 
+para editoras né a gente viu aqui né 
+de treino de teste ambos têm sete 
+variáveis que são essas Sete Colunas 
+aqui do nosso da sete inclusive Se eu 
+quisesse aqui eu poderia de forma mais 
+prática né colocar por exemplo o meu 
+próprio j7 x treino 
+ponto Shape e selecionar que a dimensão 
+das colunas que é a dimensão um né então 
+se eu botar aqui para vocês por exemplo 
+né nessa célula vocês verem essa 
+informação é justamente essa informação 
+que tem assédio colunas né Se eu pegar a 
+dimensão zero é a quantidade de linhas 
+que esse j7 tem e a dimensão um é a 
+quantidade de colunas Então como aqui 
+nesse caso a primeira camada da minha 
+rede General sempre vai ser tem que 
+informar quantos neurônios eu quero e 
+quantas Quantas são as variáveis da 
+minha entrada é até uma boa prática já 
+colocar aqui né o data 7 x 3 por exemplo 
+um ponto Shape dimensão porque ele já 
+vai pegar automaticamente antes do 
+contrário antes do ver aqui ou pedir 
+primeiro olhar essa dimensão para depois 
+informar aqui ele já vai automaticamente 
+pegar essa dimensão direto daqui fica 
+mais automatizado né O que é uma boa 
+prática a programação em geral tá então 
+depois de colocar essas três esses três 
+neurônios quando você está conectados 
+essas três essas sete variáveis né para 
+cada linha Então imagina que ela tá 
+treinando eu em forma uma linha dados 
+são sete dados em uma linha depois em 
+outra linha em forma mais sete dados 
+cada vez ele vai sair vai ser alimentado 
+né com um conjunto de 7 variáveis para 
+cada linha e depois colocar esse três 
+neurônios eu conecto com uma camada de 
+saída tá então é General vai ficar bem 
+pequeno você só três neurônios na camada 
+oculta depois um neurônio de saída que 
+vai ser a própria saída da minha rede 
+neural como esse aqui é um problema de 
+Problema de regressão 
+regressão a gente pode ver isso aqui 
+claramente as variáveis para editoras 
+elas possuem diferentes formatos por 
+isso isso aqui é um mundo da sete de 
+exemplo tem variáveis aqui que são 
+discretas tem variáveis contínuas aqui 
+né Tem variáveis binárias aqui uma 
+regenerar pode lidar com qualquer tipo 
+de informação e nesse caso a minha saída 
+a gente pode ver que são valores 
+numéricos né então são valores aqui que 
+Aparentemente parece que tá variando 
+
+
+
+entre zero e um então obviamente é um 
+problema de regressão não é um problema 
+de classificação e por isso por ser um 
+problema de regressão a gente vai 
+trabalhando com uma rede neural com um 
+neurônio apenas de saída que vai nos 
+informar esse valor único de saída para 
+cada linha de entrada que a gente quer 
+saber a previsão e a função de ativação 
+é linear tá então esse é um padrão para 
+modelos de regressão em redes neurais a 
+gente coloca um neurônio de saída na 
+função de ativação linear porque linear 
+porque uma função linear significa nesse 
+caso aqui que a entrada vai ser 
+exatamente igual a saída ou seja como se 
+não tivesse função de ativação tá ele 
+simplesmente vai replicar o resultado 
+que o neurônio trouxe Inclusive eu fiz 
+uma figurinha aqui para mostrar para 
+vocês tá esse essa rede neural Então é 
+isso aqui ó são esses sete neurônios 
+aqui na realidade representam as 
+variáveis de entrada tá no nosso data 7 
+eles vão estar conectados à nossa 
+primeira camada oculto da rede General 
+que tem apenas neurônios e por sua vez 
+estão conectados ao neurônio de saída 
+bem simples com muito poucos pesos aqui 
+para serem calibrados tá são apenas aqui 
+se a gente for contabilizar né como são 
+sete neurônios todos eles estão 
+conectados com cada um dos neurônios a 
+primeira camada oculta são sete vezes 
+três pesos aqui né Sem contar os baias 
+sete vezes três pesos 21 pesos mais três 
+vezes um né mais três pesos de saída 
+então apenas isso são 24 pesos aqui né 
+ao todo nessa rede General são bem 
+poucos valores variados para a gente 
+tacaribrando então uma vez que eu 
+adicionei essa camada Inicial e a camada 
+subsequente que nesse caso aqui já vai 
+ser a camada de saída Se eu quisesse 
+aumentar a dimensão dessa General 
+bateria colocar aqui mais uma camada 
+intermediária dá um é e colocar mais uma 
+camada dessa aqui com mais neurônios é 
+muito simples elas ele facilita muito 
+pra gente a criação Nossa Rede Generais 
+não precisa ficar calculando se 
+preocupando com quantas pessoas vai ter 
+contabilizando para ver se vai funcionar 
+aqui eu quero ele faz tudo sozinho só em 
+forma quanto a gente quer qual é a 
+função de ativação e ele cria tudo para 
+gente 
+e uma vez está criada arquitetura da 
+rede neural armazenado nessa variável 
+Treinando a rede neural 
+chamada modelo a gente pode compilar e 
+treinar essa rede neural é isso que a 
+gente vai fazer nessas outras duas 
+linhas então primeiro a gente compila o 
+modelo informando qual vai ser a nossa 
+função de custo nesse caso aqui como um 
+
+
+
+problema de regressão eu tô usando a 
+função de custo 
+MSE que é a função de erro médio 
+quadrática ou seja ele vai calcular o 
+quadrado dos erros e com isso ele vai 
+tratar Minimizar essa função minimizar o 
+tamanho desse erro quadrado como a gente 
+viu lá na aula teórica no outro vídeo 
+existem diversos tipos de otimizadores 
+tá para fazer essa procura do ponto 
+mínimo da função nesse caso aqui eu 
+selecionei otimizador Adam mas existem 
+vários outros também que poderiam dar o 
+resultado muito semelhante aqui para 
+entender bem a diferença de um 
+otimizador e outros são necessários 
+várias outros vídeos como a gente 
+trabalha lá nos nossos cursos tá 
+inclusive aqui aproveitar para falar um 
+pouquinho sobre isso né mas tem um curso 
+completo aqui de redes neurais e visão 
+computacional são mais de 120 aulas ao 
+todo onde a gente agora todos os 
+aspectos teóricos práticos programação e 
+trabalha com informações avançadas vai 
+fazer reconhecimento de objetos detecção 
+de imagens de objetos então trabalhar 
+com quedas só Flow então é um curso 
+super completo um preço super acessível 
+também vou deixar aqui na descrição do 
+vídeo para quem tiver interesse em dar 
+uma conferido Nossa diferencial que se 
+preocupa muito é qualidade né deixar 
+tudo bem explicadinho cada linha de 
+corte cada conceito por trás porque o 
+aluno consiga entender não precisa ficar 
+correndo para outros materiais porque 
+ele não entendeu alguma informação tá 
+então uma vez aqui que a gente já 
+selecionou os parâmetros que a gente 
+quer para o nosso modelo basta que a 
+gente treine e para treinar o modelo a 
+gente usa o método Fit tá então como tá 
+tudo armazenado na nossa variável 
+chamada modelo a gente chamando aqui o 
+ponto Fit basta informar qual é o nosso 
+x treino o nosso Y treino que a gente já 
+separou lá em cima e a gente pode também 
+dizer se a gente quer isso aqui não é 
+obrigatório Mas a gente pode ficar 
+testando a medida que ele vai treinando 
+a gente vai testando nossa passagem de 
+teste para ver como é que tá sendo como 
+é que tá ficando a performance então 
+isso a gente pode ver desse parâmetro 
+aqui validation daira a gente pode 
+informar o nosso x teste Y Test e com 
+isso a medida do treinamento for 
+acontecendo ele vai nos informando Como 
+é que tá a performance com os anos de 
+teste dados que o modelo ainda não viu e 
+que a gente pode saber esse aqui a 
+partir de tantas épocas de treinamento o 
+modelo já tá ficando com over Fit ou 
+seja ele não tá melhorando o resultado 
+do teste tá ficando pior eventualmente e 
+
+
+
+no treino tá melhorando Então não é 
+legal continuar a partir daqui então é 
+uma forma legal de visualizar né colocar 
+aqui como dá paciente pequeno não vai 
+ser muito Custoso computacionalmente a 
+gente pode colocar para ele visualizando 
+né testando com os anos de teste ao 
+mesmo tempo que ele vai treinando para a 
+gente 
+a gente também informa que quantas 
+épocas de Treinamento completos a gente 
+quer e o nosso bate size O que que 
+significa isso o Bete size é quanto o 
+nosso lote né De quantas linhas do nosso 
+data 7 ele vai treinar para cada ajuste 
+dos pesos e baias da rede incentivo 
+falou bastante lá na aula teórica né 
+então é isso aqui que a gente vai 
+informar nesse parâmetro aqui nesse caso 
+Estou informando o parâmetro que é o 
+padrão aqui do que eras que é 32 o 
+tamanho desse bets size e tô dizendo que 
+eu quero ter 200 épocas de Treinamento 
+Essa época no caso uma época ela termina 
+quando o nosso j7 inteiro é varrido né 
+então usando um Bad saia de 32 como a 
+gente tem 400 linhas ele vai ficar 
+usando 32 32 duas até terminar as 400 
+linhas quando terminar as 400 linhas ele 
+finalizou uma época esse treinamento 
+depois ele vai para a próxima época e 
+assim continua então eu coloquei aqui 
+200 isso aqui na realidade como a gente 
+tá recém começando a gente pode colocar 
+um valor qualquer vê como é que ficou a 
+performance depois E aí ajustando com o 
+tempo tá então o que eu vou dar nessa 
+célula agora que a gente já viu ela 
+inteira cada linha de código e a gente 
+pode ver então como treinamento começou 
+tá bem rápido justamente porque é uma 
+verdade muito pequeno né uma rede neural 
+também muito pequena então fica muito 
+fácil muito rápido de treinar dependendo 
+do caso 7 maior se é uma rede neural 
+mais robusta esse treinamento pode ficar 
+muito mais lento então a gente pode ver 
+aqui ao longo do treinamento que a gente 
+tem essa informações ele vai nos 
+informando né A medida que ele vai 
+treinando o tempo de cada época o Como é 
+que tá a função de custo como é que tá o 
+nosso a nossa variável que a gente está 
+usando com uma métrica de validação até 
+até esqueci de comentar mas aqui na 
+médica a gente pode isso aqui é um extra 
+a gente pode informar eu quero ficar 
+acompanhando Como é que tá a performance 
+a partir de alguma métrica eu tô 
+treinando minha função de curso a partir 
+de uma métrica que é o erro médico 
+quadrática aqui nesse caso mas eu posso 
+acompanhar com outra métrica nesse caso 
+ele só vai mostrar para vocês eu 
+coloquei o erro médio absoluto se chama 
+mai Minaj 
+
+
+
+de validação e de treino a gente tem 
+valores diferentes então primeiro 
+uniforme fora os dados de treino como é 
+que tá o meu mai e depois ele informa 
+para os dados de teste como é que está 
+online e a mesma coisa ele informa para 
+nossa função de custo Como tá o valor 
+dela para o treino Como tá o valor dela 
+para teste se eu tivesse colocado aqui o 
+erro médico também nessa métrica esses 
+dois valores aqui seriam iguais ele ia 
+mostrar o loss e o ms-e aqui e ficar o 
+mesmo valor tá porque esse valor do losa 
+nada mais é do que o MSN Beleza então a 
+gente pode vamos ver como é que terminou 
+que o nosso treinamento ele terminou com 
+um my de 0,31 e o MSN de 019 se eu 
+tivesse se eu colocar para rodar de novo 
+provavelmente ele deu um resultado 
+diferente vamos ver 
+eu coloquei para rodar de novo e 
+rapidamente a gente viu que já tá melhor 
+aqui o resultado ele já tá com 
+00 alguma coisa no valor do My Por que 
+que isso acontece por que que não é na 
+outra vez que eu rodei ele começou aqui 
+pode ver que foi mostrado também 
+diferente ele começou com lá em cima e 
+foi reduzindo né e tanto é que a gente 
+iniciou que nessa mesma cela está 
+iniciando o modelo do zero de novo então 
+como é que com duas rodadas diferentes a 
+gente tem valores tão diferentes de 
+performance é porque a rede neural no 
+outro caso ali onde eu dei o clique 
+antes provavelmente ela chegou no mínimo 
+local não no mínimo Global da função de 
+custo que foi até interessante observar 
+como a gente viu lá na aula teórica a 
+nossa rede neural ela vai tentando 
+encontrar o ponto mínimo da função 
+pequenos Passos um passo após o outro e 
+às vezes ela chega num valor mínimo que 
+não é o mínimo Global da função chegando 
+no mínimo local então por isso que 
+dependendo do caso a gente pode treinar 
+mais de uma vez ou fazer algumas 
+técnicas para tentar evitar que a rede 
+com virgem né precocemente 
+prematuramente para um mínimo local em 
+vez de um mínimo Global como eu botei 
+para treinar e armazenei o resultado 
+Visualizando os resultados 
+nessa variável que eu tô chamando de 
+resultado a gente pode criar um gráfico 
+aqui para visualizar esse treinamento 
+depois que ele foi executado para isso 
+eu vou usar a função né o a biblioteca 
+do método livre é uma biblioteca muito 
+usada para gráficos como a gente viu em 
+vários dos vídeos aqui no canal Então o 
+que a gente vai fazer aqui basta pegar 
+essa variável resultado onde o conteúdo 
+tá armazenado sente pegar aqui um ponto 
+History e selecionar loss a gente vai 
+estar armazenando né todos os valores 
+
+
+
+dessa lista da nossa função de custo 
+para cada época Mas da forma que foi 
+impressa aqui naquela pra gente todos 
+esses valores ficaram armazenados a 
+gente pode coletar eles aqui dessa forma 
+e por trás da tela eu vou botar esse 
+resultado Nossa função de custo tanto 
+para o treino que se chama loss como 
+também para o treinamento que se chama 
+que vá underline loss tá entendendo é 
+poder comparar aqui um com o outro para 
+cada época esse treinamento num gráfico 
+como foi aí botar numa cor diferente 
+para ir estudando um título para o 
+gráfico tô especificando que cada 
+variável vai ter um nome diferente né 
+meu tô colocando aqui só os títulos aqui 
+ó por enquanto nesse gráfico e colocando 
+uma legenda do da função de curso no 
+caso que é uma função de erro né o erro 
+de treino e o erro de teste e dando um 
+plt ponto show para mostrar na tela tá 
+então isso aqui eu tô passando bem 
+rápido porque a gente já viu o método em 
+outros vídeos aqui no nosso canal tá 
+então para supor que já tem um 
+conhecimento mínimo sobre método Lima 
+Mas se não tiver também esse código é 
+muito simples né então dando um rank 
+nessa cela ele já cria pra gente esse 
+gráfico Então olha que legal a gente 
+pode ver as duas cores a cor azul no 
+caso são os dados de treino e a cor 
+laranja com os dados de teste a gente 
+pode ver que ambos andaram bem juntos 
+Bem colados que significa que o modelo 
+ele aprendeu a classificar tantos dados 
+de Treinamento Como usar o GTS juntos 
+então tá funcionando né se acontece do 
+azul tá baixando Ou seja a função de 
+custo tá diminuindo mas o laranja que 
+não tá mais baixando e começou 
+isso significaria que o erro do teste 
+está aumentando Isso não é legal né quer 
+dizer que a partir desse momento talvez 
+o modelo tivesse passando por overfit 
+Mas não foi o caso aqui nesse caso ambos 
+convergir um rabo depois aqui da época 
+25 aqui na época 50 já tinha convergido 
+bem em modelo já tinha chegado num valor 
+muito próximo aqui né do seu da sua 
+convergência final que é um Foi um erro 
+de 0.09 o que que esse erro significa 
+como é um erro médio absoluto aqui nesse 
+caso mai significa que na média né 
+quando o modelo tenta prever essas 
+informações Ele comete um erro que de 
+0.09 em relação ao valor que deveria ser 
+tá na média de comete esse erro entre o 
+valor absoluto deveria ser o gabarito né 
+ele dá uma previsão aqui até 0.09 de 
+distância para cima ou para baixo desse 
+valor tá esse que significa esse erro no 
+fim das contas no início ele tava dando 
+um erro né quando ele não sabia nada não 
+tinha nenhuma informação tava iniciando 
+
+
+
+com valores aleatórios ele de pelos 
+ibaias da rede né Então essa rede neural 
+aqui quando ela não estava calibrada os 
+pelos e baias dela estavam basicamente 
+randômicos então por isso o erro médio 
+aqui era de 12 de 12 pontos aqui em 
+relação ao valor previsto a valor que 
+deve ser o gabarito e o valor que a 
+gente está aprendendo aí rapidamente ela 
+foi se corrigido corrigindo até chegar 
+nesse erro bem pequeno aqui no final das 
+contas tá então esse mesmo conceito aqui 
+poderia ser aplicado para qualquer outro 
+da j7 a rede neural iria prever os dados 
+de qualquer outra set que tivesse 
+dividido em treino e teto tá então a 
+gente pode ver que é muito simples com 
+pouquíssimas de código a gente pode 
+criar uma rede neural e aqui eu criei 
+uma rede com apenas três neurônios mas 
+podia ser 30 neurônios podia ser 300 
+neurônios atualizar esse parâmetro e a 
+gente vai estar criando uma rede neural 
+que em vez de ter apenas três neurônios 
+aqui vai ter muito mais neurônios tá se 
+a gente fizesse pensar em performance Ah 
+como é que eu posso melhorar o máximo a 
+performance dessa rede neural para 
+cometer o mínimo de erros possível sem 
+chegar em over fitness a gente poderia 
+fazer várias coisas poderia mudar a 
+temperatura da rede e colocar mais de 
+uma camada aqui ambiental ou não a 
+quantidade de neurônios colocar alguma 
+função de regularização né como dropar 
+Alt Então tudo isso são técnicas mais 
+avançadas e os antigos aborda 
+extensivamente aqui no nosso curso de 
+redes neurais e depilani recomendo 
+fortemente dar uma conferida depois um 
+preço super acessível tá é tudo na 
+descrição do vídeo aqui tanto o curso 
+como também o datas 7 dessa aula e o 
+código tá Deixei tudo aqui na descrição 
+vocês podem conferir Espero que tenham 
+gostado desse vídeo Se vocês gostaram 
+deixe seu comentário aqui também embaixo 
+do vídeo e nos vemos em próximas aulas 
+em breve até mais

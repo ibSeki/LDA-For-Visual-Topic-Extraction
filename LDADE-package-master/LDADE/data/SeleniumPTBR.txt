@@ -1,0 +1,145 @@
+﻿E aí pessoal, Tudo beleza? 
+No vídeo de hoje nós vamos desenvolver um web scraping em um marketplace. 
+Para quem nunca ouviu falar o que é Web scraping Web scraping é uma técnica que permite com que a gente 
+raspe dados, ou seja, copie informações de um site para um outro local, como uma planilha ou um banco 
+de dados, por exemplo. 
+E com isso, a gente pode usar essas informações para algum determinado fim. 
+Essa é uma técnica muito utilizada. 
+Essa técnica é muito útil para obter dados de um site que não fornece uma API com esse tipo de fim.  
+No caso, eu vou fazer esse web scraping no site da Amazon. 
+De forma resumida, nós vamos fazer uma consulta automatizada. 
+E com isso a gente vai raspar as informações, a gente vai extrair essas informações referentes a essa 
+consulta, como a descrição dos produtos, os valores, as parcelas, o valor à vista, o valor a prazo.  
+Bom, aqui então eu demonstro como que foi a execução do sistema raspando os dados da página.  
+Beleza. 
+Planilha criada com sucesso. 
+Se a gente atualizar aqui agora, dá um F5 no nosso projeto e cria uma planilha. 
+Vamos abrir ela para ver se tem as informações. 
+E aqui ele então trouxe as informações. 
+A gente tem aqui o nosso texto. 
+Temos o valor, a vista, a quantidade de parcelas, o valor a prazo. 
+E é isso. 
+Agora bora codar isso para ver como que funciona. 
+Então vamos criar um novo projeto Maven. 
+Para isso a gente vai aqui nessa opção de criar um projeto Maven. 
+Vou marcar essa primeira opção para fazer um projeto simples. 
+Vamos em Next. 
+Aqui vou preencher algumas informações aqui no group e vou colocar o scraping. 
+O Artifact age também. 
+Vamos supor preencher isso aqui mesmo. 
+Beleza, vou finalizar aqui. 
+Projeto está sendo criado. 
+Projeto foi criado. 
+Já vou expandir. 
+Vou mudar um pouco a estrutura aqui. 
+Vou remover essas duas pastas. 
+Vou remover também essas de teste. 
+E agora vou criar as novas pastas. 
+Para isso a gente fica com direito em cima do projeto. 
+Vamos em New Source Folder. 
+Criar src. 
+E a resources new novamente. 
+As forças. 
+Agora vamos abrir o nosso arquivo pom.xml. 
+Aqui no pom.xml, onde nós vamos decidir todas as dependências que nosso projeto vai precisar e também 
+como será construído o projeto. 
+Para agilizar eu já deixei o código do build pronto aqui. 
+Então é isso que vai conter na nossa tag Build. 
+Vou deixar na descrição para começar para vocês. 
+Além disso, a gente precisa das nossas dependências também. 
+Vou adicioná las aqui. 
+Então essas serão as nossas dependências. 
+Agora a gente salva e essas dependências vão ser carregadas aqui no nosso projeto.  
+Vou salvar aqui. 
+Ponto. 
+Contabilizando aqui. 
+Pronto, já terminou o build. 
+Com isso, a gente vai ter acesso a algumas bibliotecas externas que a gente vai precisar, como a Selenium,  
+por exemplo. 
+Em conjunto com o Selenium, para o funcionamento do nosso Web scraping, eu vou utilizar um Web Driver 
+Web Driver. 
+Ele permite a gente automatizar o navegador simulando uma interação de usuário. 
+Eu vou deixar o link na descrição do web driver que eu estou utilizando. 
+Vou deixar também do Chrome que também é possível utilizar. 
+Essa é a página para download do Web Driver do Edge. 
+A gente pega aqui a compatível com nosso sistema. 
+E além dela ser compatível com o sistema, a gente tem que escolher a versão que vai de acordo com a  
+
+
+
+versão do nosso navegador. 
+Para ter mais garantia de que esse web driver vai funcionar, a gente precisa baixar a versão que corresponde 
+a mesma versão do nosso navegador. 
+Aqui no driver do Chrome, por exemplo, a última versão é a 114. 
+A gente pode verificar aqui em Definições sobre o Chrome qual a versão que a gente está. 
+No meu caso, eu estou numa versão superior, então esse web driver não vai funcionar. 
+Eu verifiquei a versão do meu Edge, está na mesma versão desse web driver, então vou utilizar a do  
+Edge. 
+Então bora lá. 
+Vamos adicionar esse web driver na pasta Resource. 
+A gente pode simplesmente dar um Control C Control V na onde a gente baixou esse arquivo e colar ele  
+aqui na resources. 
+Então é esse arquivo que a gente vai precisar. 
+E agora vamos implementar a lógica para fazer esse web scraping. 
+Vou remover esses pacotes. 
+Vou adicionar um pacote controller aqui. 
+Também vou adicionar um pacote model. 
+Do contrário, eu vou criar uma classe. 
+Profissional de web scraping. 
+Vou criar um método main para ela. 
+Esse método também vai chamar meu método raspar dados. 
+A. 
+Primeira coisa que a gente precisa fazer aqui é definir o caminho do nosso driver. 
+Então a gente vai definir o caminho do driver. 
+Para isso a gente utiliza a classe System. 
+Então setamos uma propriedade. 
+No caso, vai ser a Web Driver. 
+Ponto Ed. 
+Ponto Driver. 
+E aqui o caminho do arquivo do driver que está em resources. 
+É o nome do arquivo. 
+A gente pode copiar aqui. 
+Vamos colocar a extensão dele e com isso a gente definiu o nosso driver. 
+Vamos instanciar aqui uma classe que vai definir algumas opções para esse navegador que a gente vai  
+abrir. 
+Aqui vamos instanciar uma Edge Options. 
+Nada de Options. 
+É que vou adicionar uma opção que referente ao uso da memória compartilhada pelo navegador. 
+Essa opção aqui ela vai tentar corrigir possíveis erros ou falhas na execução. 
+Ela tenta prevenir. 
+Só que a gente pega nossa options e adiciona. 
+O argumento de no sandbox. 
+Então traço traço no traço sandbox. 
+Além dessa opção, vou adicionar mais uma outra. 
+Agora a gente adicionou algumas opções para tentar evitar que os sites se identifiquem. 
+O nosso Web scrap como um bot. 
+Então vou adicionar aqui também. 
+Agora vamos instanciar um web driver aqui. 
+E utilizar essas opções em New Add Driver. 
+E isso a gente atribui a outros. 
+Desse novo driver, desse novo edge driver. 
+E agora a gente pode tentar dar um get, uma página, Vamos utilizar nosso driver, dá um get passando 
+a URL do site que a gente quer acessar. 
+Executar para ver se consegue pelo menos acessar o site. 
+Aqui. Na verdade, a extensão singular por si só isso está errado. 
+Esse nosso site está sendo aberto. 
+Bom, então a gente já consegue abrir o site. 
+Vou adicionar mais algumas opções aqui. 
+A primeira é para definir o tamanho da janela. 
+E segunda para a gente simular o sistema operacional e o navegador que vai ser utilizado.  
+Eu vou pegar aqui que eu deixei separado já. 
+Então eu vou adicionar esse argumento onde eu defino o sistema operacional e o navegador.  
+Sei que também é uma tática para tentar evitar que o site identifique como um bot. 
+Bom, esse é o código básico que a gente precisa para conseguir acessar a nossa página. 
+Esse vídeo não ficar muito longo, eu vou encerrar por aqui. 
+No próximo vídeo nós vamos de fato então fazer essa raspagem de dados e entender como que é a estrutura 
+
+
+
+do site para a gente poder fazer isso. 
+E então, depois que a gente obter esses dados, a gente vai levar eles para uma planilha. 
+Bom, se você chegou até aqui, deixe seu like, comenta se tiver alguma dúvida ou opinião.  
+Se inscreve para ajudar o canal e sempre receber os vídeos novos. 
+E compartilhe o vídeo com alguém que possa se interessar. 
+É isso aí, pessoal! 
+Até mais!

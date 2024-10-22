@@ -1,0 +1,271 @@
+﻿hello I'm kind of again um now I'm going 
+to teach you quickly how to build a 
+neural network in very few minutes in 
+Gupta notebook and on from Python using 
+range of flow on Keros so I'm going to 
+click on new and choose Python 3 now 
+this is a simple way and this is how to 
+build a neural network no matter how 
+complex network is this is the procedure 
+I'm going to leave now step by step so 
+the first step is to import stench of 
+flow and Karis import range of low and 
+carrot now what are the data set we are 
+going to use we are going to be using a 
+data site available in Karis on these 
+data space is called a fashion and list 
+data set so these are data save that you 
+used to recognize different items of 
+clothes and then you you have a model 
+built to recognize and be able to 
+categorize the clots into sneakers into 
+a carp into a sandal and stops by that 
+so from things of low again I like to 
+remind you to subscribe to my channel 
+I could not subscribe if you have any 
+challenges let me know as well if this 
+has been informative for you like it as 
+well so the first step is to impose 
+times of the one carat and that is what 
+I'm going to do at this point so the 
+second step is to try to import the data 
+from cara's and then load it into a 
+variable some linguistic choose a 
+variable name fashion data is equal to 
+TF dot Kara's dot datasets 
+Emily's now there are other datasets 
+available as well in in the carousel 
+datasets but for now let's use the 
+torchon dataset alright so we have the 
+carrot dataset loaded right here so if I 
+execute this what means taking anything 
+fashion data that is fine alright so at 
+this point in lesson I'm going to do is 
+to load the fashion data naughty these 
+data set contains many many data sites 
+but there is a data set here called the 
+fashion data so I'm going to extract 
+this fashion data 
+split it into training data sites and 
+paste data sites the syntax to do that 
+those is way extreme and white rain so I 
+think this plate is going to be 70% of 
+the training data say and they do the 
+same for basically the same I can 
+remember exactly how to change a second 
+X face and wine-based is equal to 
+partial data dot load dot load data okay 
+so what will happen is that this fashion 
+data I have here is going to load up 
+these data into the training data safe 
+enough of x and y train on the test data 
+side made up of X that's my Y test 
+remember that X train is the attributes 
+while the y train is it classes right 
+a similar similar thing goes for the X 
+test on the white edge so I'm going to 
+
+
+
+run it at this point so it says can't 
+assign operator so let's see we are we 
+having error okay so this is not - but 
+on the score okay so yes Ronnie all 
+right so the data has been splitted up 
+now into testing aside and trained our 
+training data site so you can actually 
+go ahead to look at X test 
+all right space dot shape think that is 
+how to see how many did is develop okay 
+so have 10,000 and for the training 
+dataset I think yeah 60,000 of things so 
+I'm gonna just check extreme boss shape 
+I think there should be 60,000 so now 
+have 60,000 times did I say I'll have 
+60,000 for training data side now this 
+60,000 items is made up of images that 
+are 28 by 28 pixels all right so before 
+we can do an analysis we need to do 
+something called pre-processing 
+pre-processing simply means to prepare 
+the data kind of to adjust it so that is 
+to be able to be used in a neural 
+network or training so what we are going 
+to our jaws at this point easy the X 
+values that 
+the features that we want to use for 
+making predictions so the X train and X 
+bests y is what we are trying to predict 
+so extra them egg slices then pour the 
+egg string we have to divide by 255 and 
+also divide X tastes by 255 so if you 
+multiply 28 by 28 you are going to be 
+getting 255 so okay so 
+so these pre-processing I just did no ok 
+so now this the next step is very very 
+important remember in a top is made up 
+of several layers this time I'm going to 
+be using four layers of the network the 
+first layer is the input layer takes the 
+impute data site then we have the second 
+layer which is an activation layer how 
+the fourth layer which is a dropout 
+layer and the final layer which is the 
+output layer so let me model it so they 
+see how it goes so I'm going to say 
+model is it bottle times of low Cara's 
+dots models dot sequential C fine show 
+me the spelling okay alright so this is 
+the first thing you do and we are going 
+to create everything is going to come in 
+between this place so we are going to 
+specify the four layers inside the 
+sequential function because we are 
+saying that this layers are sequential 
+from the first layer to the last layer 
+they are all connected with two hidden 
+layers inside in between and will impute 
+layer 1 out from there alright so I'm 
+going to define my first layer to be 
+here dot Karis got layers dot plus C and 
+the shape of the infields going to 
+specify in this shape 
+in this shape is equal to 28 by 28 so 
+how this point instead of typing it out 
+I'm going to just paste it from my click 
+
+
+
+bolts because I already have it in my 
+clipboard so I'm going to paste it so 
+now this is the first layer for each of 
+them for instance we have 60,000 items 
+each of them is 28 by 28 
+so we are presenting one item 28 by 28 
+so the first layer how to between 8 120 
+the second layer will be 1 2 128 128 
+nodes then we have the drop out layer to 
+take care of to avoid overfitting and 
+have the last layer which is 10 I'm a 
+pain nodes at the last step is a soft 
+matte layer what all these things mean 
+we are going to be talking about 
+different details a little later this is 
+just a weekend later and better way to 
+build a neural network 
+I'm not running at this point in this 
+place these are this warning you have to 
+ignite all right so the next thing you 
+do after building your model is to 
+optimizing right so to optimize the 
+model you need to simply specify the 
+optimizer and also specify the loss 
+function so to do that you have to 
+compile your model using this thing so 
+model dots compile and specify the 
+optimizer commonly do this optimizer 
+impulse Adam okay so I think it's not 
+adopt adopting the part I can't remember 
+exactly the meaning to forming all this 
+up for me please specify the loss 
+function to be sparse categorical cross 
+entropy passed on this poor victim we 
+think about it this is how to do the 
+neural network network no matter how 
+complex and your networking this is 
+exactly 
+Priscilla ought to build a neural 
+network cross and draw in okay so 
+finally we have the matrix what you're 
+interested in is the accuracy you want 
+improve the accuracy of this model also 
+specify the matrix as you ready so 
+as we are training this model we are 
+monitoring the accuracy to see when it 
+reaches a maximum accuracy so I'm gonna 
+run it at this point so I think our 
+model is perfectly okay now so finally 
+I'm going to use a training bigger site 
+to train my model after which I'll now 
+list I'll not check the accuracy of this 
+model so to train this model using the 
+training data paper simply say model all 
+the things and passing the training data 
+cyclic is extreme my training the easier 
+stuff and also you need to specify how 
+many presentations are you need to give 
+this your your your data into this model 
+that is called f4 f4 so let's say five 
+the more the airport we want to rate the 
+model becomes right so let's train at 
+this point so training actually takes a 
+few seconds so model that speeds extreme 
+Wine Train air box is able to find the 
+thing so it says invalid military times 
+
+
+
+of long lasting fast categorical 
+cross cross and trophy also optimizer is 
+a for Adam what elephant optimizing for 
+other losses airport is passed 
+traffic director cross-entropy okay so I 
+think 
+we Steve so it's given that there are 
+somewhere in Bali document metric passed 
+with a function in terms of reporting 
+metric 
+accuracy okay this is okay so let's the 
+model feed a strain extreme extreme 
+white rain arefox is equal to five 
+invalid argument metric okay 
+actually it is metrics not metric so 
+it's gonna be metrics 
+okay so just wrong 
+[Music] 
+so at this point is going to take a few 
+seconds you can actually see it training 
+and then gradually improving an accuracy 
+for each epoch now I have a pop one of 
+five so for J pop is going to run 
+present this sixty thousand data into 
+the network for each of their program is 
+going to do it for five times so what I 
+want you to be looking at is they 
+leaving how the accuracy and the lost 
+changing so how accuracy of 82 percent 
+is increasing to 83 the loss is reducing 
+and that is what is expected at this 
+point so let's see let's give a few 
+seconds on the theme 
+now I can see that last set is running 
+on the accuracy is telling a maximum of 
+ninety seven point six eight you can see 
+nine seven point six eight is the 
+accuracy the model report shows but we 
+need to actually evaluate the accuracy 
+using the testing site using the test 
+later so I'm going to use model dot 
+evaluate and specify the testing the 
+saying us the best data's sake are xx 
+paste and why Y first 
+so using this place they decide what is 
+a real accuracy of this body often this 
+still be ninety seven percent we don't 
+know yeah so we have minus five point 
+seven five actually it performed better 
+on the testing effect among the training 
+exercise I hope this is not some kind of 
+a fitting for me while we've completed 
+building a neural network and our neural 
+network which is actually this is what 
+the neural network is this model I can 
+easily give it any new data safe and 
+allowed to make a prediction now we are 
+going to be exploring later in the this 
+other series of videos I like to stop 
+here I like to recommend you do this by 
+yourself and alright thank you for 
+viewing remember to hit the subscribe 
+button and also leave me a comment and 
+these have been informative for you

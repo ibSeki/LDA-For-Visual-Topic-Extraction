@@ -1,0 +1,589 @@
+﻿hi everyone welcome to javateki in this 
+tutorial we are going to discuss how to 
+upload an image into a database and then 
+download it back okay all right so this 
+tutorial will be useful if you are 
+implementing any real-world application 
+where you need to store the images and 
+then send them back to the user when 
+they requested so there are multiple way 
+to store the images store image in 
+database or there is another approach 
+you can store the image in file system 
+so in approach one you can directly 
+store image as a binary file to the 
+database where while storing the image 
+you can compress it and while retrieving 
+you can directly decompress it for more 
+secure in approach 2 you will simply 
+store an image to the file system and 
+just store the path of that image or 
+file to the database which is quite 
+simple now you might have a question 
+when to use this approach well let me 
+tell you suppose if you want more secure 
+access and less frequently used images 
+then we should go with the database 
+approach because getting an image from 
+dv involves a lot of steps so definitely 
+it will create a delay however getting 
+an image from a server file system is 
+straightforward and the file system 
+approach is preferred if you want faster 
+access like for web application where 
+the image is used frequently so based on 
+our need we need to choose the correct 
+approach in this example i will 
+demonstrate approach one where will 
+directly store image into the database 
+will just compress it and while 
+retrieving will just decompress it 
+let's quickly create a project from 
+scratch so let's get started 
+[Music] 
+boom 
+[Music] 
+let's jump to the intelligent idea then 
+we'll create a new project click on file 
+new project 
+then click 
+next then i'll just specify the group 
+ideas 
+com.javateki 
+artifact id i will specify something 
+like storage service 
+fine i'll give the same artifact id as 
+my project name will change the jdk 
+version to it 
+then we'll just specify the package name 
+com.javatekkey 
+that's it 
+now click on next 
+i'll just add lombok dependency then 
+i'll just add spring web dependency 
+since we want to integrate with the db i 
+will just add gpa 
+and i will use my sql connector 
+
+
+
+okay 
+i believe that's fine now let me 
+click next finish this 
+it will take few seconds to 
+import the project 
+next let's just create couple of package 
+go to the src main then i'll just create 
+a package called 
+new package i'll name it entity 
+then i'll create another package called 
+service 
+there is a spilling mistake 
+let me refactor it 
+then i will create another one 
+called repository 
+then i can use the main class as a 
+controller that's fine i'm not going to 
+create any package so for okay i need to 
+create another package called util there 
+i will write the logic to compress and 
+decompress the byte array or the image 
+okay i'll just use util 
+now first let me create the entity 
+java class i'll give the entity name as 
+image data or you can give file data 
+anything you can specify okay this is 
+just a class now here i will add couple 
+of field 
+like id name type then the byte array 
+okay so i'll just add id name type and 
+byte array since this is my entity i 
+need to annotate other entity 
+then i need to specify the table 
+i'll give the name of the table as a 
+image data 
+you can give any name here since i am 
+using lombok i can directly use 
+data annotation for getter and setter 
+and i can use all argument constructor 
+then i can use 
+no argument constructor okay 
+that's fine 
+and then i need to define this as a id 
+which will be my primary key 
+and i want this to be auto generated 
+so i can specify here the strategy 
+generation type 
+identity 
+okay 
+now this is the field image data 
+which will be convert my file to the 
+byte array and will store in the dv so 
+since this is my binary format i just 
+need to define one annotation called lob 
+okay so this is how you can perform the 
+this particular operation by byte array 
+so you need to define this annotation if 
+you want to store any binary format in 
+your db 
+and then i can define the column 
+so as part of the column i can define 
+the name of it 
+the name of that column will be same 
+image data 
+and if you want you can specify the 
+length but that is not mandatory you can 
+
+
+
+specify some certain length i'll specify 
+a thousand 
+that's it we are good with our entity 
+so next let's just create our repository 
+class so i will just create a new 
+interface 
+i'll name it storage 
+repository or something like that 
+okay i just need to 
+extends it from jpe repository 
+then i just need to define the type 
+as my entity or the first argument which 
+will be image data 
+then the next type generic should be 
+primary key data type of your primary 
+key so the image data primary will be 
+type long so i just need to specify here 
+data type as a long here 
+then i'll just write one method to find 
+the image by name so what i'll do i'll 
+just write a syntax find by name 
+so i just need to give the 
+file name or image name anything you can 
+specify 
+and what it will return it will just 
+return me the 
+image data 
+fine so better i just need to use the 
+optional 
+it's fine we can directly return the 
+image data but it's good practice to use 
+the 
+optional 
+okay 
+then let's start writing our service so 
+i'll just create a new class 
+java class 
+storage service something like that okay 
+then i'll just annotate here at the red 
+service 
+i just need to inject my repo here so i 
+will just inject using auto air private 
+storage repository 
+i can inject using auto air 
+now i need to write a method to store 
+the image and to retrieve the image from 
+the db 
+so i can write something like public 
+will return me the string 
+upload image 
+i am specifying for upload image but you 
+can change it to the upload file or 
+anything you can specify 
+then i need the object file object so in 
+spring mbc approach the file information 
+you can get from one class that is 
+called multi-part file 
+okay if you observe this came from org 
+spring framework dot web dot multi part 
+so just choose the correct input 
+statement then i can specify file 
+now since i injected my repo i can 
+directly use repository dot safe it will 
+save the image data object and that 
+image data object i need to build 
+actually because i have the file info 
+
+
+
+now i just need to build the entity 
+object 
+so what i can do i can directly use 
+image 
+data dot builder 
+dot 
+this method seems not present so what i 
+need to do i just need to annotate here 
+other builder 
+or else you can define the static name 
+inside all argument constructor and you 
+can build it it's fine any approach you 
+can follow now just use builder 
+then i just need to provide the 
+first field is name right so i will just 
+give the name 
+which will be file 
+dot get original file name 
+fine then the next field 
+is 
+okay let me format your dot type 
+then the type of the file which you are 
+uploading so i can get it from file dot 
+get content type okay 
+then the next field 
+is 
+what is the field let me check image 
+data we have name 
+type id will be auto generated next will 
+be image data 
+so i will just use image data 
+then i need to give the byte array here 
+right 
+i can type file dot get bytes this is 
+fine okay let me build it 
+this is fine this will work 
+but i don't want to keep the hard coded 
+image file or the file information i 
+just want to compress it before i store 
+into the db so what i'll do i'll just 
+write a class new java class i will give 
+something like 
+image 
+utils then here i'll write a method to 
+compress the image while storing into 
+the dv and to decompress the image while 
+retrieving it 
+so let me add these two method 
+you can use the same code i will share 
+the code over the github so you can use 
+the same class okay 
+let me add the input statement 
+fine okay 
+fine we are good with the compress and 
+decompress method this is the utility 
+method even i copied from the google you 
+can use the same method i will share the 
+source code since this is the static i 
+no need to define this as my component i 
+can directly access these two method 
+using the class name 
+so what i'll do before store i just want 
+to 
+compress it so i can use 
+image utils 
+dot 
+
+
+
+compress the image give the 
+byte array so i think we need to handle 
+the exception that's fine 
+now once this will be saved 
+it will give you the it will return with 
+the image data object right so just add 
+that to the local variable 
+then if i i will just simply write if 
+image data 
+not equal to null it means the object is 
+saved in the db correctly and i will 
+just written some string ok 
+file 
+uploaded 
+successfully 
+then i can also define the file name 
+so i can define something like file 
+dot get original file name 
+okay this is what my return statement 
+otherwise just written the 
+null 
+so i'll just add a return statement as a 
+null this is fine for upload the image 
+now next i need to write a method to 
+download the image so what i'll do i'll 
+simply write public 
+will return me the byte array 
+then i will specify the method name 
+download image 
+okay and to get the image i need to give 
+any information so i'll just give image 
+name or file name 
+next based on this file name i will face 
+the image data object from the db then 
+i'll just decompress it and then i'll 
+just return it back 
+so for that what i need to do 
+um repository dot 
+find by name right 
+the method name you define find by name 
+who will return as the optional of image 
+data 
+so just give the file name 
+then it will simply return you the image 
+data object from the db 
+so i'll just image i'll just name it 
+db 
+image data okay now once i get the 
+object from the db i just need to 
+decompress it 
+image utils dot decompress the image 
+fine so i can do something like dbms 
+data dot get 
+dot get image data this is what the 
+actual binary file we have in our object 
+right if you go to the image data this 
+is what the binary information we have 
+so i just need to decompress that 
+particular field 
+now it will return me the 
+object as a byte array so i'll just 
+specify byte array 
+images 
+then i just need to return the same 
+so we are good with the upload image and 
+download image method 
+
+
+
+now i'll just write the controller class 
+so i will just use the main class here i 
+need to annotate at the retraced 
+controller 
+then i will define the two endpoint one 
+for upload the image so that it will 
+store in the dv and the second endpoint 
+will face the image from the db by file 
+name 
+so just write the method public 
+so let's return the response entity 
+and we'll set the value at runtime 
+then method name i'll specify upload 
+image since we are using the multipath 
+file we just need to use the request 
+param 
+okay 
+and we need to define the attribute or 
+key before 
+adding your file okay so for that what i 
+will keep the request from attribute as 
+a 
+anything you can define for me like for 
+this particular example i'm defining 
+image should be key 
+and it this need to be present while 
+uploading your file and you just need to 
+define your multi part file 
+fine 
+so to access the service from controller 
+i need to inject the service fast 
+private 
+storage service 
+i can inject using auto add 
+then next what i need to do i will 
+simply call the method 
+service 
+dot 
+upload image and i will give the file 
+it will return me though okay there is 
+exception you need to handle it either 
+you can handle or you can delegate 
+introduce local variable which will be 
+upload image response now simply i can 
+return the response entity object 
+response entity 
+dot give the status 
+it should be http status okay 
+okay 
+then the body should be 
+the response which i will get from the 
+after upload image 
+that's it i'm just specifying the status 
+code and the response so i'll just use 
+this as a post mapping 
+and then if you want you can define the 
+url for each method but i will just 
+define the url 
+at class level itself so i will just 
+define request mapping 
+give the url 
+image 
+okay now the next method i need to write 
+for download the image 
+let me just write the method 
+public 
+
+
+
+will return me there again response 
+entity 
+of type generic then i'll name it 
+download 
+and give the image name 
+or you can specify the file name 
+then i need to define this as part of 
+request url so i will just use path 
+variable annotation 
+and then i need to define the url gate 
+mapping 
+and i will just define 
+this particular field 
+fine 
+next just call the method from service 
+service dot 
+download the image give the file name 
+it will return you the byte array 
+okay 
+you can name image value or image data 
+anything 
+now this is the byte array and this will 
+return as a image because we are going 
+to upload a image but again you can make 
+it dynamic i will show you how you can 
+do that now i will just use return 
+response entity 
+dot status 
+this should be okay 
+then 
+i just need to define the content type 
+since i know i am going to upload a 
+image file so i can specify the content 
+type as a media type 
+media type 
+dot value of 
+you can define 
+what exact data type you are expecting 
+to return so for me i can specify image 
+dot png if it is a text 
+or any word file or document file you 
+can define plane slash text okay that 
+field also you can make dynamic the way 
+you are giving the file name at runtime 
+or as part of request url you can 
+specify what format you are expecting 
+from your db since i am going to 
+demonstrate with any picture so i 
+specify image slash png 
+then next you just need to define the 
+body but is nothing the byte array what 
+i just want to return 
+that's it 
+so we are good with the controller 
+service and we are created entity repo 
+but since we want to integrate with our 
+db we just need to specify the data 
+source related properties right 
+so let me add it 
+these are the driver class name url 
+username and password and these are 
+hibernate specific um 
+key and value okay 
+so now 
+the port will be run on 9191 that is 
+good now let me start this application i 
+
+
+
+will just run from here 
+it will take few seconds to start 
+so if you observe it started 
+and then it created the table okay image 
+data now let's verify the same in our db 
+so i'll just replace it 
+you can see the table here right so i'll 
+just 
+add a sql editor to check whether there 
+is any entry or not 
+select 
+star from table name is image data 
+just run it there is no data present so 
+far 
+so let's go to the postman and hit this 
+to end point 
+i'll go to the postman 
+so the first endpoint will be http 
+localhost 
+9191 then image 
+let me cross check the url slash image 
+okay 
+and then we need to add a file here so 
+go to the body go to the form data 
+key you need to provide image because 
+this is what the request param is 
+specified right let me copy this 
+go to the postman 
+key should be image under type there is 
+option you can choose the type 
+it should be file 
+now click on select file 
+choose any of the file let me choose any 
+image here 
+let me take any image from here 
+let's see this one okay 
+now click on open 
+so file name photo iphone new hyphen 
+icon 
+now let me send the request okay before 
+that it should be post 
+fine that is what the post mapping 
+now hit the request 
+you can see here file uploaded 
+successfully this is where the file name 
+now let's verify in the db before 
+retrieve it 
+you can see here id is one and the name 
+of the file let me expand this 
+and type slash image slash png and this 
+is what the data in encrypted format or 
+compressed format now let's retrieve it 
+go to the postman and hit the gate api 
+which is slash image then give the image 
+name 
+now send the request 
+you can see the image here right so if 
+you will run this in the browser 
+this will be more visible 
+you can see the image which is there in 
+the dv so while loading it we are just 
+decompress the image and we are 
+returning it back and based on the type 
+we are specifying here 
+so if you check here here we are just 
+decompress the image now let's try to 
+
+
+
+add one more user or one more image 
+go to the 
+this then i will just choose another 
+file 
+you can choose any file guys let me go 
+inside 
+okay this is what my java tech logo i 
+will just upload this 
+send the request 
+it got saved 
+just copy the 
+name of it 
+and check in the db we should found two 
+entry 
+okay the file name is this 
+now go to the postman 
+then just do the get call 
+with the file name 
+okay just send the request 
+you can see the image right now if i'll 
+hit the same from the browser 
+it will be more clear for me 
+okay so this is how you can write your 
+logic to upload and download image to 
+the dv so if you remember there are two 
+approach we discussed the first approach 
+store image in the database that is what 
+we perform and the second approach store 
+image in the file system do let me know 
+in a comment section if you guys are 
+interested to know this approach so that 
+that will be my next video based on your 
+boat 
+that's all about this particular video 
+guys 
+thanks for watching this video 
+meet you soon with a new concept

@@ -1,0 +1,623 @@
+﻿e fala galera na aula de hoje eu vou 
+ensinar vocês a fazer isso daqui Como 
+que você pode controlar sua webcam 
+usando o pai como que a gente vai fazer 
+para o Python integrar com a nossa 
+webcam exibir informação para gente até 
+salvar imagens que a nossa webcam tá 
+vendo caraca como é que a gente faz isso 
+eu vou ensinar Tudo nessa aula daqui e 
+bom para você aprender isso daqui a 
+gente vai precisar usar a biblioteca do 
+Open serve ou tem serventia uma 
+biblioteca incrível que tem uma 
+funcionalidade de bizarras de Geniais 
+mas aqui a gente vai dar meio que uma 
+introdução a ela porque para fazer isso 
+daqui a gente vai ter que usar essa 
+biblioteca que a gente vai começar 
+entendeu Como que essa biblioteca 
+funciona com esse nosso exemplo de 
+controlar a nossa webcam por meio do pai 
+beleza bom e no final da aula a gente 
+vai ter um código pronto que é um código 
+que você sempre vai ter que usar quando 
+você quiser conectar o pai tão com 
+webcam se você veio aqui para esse vídeo 
+que já quer pegar esse código pronto 
+para você 
+e vai dar ele uma parte do seu 
+computador você tem ele para consultar 
+Sempre que precisar Pulse preciso 
+conectar a webcam no meu código em 
+Python o cara código do vira pega lá na 
+parte do seu computador eu deixei aqui 
+embaixo no link para você acesse o link 
+pega esse código para você armazenar ele 
+no seu computador guardo ele direitinho 
+com muito carinho mas eu vou te ensinar 
+passo a passo todo ele e vou embora tamo 
+junto vamos aprender essas magias Então 
+vamos lá para a gente conseguir aprender 
+bem assim aprender bem né você tem que 
+escrever no canal só vai se inscreve no 
+canal e curte o vídeo se não aprende bem 
+se não ficar só felicidade minha boca 
+tava que aprender mesmo e aí para a 
+gente fazer nosso código como que 
+funciona o outro escrever a primeira 
+coisa é você entender como que funciona 
+ouvirem se esse vídeo que você tá vendo 
+na verdade Na verdade ele não é 
+necessariamente um negócio continuar 
+gente tem a ideia de que um vídeo água 
+sem por cento continuar mas na verdade 
+um vídeo nada mais é do que uma junção 
+de várias fotos muito próximas uma das 
+outras então o que que eu tô querendo 
+dizer com 
+o seguinte quando pega meu braço e faço 
+assim que você ver isso de uma forma 
+contínua no vídeo na verdade que tá 
+acontecendo é que tá saindo tá tendo uma 
+foto assim uma foto assim uma foto assim 
+uma foto assim uma foto assim uma foto 
+assim uma foto assim uma foto assim e aí 
+essas fotos todas elas passarem muito 
+
+
+
+rápido pelo seu olho você acha que só 
+tem um vídeo um negócio constante por 
+que que eu tô explicando isso tudo é 
+para parece que eu sou Bamba da Ótica 
+não teu sogro ele isso aqui é porque o 
+gol pensei ver ele trabalha exatamente 
+dessa maneira ele enxerga o nosso vídeo 
+aberta de Enxergar aquele nosso vídeo 
+como um arquivo único constante ele 
+quebra aquele nosso vídeo em várias 
+fotos em vários frames cada print desse 
+cada foto dessa a gente chama de um 
+frame Por isso que às vezes você vê acha 
+que é 30 FPS só que é 60fps que que é 
+isso 30 frames por segundo 60 frames por 
+segundo Então é isso tem 60 fotos 
+passando na sua vista em um segundo tem 
+30 
+tô passando na sua vista em um segundo e 
+o opencv a funciona exatamente dessa 
+maneira um frame para o opencv nada mais 
+é do que uma foto dessa um print um 
+print do que a sua amiga tá vendo um 
+print da sua tela e assim vai beleza bom 
+pra gente poder usar o open cerveja aqui 
+instalar duas bibliotecas aqui ou não 
+pai e o opencv beleza e aí você pode 
+usar qualquer editor de código em Python 
+que você queira então vou chegar aqui ó 
+no terminal e vou rodar aqui ó 
+a PIP install não vai se você não tiver 
+instalado o estágio tá se caso você já 
+tenha instalado pode para a instalação 
+do meu pai e o pipi não estou opencv 
+traz o pai também é importante da tua 
+bem ser ver ele existe para várias 
+linguagens using opencv traz o Python 
+que vai ser o que a gente precisa 
+instalar aqui para ele funcionar no 
+bumbum beleza bom no meu caso eu tava 
+instalado no seu caso ele vai instalar 
+show de bom feito isso agora a gente vai 
+ter que importar eu pensei ver ele para 
+importar Import cv2 isso aqui em porta 
+opencv para gente então vou bem cê vê na 
+hora de importar você importa ele como 
+você vê dois você vai vir alguns códigos 
+da internet pessoal fazendo assim ó é 
+escrever porque porque eu aparecer ver 
+já teve diferentes versões E aí a versão 
+que a gente usa essa aqui você vê dois 
+só que aí para padronizar algumas 
+pessoas fazem isso aqui ó é escrever eu 
+não vou fazer isso eu vou só importar os 
+servidores e pronto acabou show de bola 
+Vamos fazer a nossa conexão 
+o livro lugar como que eu faço para 
+conectar o o pen se ver na webcam do meu 
+computador é uma linha de código é muito 
+simples você chega e faz assim ó se faz 
+assim webcam nyah 
+o CV 2.0 video capture vídeo rapper 
+beleza e aqui entre parentes você passa 
+o parametro zero beleza e isso daqui vai 
+permitir confirmou que você vê se 
+conecte a webcam do seu computador e 
+
+
+
+pegue essa informação da webcam do seu 
+computador se você rodar o seu código 
+ele não vai fazer nada ele não vai Nossa 
+já funcionou não olha só sabia que ele 
+vai demorar um pouquinho ele não vai dar 
+nenhum resultado aqui e vai subir um 
+aviso para gente mas não é um erro É só 
+um aviso então você não deu erro nenhum 
+significa que ele conseguiu criar essa 
+conexão só que apesar de ele ter 
+conseguido criar essa conexão Ainda não 
+fez nada por quê Porque a gente conectar 
+o nosso código em Python com webcam não 
+significa que a gente está pegando as 
+informações do orica gente conector 
+agora que a gente conector primeiro a 
+gente tem que ver se a conexão foi bem 
+sucedida se essa conexão foi bem 
+sucedida tem um método chamado webcam né 
+que foi essa variável que a gente acabou 
+de criar. PIS 
+é o pênis isso daqui vai me retornar a 
+verdadeiro então veio assim eu consegui 
+fazer a minha conexão com a minha webcam 
+se American tá conectada foi Deu tudo 
+certo eu vou perguntar aqui conector 
+beleza só para saber se essa conexão 
+funcionou não porque não deu nenhum e 
+Rony Mas pode ser que não ter conseguido 
+conectar para você verificar se essa 
+conexão funcionou e a sua webcam tá 
+aberta para você rodar você faz isso se 
+a sua webcam tá aberta tá funcionando tá 
+conectada 30 conector perguntou conector 
+Então tá funcionando agora o que que a 
+gente tem que fazer se a nossa webcam tá 
+conectada se ele conseguiu fazer isso a 
+gente tem que pegar a informação que vem 
+dessa webcam e como que a gente pega 
+informação que vem da webcam com webcam. 
+Rede webcam. Me lê a informação para 
+gente que tá na webcam só que deixa eu 
+te mostrar o que que essa informação vão 
+printar webcam. Beach para gente 
+O que é esse cara aqui olha lá ele vai 
+conectar vai verificar se houve tanto 
+assim o conectar 
+e ele vai perguntar o ele tem um outro e 
+se você nesse meio tempo ficar prestando 
+atenção na sua webcam você vai ver que a 
+sua ela se ela tem aquelas luzinhas que 
+ascende né ela vai acender rapidinho e 
+vai pagar e aí ele vai te dar essa 
+resposta aqui então preciso dessas duas 
+coisas na resposta dele e no fato de que 
+a minha webcam ligou e apagou só 
+brincando não tem luzinha saiba com a 
+sua amiga fez isso ela ligou e apagou Tá 
+é para me dar duas informações aqui ele 
+me dá um full e me dá uma rave digam tem 
+escola lá no ar bem gigantesco o que que 
+é isso daqui primeiro o seguinte esse 
+truque daqui nada mais é do que se ele 
+conseguiu ou não conseguiu ler o que 
+tava na sua bbcan pegar um friend da 
+subcampo pegar aquela Imagem Beleza 
+
+
+
+então então de dados e informações ele 
+dá uma tupla para gente com duas 
+informações primeira informação se 
+aquilo dali funcionou não meio que uma 
+validação segunda informação na lista 
+mas que lista é essa essa lista nada 
+mais é do que o frango da sua tela só 
+que o o pen 
+e ele lê o frango da sua tela que ele 
+enxerga sua tela como uma lista de 
+várias listas Tá vendo como se fosse uma 
+matriz zona mesmo e repara cada listas 
+individual tem três valores o valor de 
+vermelho verde e azul céu Red Green blue 
+yellow RGB não sei se você já reparou 
+mas todas as cores que você tem o seu 
+computador elas são codificadas em RGB 
+que a quantidade de vermelho quantidade 
+de verde quantidade de azul e o que que 
+essa lista aqui essa lista é sua tela é 
+como se fosse um print da sua tela mas 
+era um print da sua tela em RGB ou seja 
+ele pega a cada cada lista dessa daqui é 
+um pixel da sua tela então ele pega cada 
+Pixel da sua tela cara pixon e coloca 
+ele no formato RGB Então é só o primeiro 
+Pixel da minha tela tinha 176 de 
+vermelho 165 de verde e 167 de azul 
+recebe primeiro Pixel o segundo Pixel 
+tinha 
+é o terceiro Pixel tinha está aqui e 
+aqui tem uma lista com todos os Picos 
+então isso aqui nada mais é do que um 
+frango um print da sua tela em formato 
+de uma lista do opencv que é isso que eu 
+perseverei e termos práticos para o 
+nosso exemplo de hoje você não vai usar 
+muito essa lista assim como uma lista 
+mesmo a gente só vai visualizar ela como 
+uma imagem tá tudo bem mas é legal você 
+sabe isso porque sempre que você for 
+trabalhar com opencv o open CV ele nem 
+as suas informações dessa maneira Beleza 
+então quê que eu vou fazer aqui esse 
+webcam midi me dá para uma resposta 
+essas duas informações eu vou armazenar 
+essas duas informações e variáveis eu 
+vou botar assim ó vão pagar esse print 
+vou botar a validação deve funcionou se 
+não funcionou e o frame vão ser o meu 
+webcam. Isso meu época. Vídeo me dá duas 
+informações Osho aqui ó a validação e 
+frame o print da minha tela beleza que 
+ele armazena em formato de lista eu só 
+queria explicar como que ele armazena a 
+informação para vocês mas continua sendo 
+um frame um print 
+Ah então tá lá se você rodar o código 
+agora e não vai exibir essa imagem para 
+gente você viu Ele só perguntou essas 
+informações aqui então aqui que a gente 
+tem que fazer agora é para o seguinte 
+lembra que eu falei para vocês que a 
+gente rodou esse código ele ligou Nossa 
+câmera desligou rapidinho então ele pega 
+o frame e acaba o nosso código mas eu 
+
+
+
+não quero que ele Pegue um frame acaba o 
+nosso código eu quero que ele fique 
+lendo a minha webcam como um vídeo que 
+ele pega e freio e depois o fêmur depois 
+outro frame depois outro frente depois 
+eu tô frio assim até eu mandar ele parar 
+só que a gente tem que fazer tem que 
+fazer um loop tem que mandar ele pegar 
+um frame depois pegar o outro frame 
+depois pegar os frame depois pegar outro 
+trem e assim vai então a gente tem que 
+botar essa linha de código aqui dentro 
+de um Loop Infinito mesmo 
+E aí tem duas opções aqui tem gente que 
+aqui faz assim o ar e outro e coloca 
+essa linha de código aqui 
+de dentro do iOS 11 
+e eu prefiro fazer assim para o raio 
+validação por quê Porque o alho 
+validação que ele só vai rodar se ele 
+tiver conseguindo ler a primeira 
+informação da minha amiga beleza e 
+depois essa própria linha de código ele 
+tá sempre mesmo a informação da minha 
+webcam então se algum momento aconteceu 
+algum problema ali no meio do caminho em 
+que ele não consiga ler informação da 
+minha webcam eles influente encerra o 
+meu loop é meio que uma dupla segurança 
+aqui porque dentro desse código a gente 
+vai ter que criar alguma forma dele 
+interrompesse Loop Infinito daqui alguma 
+forma dele parar de ler a minha webcam 
+do tipo ah ele tá lendo a linha 
+americana além do bonitinho e tal quando 
+eu apertar o Ask do meu teclado fecha 
+tudo e para de ver vai ter que criar 
+essa Maria a gente vai ver como que a 
+gente vai criar isso Beleza tá Então 
+nesse momento daqui se você rodar o seu 
+código o que que vai acontecer você 
+imagina por ele vai ligar a webcam e aí 
+vai rodar já vai estar tudo pronto não 
+porque olha lá 
+o único até aquela luzinha que ascende 
+você vai ver com a sua amiga agora vai 
+ficar o tempo todo aceso que você tá num 
+Loop Infinito ela tá o tempo todo acesa 
+então só tempo todo olhando essa 
+informação por trás pelo código ele tá 
+conseguindo ver a sua webcam tá lendo 
+informação dela e tá rodando ele tá 
+fazendo uma boa só que ele não tá 
+mostrando pra gente a imagem que ele tá 
+rodando 
+E por quê Porque a gente não mandou ele 
+mostrar a gente só vou pausar aqui nosso 
+código vou pausar o stop aqui a gente 
+não vai mostrar a gente só mandou ele 
+ler então se você falou do líder que ele 
+vai dar aquela informação e acabou mas 
+você quer que ele também mostra essa 
+informação para esse frame que ele tá 
+vendo essa imagem que ele tá vendo eu 
+quero que ele mostra essa imagem para 
+mim como que eu faço isso da seguinte 
+
+
+
+maneira se vê: e m show me mostra uma 
+imagem e e me show E aí não ia me show 
+né nesse parâmetro desse método e ele 
+show pessoas para ir duas informações 
+ele vai criar uma janela para você aí 
+você passa o título da janela que você 
+quer aquele coloque aí pode colocar o 
+texto que você quiser vou botar o vídeo 
+da webcam e qual imagem você quer que 
+exiba ali dentro Eu quero que exiba um 
+frame para mim beleza eu vou botar aqui 
+on hang-on 
+a beleza E esse a gente com 2 código 
+agora vai aparecer que funcionou mas vai 
+aparecer aqui no carrega Como assim vida 
+namoradinha olha só que que vai 
+acontecer rodei Olha lá meu canto tá 
+ligado ele aparece essa janela vídeo da 
+webcam mas tá vendo que ele tá aqui com 
+a rodinha o tempo todo como se ele não 
+estivesse conseguindo carregar a imagem 
+que que tá acontecendo aqui na verdade 
+na verdade está carregando muito imagem 
+muito rápido porque porque ela isso aqui 
+de um Stop ele nosso código também isso 
+aqui é um Loop Infinito então ele levou 
+as imagens exibem margem para gente leva 
+as imagem exibem uma imagem para gente 
+mas ele vai fazer isso tipo metralhadora 
+rapidão rapidão rapidão rapidão então 
+ele não tá nem dando o tempo da gente vê 
+a imagem ele meio que tá carregando a 
+imagem Já carregou Já carregou o teu 
+carregador E aí acaba a gente na prática 
+não usei nada o nosso pode Vou ficar 
+parecendo que tá travado então o que que 
+a gente vai ter que fazer a gente vai 
+ter que chegar aqui e falar o computador 
+espera um milissegundo 2 milissegundos 
+a exibir a imagem deixa imagem ali 12 
+mil e segundos lembra que eu falei para 
+vocês a normalmente um vídeo que a gente 
+vê é 30 FPS 60 FPS E aí tem outros 
+valores também dfs existentes Mas é para 
+São 30 imagens por segundo então cada 
+imagem fica ali durante 2 milissegundos 
+é isso que é um 30fps no 60fps São 60 
+imagens por segundo então cada imagem 
+fica ali por um milissegundo no caso 
+aqui é mas ele tá ficando com nenhum 
+tempo para gente para o nosso olho 
+consegui visualizar alguma coisa a gente 
+tem que mandar ele Cara espera um mês 
+segundo dois meses segundos cinco 
+milissegundos que seja Beleza então 
+vamos fazer isso só que o método que faz 
+isso cabou pense bem incrível ele tem um 
+método que faz isso que ele também já 
+faz outra coisa para gente é o que é o 
+seguinte eu vou escrever aqui ó aqui vai 
+ser o CV 2.1 leite que 
+o que é que você passa por exemplo cinco 
+milissegundos que o dele que ele vai dar 
+que que esse método faz para gente além 
+dele esperar esses me de segundos né da 
+nossa águia poder carregar e tudo mais 
+
+
+
+ele armazena informação de teclas que 
+você tá clicando no seu teclado dentro 
+dessa variável que ou seja se você 
+apertar a tecla esc essa essa variável 
+que vai ter dentro dela a informação de 
+que você apertou até Quest Então esse a 
+linha de costa ela faz duas coisas para 
+gente é lá faz a nossa imagem esperar 
+onde milissegundos E além disso pra 
+gente conseguir visualizar ela e além 
+disso armazena dentro da variável que 
+até que você apertou no teclado qual é a 
+vantagem disso a vantagem disso é que 
+agora eu posso chegar aqui embaixo 
+escrever algo do tipo assim se a tecla 
+que você apertou foi a tecla esc então 
+para o código então para tudo fecha 
+Nossa janela beleza é isso que a gente 
+vai querer fazer nós vamos fazer isso 
+não a gente já já vai fazer isso mas eu 
+tenho uma 
+o código rodando e a importância da 
+gente fazer esse interromper ele por 
+meio do que só roda aí nós código aí tá 
+lá olha lá já aparece para mim não é 
+porque hoje eu tava lá se já tá me vendo 
+aqui na tela do computador e também na 
+edição do vídeo e tudo mais então agora 
+cara que legal agora eu já tá aparecendo 
+Você já viu você vem que ele é meio um 
+pouquinho mais travado do que o vídeo 
+normal que você tá me vendo aqui ó tá 
+vendo ele é um pouquinho mais travado 
+por que que ele um pouquinho mais 
+travado porque eu vejo normal você tá me 
+vendo provamento você tá me vendo em 30 
+60 FPS esse daqui só esperando 5 
+milisegundos a cada imagem Então tem que 
+fazer a conta aí a 60 / 5 vai dar o que 
+vai dar 16 então está vendo 16 imagens 
+16 DSTS ou FPS pequeno 
+é só que é para o seguinte sempre que 
+você Fechar essa janela olha só você 
+fecha a janela e ela abre de novo ele só 
+para o código seu clicar no stop porque 
+isso porque é para isso daqui não cria 
+uma imagem da janela como imagem já tá 
+criada ele só substitui a imagem criada 
+anteriormente quando a imagem não está 
+criada você fecha janela ele queria 
+imaginou Você fecha janela de climagem 
+de novo você fecha janela ele queria 
+imagem de novo e fica fazendo isso até 
+parar Então qual é a vantagem desse que 
+é que a forma a gente vai criar uma 
+forma da gente interrompesse nosso 
+código vou falar assim ó if 
+É sim for igual a 27 Lira 27 porque 27 
+porque 20 esse que ele armazena aqui é 
+um número para as teclas do seu teclado 
+é um número cada até que eu tenho um 
+número específico tecla um dois três 27 
+a tecla 27 é a tecla Este é o Eric 
+Beleza então se você apertou Oeste que 
+que eu quero fazer eu vou dar um jeito 
+eu vou interromper esse nosso loop 
+
+
+
+infinito agora repara assim agora se eu 
+rodar o nosso código Olha lá rolei 
+código 
+é parararara pararara ele vai carregar 
+vai abrir webcam tô mexendo tá mexendo 
+seu clicar no x não vai funcionar agora 
+se eu clicar no Oeste Olha lá po acabou 
+Ele interrompe o código para mim ele dá 
+um toque beleza isso daqui interrompe 
+para gente e tocar essencialmente já 
+aprendeu conectar na sua amiga mas agora 
+o que que você pode fazer com essa 
+webcam A pois é um negócio legal que 
+você pode fazer pegar por exemplo a 
+última imagem eu quero tirar uma foto 
+Quero tirar uma foto com ele apertar esc 
+outra metade ficar pedindo uma foto ou 
+seja eu quero que eles salve o último 
+frame que eu fiquei poder ficar no frame 
+eu quero apertar esc E aí ele salvar 
+aquele fremio aquela foto aquela última 
+foto então eu quero salvar esse frango 
+aqui essa imagem como que eu faço para 
+salvar essa imagem fora do seu horário 
+aí você pode colocar dentro do iphan 
+fora daí fica a seu critério eu vou 
+botar dentro do IF mas fora do raio a 
+gente faz assim ó você vê: e emme White 
+tá vendo e m show exibe uma imagem para 
+in III Raid salva cria um arquivo de uma 
+imagem pra gente e aí você dá passa aqui 
+para ele dois parâmetros da parâmetro 
+frente qual o nome da imagem que você 
+quer me botar aqui uma foto livro tá 
+vendo foto ir ponto.png e aí bota a 
+extensão também tá. Jpg ponto.png tudo 
+mais e o segundo parâmetro é qual é a 
+imagem que você quer salvar a imagem que 
+eu quero salvar e a variável frente a 
+gente pegou a variável frente foi o 
+último frame do nosso vídeo então isso 
+daqui já vai criar uma imagem para a 
+gente E além disso você tem que fazer 
+duas coisas aqui quais são essas duas 
+coisas que você tem que fazer você tem 
+que rodar esses dois códigos aqui ó eu 
+vou botar eles no final de tudo eu vou 
+botar webcam. Eles e cê vê dois. Destrói 
+e ao Windows o que que esses dois caras 
+aqui fazem basicamente Olha lá webcam. 
+Isso é o seguinte da mesma forma que 
+quando você trabalha com o arquivo no 
+Python quando trabalho com o arquivo no 
+pai então você tem que abrir o arquivo e 
+no final você tem que fechar aquele 
+aquilo se você não fechar aquele aqui 
+não escrever um comando para fechar 
+aquele arquivo que vai acontecer aqui 
+entre uma execução e outra do seu código 
+aquele aqui como é que pode ficar em 
+aberto no fundo bem sem você tá vendo É 
+bem como sua distância do arquivo 
+tivesse aberto dá uma confusão danada 
+isso também serve para webcam uma vez e 
+criando a conexão com a web cam você tem 
+que finalizar conexão com webcam e se 
+
+
+
+vai ficar um deles é isso está 
+finalizando a conexão cola de Campo por 
+quê Porque isso garante aqui se você for 
+rodar moto código um outro programa do 
+seu computador que vai usar a webcam aí 
+que já está finalizado e ele vai 
+conseguir fazer essa conexão beleza E 
+esse servidores destrói o Windows é para 
+garantir que essa imagem aqui ó que ele 
+exibe para gente ir na janela que essa 
+imagem que ele abriu ali vai ser fechado 
+e é isso é para fechar aquela janela que 
+ele abriu pra gente então é isso vamos 
+rodar agora pode botar pronto a gente 
+salva essa imagem e libera Nossa webcam 
+e Fecha todas as janelas que ficam 
+abertas né se tinha alguma janela aberta 
+fecha ela para mim que é isso aqui que 
+tá escrito então a frente eu vou dar 
+esse código agora olha que vai acontecer 
+rodeio código ele vai criar conexão com 
+a minha webcam vai abrir agora que uma 
+janela quase câmbio e eu tô a mexendo 
+deixando aí eu vou terminar assim ó com 
+25 para cima assim vou terminar assim tá 
+vendo tem de cinco doméstica 
+e pronto agora se você olhar ele que não 
+o arquivo chamado foto Lira aqui ó 
+dentro do Pai te amo tá vendo se você 
+abriu para lá me imagem foi doidinho que 
+eu fiz para cima lá bonitinho tá não com 
+a minha cara esquisita e não sei o que 
+salvou aquela imagem pronto com você vê: 
+nele vai beleza bom galera então aula 
+concluída esse era meu objetivo cola de 
+hoje ensinar vocês a conectar em qual 
+ele e esse código que vocês têm aqui é o 
+código sempre se quiserem conectar com a 
+webcam se vou ter que fazer isso aqui a 
+diferença é que talvez aqui dentro desse 
+Uai eu só queria fazer alguma coisa 
+talvez você queira que era uma condição 
+por Florence dentro do freio Existe 
+algum objeto faz uma coisa faz outra 
+coisa e assim vai dentro desse Loop 
+Infinito mas a estrutura vai ser sempre 
+essa estrutura sempre no final você vai 
+ter que finalizar esses caras e aqui no 
+meio do caminho a gente aprendeu ainda a 
+salvar uma imagem está na webcam ou uma 
+imagem qualquer se deixa você tem esse 
+parâmetro da imagem aqui numa variável 
+no arquivo 
+de dentro do pai estão usando a 
+biblioteca do Open cerveja biblioteca 
+incrível tem muita coisa de alguém que 
+você realmente e me diz aí o que que 
+você achou dessa ó curtiu que aprender 
+mais sobre coisas do tipo deixa no 
+comentário para mim que eu preciso saber 
+isso se você chegou até o final ainda 
+assim se inscrever no canal e curtir o 
+vídeo você tem obrigação agora que acha 
+quer ver o curtir o vídeo Beleza 
+então vai lá não deixa de fazer isso que 
+ajuda demais a gente é de graça para 
+
+
+
+você então vai lá só faz um grande 
+abraço e te beijo na

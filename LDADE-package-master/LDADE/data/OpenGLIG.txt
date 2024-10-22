@@ -1,0 +1,532 @@
+﻿hey what's going on everybody it's your 
+bro here hope you're doing well 
+and in this video i'm going to teach you 
+guys how we can paint some simple 
+2d graphics in java so sit back relax 
+and enjoy the show 
+if you find this video helpful please 
+remember to like 
+comment and subscribe your support will 
+help keep this channel running 
+okay everybody let's create some 2d 
+graphics but before we begin here's my 
+setup that i have so far 
+i have two classes a class called main 
+that just contains my main method 
+and an instance of my other class called 
+my frame 
+and this class my frame extends jframe 
+so it behaves exactly like a jframe 
+within the constructor for my frame i 
+have this dot set default close 
+operation jframe exit on close 
+i'm using a size of 500x500 this dot set 
+location relative to 
+null this allows the frame to appear in 
+the middle of the computer screen and 
+not just the top left corner 
+and lastly this.visible is set to true 
+now i'm on oracle's website looking up 
+some java documentation 
+and for the component class the 
+component class is a parent class to 
+many of the java gui components that we 
+work with 
+there is a paint method underneath the 
+component class and this has 
+a parameter of graphics g it takes a 
+graphics object 
+and what this paint method does is that 
+this method is called when the contents 
+of the component should be painted 
+such as when the component is first 
+being shown 
+so most if not all gui components 
+actually have 
+component somewhere as a parent class 
+somewhere down the line 
+and with our my frame class we're going 
+to be overriding 
+this paint method and be drawing some 
+stuff so within 
+this my frame class let's define and 
+declare what we want this paint method 
+to do 
+so we'll say public void 
+paint and this has a parameter of 
+graphics 
+a graphics object and we'll just call 
+this graphics 
+g so g is going to be our graphics 
+object 
+and this paint method is actually called 
+behind the scenes it's invoked 
+automatically when we instantiate 
+a component such as a j frame so we do 
+not need to explicitly invoke 
+
+
+
+this paint method it'll do so for us 
+behind the scenes 
+now with graphics it's somewhat outdated 
+we're actually better off using 
+something called 
+graphics 2d which is an updated version 
+graphics 2d is a child class or subclass 
+of the graphics class and what we're 
+going to be doing 
+is casting our graphics g as a 2d 
+graphic 
+so for the very first line after we call 
+the paint method 
+we're going to cast this graphics g 
+object as 
+a graphics 2d object so let's say 
+graphics 2d and let's call this 
+instance g to d 
+equals g and then we need to cast this 
+so within parenthesis we're going to add 
+the cast 
+graphics to d 
+now this graphics 2d object has more 
+options available to us 
+as to what we can draw and do compared 
+to a graphics 
+g object now let's attempt to draw a few 
+things 
+so there's a few methods available to us 
+to do that so let's say 
+g to d dot and there are all sorts of 
+things that we can draw 
+let's begin by drawing a simple line so 
+that's 
+dot draw line 
+and there are a few parameters a 
+starting point x and y 
+all i guess starting coordinates and 
+then ending coordinates of where you 
+want this line to end 
+so if our frame is 500 by 500 
+let's draw a line from the top left 
+corner to the bottom right 
+and the coordinates for the top left 
+corner of the frame would be where 
+x is 0 and y is 0 and since the size of 
+the frame is 500 by 500 
+the bottom right corner would be where x 
+is 500 
+and y is 500 so there's just going to be 
+one problem with this 
+this will draw a line however it's not 
+necessarily 
+in the starting position that we thought 
+it would be so 
+here's the issue with our frame the size 
+of the frame also includes this window 
+bar at the top 
+so with the starting coordinate it's 
+actually starting in the top left of the 
+window 
+and this window bar is somewhat 
+overlapping 
+our graphics area in which we can 
+display so it may be better for us if we 
+were to create a panel 
+
+
+
+draw on the panel and then add the panel 
+to the frame 
+so let's actually create a class called 
+my panel which will extend 
+jpanel so let's create one more class 
+and then we're going to draw on this 
+panel so file 
+new class we'll call this my 
+panel and then click finish my panel 
+extends jpanel so it will behave exactly 
+like 
+a jpanel and then we'll need to import 
+something as well 
+and then we'll need a constructor for my 
+panel 
+okay now going back to my frame we're 
+going to change a few things 
+we're going to get rid of this paint 
+method and since 
+a panel a jpanel is considered a 
+component 
+we can actually call the paint method 
+so take the paint method from my frame 
+and paste it within 
+my panel and then we'll want to create 
+an instance of my panel 
+so let's declare this outside of the 
+constructor 
+my panel and we'll call this panel and 
+then instantiate it within the 
+constructor 
+panel equals new my 
+panel and we'll need to add 
+this panel to the frame so let's do that 
+right about here this dot add 
+we're adding our panel 
+and we no longer need a size and we 
+should probably pack this 
+so after you add all the components that 
+you want follow this with 
+this dot pack so this should 
+fit nicely now what's going to happen 
+is that this is going to create a panel 
+for us and then we should probably set a 
+size for this panel too before i forget 
+this dot set preferred 
+size new dimension 
+and we'll make this 500 by 500 
+what ends up happening now is that this 
+panel is fully visible 
+before we were drawing directly on the 
+frame and this window bar at the top is 
+part of the frame 
+so it was overlapping a portion of the 
+visible area 
+so now this entire panel is fully 
+visible to us 
+let's head back to our my panel class 
+and draw a few things within the paint 
+method 
+so we drew one line let's change the 
+width 
+of the line this is kind of like the 
+stroke 
+the brush size that we're using so we 
+can actually change that 
+
+
+
+g2d dot set 
+there's actually all sorts of things 
+that you can set but we're looking for 
+set stroke and we can pass in a new 
+basic stroke and then we set the size 
+of the stroke so if we want this to be 5 
+pixels we'll pass 
+in 5 and what we get is an extra thick 
+line and it's not just 
+a 1 pixel brush stroke you can also 
+change the color too 
+so g to d and 
+this would be dot set paint 
+and you pass in a color so let's say we 
+want this line to be 
+blue color dot blue you can also pass in 
+uh some hex values or some rgb values 
+too 
+but we'll just stick with simple colors 
+so now we have a 
+blue line going across the screen let's 
+draw a few other shapes 
+for now i'm just going to comment out 
+this line where we 
+draw a line let's draw a rectangle 
+we type in the name of our 2d graphic 
+which is g2d 
+dot draw and there's all sorts of things 
+that we can draw let's draw a rectangle 
+and this is draw rect like get rekt 
+so we place starting coordinates as 
+arguments as well as a width and height 
+for this rectangle 
+let's say we want this to begin in the 
+top left corner of the panel 
+so that would be where x is zero y is 
+zero and let's make this one hundred by 
+two hundred if you want this to be a 
+square you can make this one hundred by 
+one hundred 
+so now we have a rectangle on our panel 
+and it retains that blue color that we 
+set as well as the stroke size 
+that's kind of like the line thickness 
+so if you need to draw 
+another graphic you can actually set the 
+paint color to something else before you 
+actually draw this 
+let's set this to pink i don't know why 
+i just picked a random color 
+and now we have a pink rectangle and if 
+you need to 
+fill this that's actually a different 
+method 
+that would be fill rect so that would be 
+g2d dot fill and you can fill all sorts 
+of shapes here 
+we're looking for fill rect and we'll 
+keep the same coordinates 
+so 0 0 then 100 and 200 for the height 
+and here's our rectangle in the top left 
+corner of the screen and it is 
+completely filled 
+one important thing that you should keep 
+in mind and know is that 
+as you're drawing graphics any more 
+
+
+
+recently created graphics 
+are going to overlap any previously 
+created ones 
+so if we were to draw this line and then 
+draw our rectangle 
+the rectangle is going to overlap this 
+line 
+kind of like there's a z-axis so 
+anything that is more recently created 
+is going to overlap any previous items 
+or graphics 
+let's draw a circle next and i'll get 
+rid of our rectangle that we have 
+as well as this line we'll just turn 
+these into comments if you need to draw 
+a circle 
+you use either draw or fill oval 
+g2d dot let's draw an oval first 
+so this will be just an outline draw 
+oval 
+now the coordinates are the top left of 
+the drawable area for this oval 
+so if we want this to start in the top 
+left corner of the panel that would be 
+where x is zero 
+y is zero and let's make the width 100 
+and the height 
+100 i suppose and we should have a 
+actually let's change the color to g2d 
+set paint let's make this 
+i guess orange kind of like it's the sun 
+i suppose yellow would work too 
+we'll keep the same stroke size of five 
+and we have a orange outline of a circle 
+or oval and if you need to fill this in 
+you would instead 
+use fill oval which will do 
+g2d dot fill 
+and we're looking for oval and we'll 
+place this at the same coordinates 
+same width and height too 
+and we have an orange 
+circle or oval in the top left corner of 
+our panel 
+okay this next one is a little tricky 
+this is 
+draw arc 
+and let's set a color so we're actually 
+going to use draw arc to draw 
+a pokeball for practice g2d 
+dot let's draw arc first then fill arc 
+draw arc and there's a few more 
+arguments 
+starting coordinates a width and a 
+height a starting 
+angle and an arc angle so we'll place 
+this in the top left corner just to keep 
+things simple 
+for the width let's make this 100 and 
+the height 
+100 so for the starting angle let's set 
+this to zero 
+and the arc angle will make this 180. so 
+this will be a half circle 
+because it's 180 degrees 
+now if we were to change the starting 
+
+
+
+angle let's say 180 
+it's going to flip counterclockwise 
+let's practice drawing a pokeball so 
+let's set the paint 
+to red for the top i would say 
+hemisphere 
+and set this to zero and we're going to 
+use fill arc 
+and we'll get rid of draw arc actually 
+we should uh get rid of the stroke size 
+too 
+all right so we should have a red half 
+circle 
+and the bottom is going to be white but 
+i'm not sure how well this is going to 
+display 
+so let's set the paint after we fill the 
+first arc 
+and color this white color.white 
+and we'll have the starting angle be 180 
+but we'll keep 
+the full extent of the arc at 180 so 
+it's another half circle 
+and we should have a pokeball or at 
+least something that 
+slightly resembles a pokeball i would 
+say that's close enough since we're just 
+beginners at this 
+all right we can also draw a triangle 
+and for that we'll actually use a method 
+called draw 
+or fill polygon and we actually have to 
+pass in an array of coordinates 
+or integers so this would be 
+g2d dot let's begin with draw 
+draw polygon 
+okay so this takes an array of integers 
+and a number of points 
+a triangle would be three points so 
+let's just pass in three points 
+but we'll need to pass in an array of 
+integers so let's declare these 
+right before we actually draw this 
+polygon so we'll say 
+int x points 
+and we'll pass in some x coordinates 
+let's say 150 250 and 
+350. we'll pass in some y coordinates as 
+well 
+so this has to be another array of 
+integers 
+and this will be y points let's set this 
+to 
+300 150 and 300. 
+and we should have the outline of a 
+triangle 
+let's set this to yellow 
+so that would be g2d dot set paint 
+and we'll pass in color dot yellow 
+now we'll fill the polygon 
+it's the same process as before but 
+replace straw with fill 
+and we have a yellow triangle it's kind 
+of like a piece of the triforce from the 
+legend of zelda series 
+well one of them at least we also have 
+
+
+
+the capability of drawing 
+a string of text on our graphic g2d 
+dot draw string 
+we pass in a string as an argument as 
+well as coordinates 
+for the string let's say you 
+are a winner 
+so for now let's set the x coordinate to 
+zero and the y coordinate to zero 
+but when we compile and run this we 
+actually cannot see the string 
+that's because it's hidden right now 
+let's change this to 
+50 by 50 and you'll see why 
+so now the string is visible that's 
+because when we display 
+the string the starting position 
+of our string of text is the bottom left 
+corner 
+since we set this to 0 0 well that's 
+going to be the very 
+top left corner of our panel so it's 
+actually not being displayed because 
+it's kind of off screen now let's change 
+the font and the font color of the 
+string g2d 
+dot set font and you can pass in a 
+new font and pass whatever font you want 
+i will pick ink 
+free because i like that font that's a 
+font family 
+then we can pick a font style let's say 
+bold and a size i will make this 
+50 i suppose 
+you are a winner and changing the font 
+color is the same process as before we 
+just set 
+paint to whatever color we want what 
+color do we not pick yet 
+let's pick why not magenta 
+and the font color is now magenta let's 
+say that you want to add your 
+own image to this graphic i have this 
+png file and it's called sky 
+and i just created this myself so i want 
+to add 
+this image to my graphic my 2d graphic 
+so there is a method to do that g2d 
+dot and that is draw 
+image and there's a few to pick from 
+uh so let's begin with something simple 
+uh here so this takes an image 
+coordinates and then an image observer 
+we have not covered image observers so 
+we're just going to set this to 
+null for now so we need an image and 
+coordinates 
+we want this to begin in the top left 
+corner now we need to create 
+an image out of this file that we have 
+within our project folder 
+let's call this image and we're going to 
+declare and instantiate this 
+so let's say image image 
+and then within the constructor we'll 
+instantiate this 
+
+
+
+image equals and this is a little bit 
+different 
+we're going to create image equals new 
+image icon 
+and list the file name or the file path 
+sky.png is my file name 
+follow this with dot get 
+image this will create an image out of 
+the image icon 
+and then we follow this with draw image 
+and then add your image here 
+and we should have our image added to 
+our graphic 
+and then you can draw on top of this 
+image this could be a background image 
+let's say 
+so i'm going to move this and place this 
+near the top and let's draw 
+i don't know maybe the triforce that we 
+have so i'm going to re-enable all these 
+why not the pokeball too 
+well yeah that image that we created is 
+kind of serving as a background for us 
+so that's how you can include your own 
+image into a graphic to display 
+well everybody that's the basics of 
+creating 2d graphics this video is 
+getting kind of long so i think i'll cut 
+it off here i was hoping to walk you 
+guys through some practice with drawing 
+a simple landscape kind of like what bob 
+ross does with his paintings but 
+i might have to wrap it up here so if 
+you want to copy of all this code i'll 
+post all of this in the comments down 
+below 
+but yeah that's the basics of creating 
+2d graphics in java 
+hey you yeah i'm talking to you if you 
+learn something new 
+then you can help me help you in three 
+easy steps 
+by smashing that like button drop a 
+comment down below 
+and subscribe if you'd like to become a 
+fellow bro 
+[Music] 
+[Music] 
+you

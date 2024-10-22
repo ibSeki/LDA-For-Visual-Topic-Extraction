@@ -1,0 +1,347 @@
+﻿you how you can create your first javafx 
+application on your IntelliJ IDEA IDE 
+also I'm going to show you how you can 
+use scene builder in your IntelliJ IDEA 
+IDE to develop your javafx applications 
+so let's get started let's start with 
+the IntelliJ IDEA IDE 
+so just open your Intel jid IDE and now 
+we are going to create a new project so 
+click on new project here 
+and then click on javafx under new 
+project 
+and you can give the name to your 
+project I'm going to name my project as 
+my Java FX app for example 
+and then you can choose the language 
+language is Java by default build system 
+is Maven which is ok and test framework 
+is J unit which is also okay for me the 
+project SDK is 17 which is Java jdk 17 
+you can choose the version which you 
+have on your Windows operating system 
+click on next here so here you can 
+choose from all these application I want 
+to just select form FX and then I'm 
+going to click on finish here which is 
+going to create my javafx application 
+so you can see my javafx application has 
+been created 
+here under my project I can see the 
+source folder and then I have this main 
+class under Java folder I have this 
+moduleinfo.java 
+and under resources I have this 
+hello hyphen view dot fxml file so first 
+of all let's build this project and run 
+this and let's see how it looks like by 
+default so I'm going to click on this 
+build icon here 
+we're just going to build my application 
+you can see it's downloading some 
+plugins for the javafx application and 
+once those plugins are downloaded it's 
+going to build that application 
+so now I can see build complete 
+successfully in 28 seconds and now I can 
+run this application by just right 
+clicking here and then I can click on 
+run 
+hello application dot main on this file 
+itself hello application and you can see 
+this kind of window which I have one 
+button when I click on this button it 
+shows welcome to Java FX application 
+right 
+so by default ah this code is already 
+working now in terms of all these 
+Imports you can see all these Imports 
+are added to your hello application dot 
+Java class 
+in the main method what we are doing 
+here is 
+we are simply creating an instance of FX 
+loader class and we are providing the 
+path of our fxml file which is this file 
+which is created by default which is 
+
+
+
+hello hyphen view dot fxml you can see 
+the same name here then we are creating 
+a scene 
+so scene is the main component in your 
+Java FX application where everything 
+loads right and then you create stage 
+for your scene right so you create an 
+instance of this stage which you have 
+already added here and provide the title 
+to your stage then you add the scene to 
+your stage and then show that stage and 
+then second method in your main method 
+is this launch method which is called by 
+default right so you always need to call 
+this launch method now let's go to the 
+hello underscore view dot fxml file 
+and it looks like this right so as we 
+have seen that our javafx application 
+have a button which is here and it has a 
+label which is here right now in order 
+to uh view this file in a scene Builder 
+you can right click here and then 
+click on open in scene Builder once this 
+window opens you can provide the 
+executable file path of your scene 
+Builder but right now I don't have scene 
+Builder installed on my Windows 
+operating system so I need to install it 
+and then give the path to the scene 
+Builder here right so what I'm going to 
+do is I'm going to just go to my browser 
+and search for javafx 
+and the first link which will appear 
+here will be from open uh jfx dot IO so 
+I'm going to click on this open jfx.io 
+website 
+and here 
+when I scroll down a little I should be 
+able to see the scene Builder and there 
+is the download button here so I'm going 
+to click on this download button you can 
+see this website is called Blue on 
+hq.com so I'm going to just click on 
+this download now button and then choose 
+the windows option right so let's choose 
+the windows install option which is this 
+one 
+I'm going to just download that and then 
+you can see in some time this MSI file 
+is going to be downloaded on your 
+Windows operating system right so you 
+can download the scene Builder from glue 
+on hq.com and if you want to download 
+the Java FX runtime you can separately 
+download the javafx SDK also from this 
+open jfx website for now I'm not going 
+to do that I'm only going to download 
+the scene Builder right so scene Builder 
+MSI file is downloaded I'm going to 
+click on this let me minimize this 
+browser let me also minimize this 
+IntelliJ IDEA IDE so when you click on 
+scene build MSI file it's going to look 
+like this I'm going to just click on 
+next here 
+and then I'm going to click on I accept 
+
+
+
+the terms and conditions click on next 
+and then click on next 
+and then click on install 
+so you can see the scene Builder setup 
+has been started I'm going to click on 
+next and then I will agree with license 
+terms and conditions click on next 
+this will be the location where scene 
+Builder will be installed on your 
+Windows operating system generally I 
+would like to change this location 
+because you can see it's hard to 
+remember where we have installed our 
+scene Builder so I can just simply 
+change this location to my C directory 
+itself so I will remove everything 
+apart from C and then scene Builders so 
+inside my C directory I will just create 
+this directory called scene Builder and 
+there it will be installed so I'm going 
+to click on OK and then next and then 
+click on install 
+and it will be installed really fast 
+and then I'm going to click on finish 
+let's go to the location where scene 
+Builder is installed so I'm going to go 
+to my C drive 
+and then you can see this scene Builder 
+folder and here you can see the scene 
+Builder exe file so now I'm going to go 
+to IntelliJ IDEA and here I have already 
+created my project once again I'm going 
+to right click on my fxml file 
+click on open in scene Builder 
+and then I will browse for my uh scene 
+Builder directory which is this one and 
+then select 
+scenebuilder.exe file click on OK 
+and once you click on OK 
+your scene Builder is going to be opened 
+and inside the scene Builder you can see 
+your Hello dot fxml file is opened right 
+so what you see here is the content of 
+your fxml file here you can see there is 
+this label and there is this button in 
+your scene Builder also you will be able 
+to see this button and label is 
+somewhere hidden here you can already 
+see that under this V box we have this 
+label and the button right so 
+you can also increase or decrease the 
+size of this 
+V box here you can add different type of 
+components here right so when I click on 
+this V box I can add 
+different controls I can add 
+different gluons 
+menus and different kind of components 
+from here for now I want to just 
+add few components so let me add a 
+button so I will just drag and drop this 
+button here 
+now in order to use this button I can 
+change the text of this button for 
+example I can change the text to 
+click 
+
+
+
+me for example right and then when I 
+press enter the text will be changed so 
+when you select your button you have 
+three sections here one is the property 
+section other is the layout section 
+where you can decide the layout of your 
+button or any component and third one is 
+the code section where you need to give 
+some ID to your button for example I 
+will give the ID button underscore 
+click me so this will be the ID of this 
+button and here on action 
+you can see on hello button click 
+function where this is coming from 
+so this hello 
+button click function is already defined 
+in your hello controller.java file which 
+is created by default in your IntelliJ 
+IDEA IDE you can see on hello button 
+click and in your scene Builder also on 
+hello button click so whatever function 
+you define here 
+in your hello controller.java file you 
+will be able to call that function in 
+your scene Builder also for any 
+component right so I am going to create 
+a new method and because this is a 
+button I can even copy this code so I 
+can just copy this code and paste it 
+once again but this time I'm going to 
+change the name of this method so I'm 
+going to just say on 
+click me you can provide any name to 
+your method right so it's not necessary 
+that you need to provide the same name 
+you can provide any name to your 
+function right and then 
+what this code is doing is it's just 
+simply uh adding the text to your label 
+my label name is welcome text right so 
+when you go to the scene Builder when 
+you click on label here which is the 
+default label created by 
+the IntelliJ IDEA IDE 
+you can see this ID here FX ID and the 
+ID is welcome text this ID you need to 
+provide always ah 
+in the scene Builder so whatever name 
+you give to your label this is your ID 
+right 
+so 
+welcome text is the ID of the label in 
+the scene Builder and that's why we are 
+always required to add the ID of any 
+component right let me add a new label 
+for example so 
+I will just add this new label and let 
+me add this label just below this click 
+me button 
+then I will provide the label or ID to 
+the new label which I have created I 
+will just name my ID as 
+click me label for example okay 
+so once you have created this new label 
+you can also for example change the 
+property to change the name for example 
+
+
+
+click me 
+label this will be the text which will 
+be displayed on your label right so when 
+you press enter this text is displayed 
+on the label in the code section you 
+provided the ID click me label right 
+this ID you can use in your code and 
+then 
+reference it so for example I can just 
+um 
+use this ID go to my Java file right I 
+can just create a new label so I can 
+just copy the same code so whatever 
+component you create you need to 
+add at the rate fxml on top of that 
+because how your Java code is going to 
+understand that it's a fxml component 
+using this 
+decorate on top of your label and then 
+we are creating a label and then the 
+label name is Click me label because the 
+ID of this label is Click me label right 
+now you can use this label and instead 
+of using the previous level I can use my 
+new label and then 
+change the text here for example 
+hello 
+world right 
+and once this button is clicked it's 
+going to display 
+hello world now we have to add this on 
+click me method in your scene builder 
+for this button so click on this click 
+me button 
+go to the code section and then on 
+action you will see that the new method 
+will appear here right so I will select 
+this new method on click me button click 
+which is this method right 
+once that's done 
+you can just save 
+your fxml file and once that's done you 
+can run your application so let's run 
+this application and let's see if it 
+works or not so I'm going to run this 
+application 
+and hopefully it's going to work let's 
+see so you can see this new button is 
+visible here which we have added using 
+scene Builder this new label is also 
+visible here which we have added and 
+when I click on click me it shows hello 
+world so it changes the text in the 
+label of this 
+frame right 
+so this is how you can use scene Builder 
+with IntelliJ IDEA IDE you can add 
+multiple components here 
+and then use it with the code component 
+so two most important sections here as I 
+mentioned is the ID and the function 
+right so if you want to do something 
+with some element for example button add 
+on action for that and then Define the 
+same function in your 
+Java code and it's going to work right 
+
+
+
+so I hope you have enjoyed this video I 
+will see you in the next video

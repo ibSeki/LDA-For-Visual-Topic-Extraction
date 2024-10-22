@@ -1,0 +1,376 @@
+﻿hello guys and welcome back to the 
+simply code programming channel 
+this is vikesh and let's get started 
+with today's topic 
+which is about image handling in java so 
+we deal with images on a daily basis and 
+you will often be required to deal with 
+image handling in java programs as well 
+where you might need to re read an image 
+or write an image 
+or load an image into memory and do 
+other kind of manipulations 
+on the images so java does provide 
+support for image handling as well 
+and uh you can pretty much load up 
+any type of image be it a gif image or 
+be it a png or be it a 
+jpeg image basically it converts into a 
+java 2d 
+image to render it and it basically 
+creates a byte representation of the 
+image to serve and save the contents 
+so in this section we are going to talk 
+about the image handling aspects of java 
+and to do that there are broadly two 
+classes which java provides 
+as you can see in this official 
+documentation the first one is 
+java.awt.image class 
+and the second one is 
+java.awt.image.bufferedimageclass 
+which extends the image class so this is 
+basically the super class as 
+you can see here which you can use to 
+represent any kind of graphical image 
+as a 2d array of pixels and buffered 
+image is a concrete implementation of 
+the image class 
+which you can use to construct instances 
+of the class and 
+buffered images is sort of the i would 
+say the de facto standard or the go to 
+class whenever you are dealing with 
+any kind of image rendering uh tasks in 
+a java program 
+and we will also have a look at how we 
+can use the buffered image class 
+to basically read and a sample image 
+and also write a sample image to a file 
+system 
+so you can read more about this in the 
+documentation and 
+these are also bunch of documentations 
+available in terms of how you can read 
+it how you can load it into the program 
+how you can draw an image how you can 
+create and save the image etc 
+and like i mentioned we will be covering 
+some aspects of it 
+in today's demo as well so this was a 
+very brief theoretical introduction 
+about image handling 
+and like i always mentioned if you want 
+to know more about this 
+do check out the official documentation 
+of of java where you can learn more 
+
+
+
+about 
+the image handling classes and utilities 
+so with that 
+let's move to the demonstration part so 
+i have prepared a demo here 
+which talks about image handling so i 
+have created a class called image 
+handling demo 
+which has a public static void main 
+method and 
+i'm just giving some some sample uh 
+dimensions for the image in terms of 
+width and height here 
+and then as i mentioned that we will be 
+using the buffered image class 
+so i'm creating an a reference for the 
+buffered image it's currently assigned 
+to null so basically 
+there's nothing and then i am calling 
+the method read from file 
+so like i mentioned you can you mostly 
+will be dealing with reading from an 
+image or writing to an image 
+so here we will look at both of the 
+aspects as to how you can 
+load an image from your file system into 
+a java program 
+and then write it back to the file 
+system from your java program 
+so let's first look at the read from 
+file method which will tell 
+us how we can read a java file so i 
+provide some sample dimensions these 
+dimensions will vary based on your use 
+case 
+and i supply the buffered image object 
+inside that i have created a try block 
+and in the try block the first thing you 
+need to do for image handling is to 
+basically create a file object 
+because image is also technically just a 
+file right 
+so you provide the file image path here 
+at this particular location 
+so let's go to the sample image part 
+this is the destination path and let me 
+open 
+the sample image path as well which is 
+somewhere in the c drive so this is the 
+image which we are loading this is the 
+path which i have mentioned which is 
+c sample dot jpg so let's first have a 
+look at the image as well as to what 
+this image contains 
+so this image is basically from a from a 
+click clinical trial and 
+showing some blood sample or some 
+vaccine bottles which is 
+probably the very uh popular image 
+nowadays 
+because we are living in this pandemic 
+world so this is the sample image which 
+i have chosen 
+to read and then i will load this into 
+the java program and then we'll try to 
+write it back to the file system 
+
+
+
+to a destination location so this is 
+where my image is present in the c drive 
+named with sample.jpg and this is what 
+i've supplied here so you just need to 
+supply it in double quotes 
+remember when you're dealing uh with 
+windows file system you always have to 
+use 
+double forward slashes which is 
+different if you're working with a on a 
+mac machine or you're working on a linux 
+system where 
+only this will work fine so that's a bit 
+awkward thing 
+which which windows has and you have to 
+respect the operating system's 
+restrictions or way of doing things so 
+once you have loaded the file or 
+created the sample.jpg file object 
+then the next thing we are going to do 
+is we are going to create an 
+object of the buffered image remember we 
+just created a reference we did not 
+create an 
+object yet of the buffered image class 
+and now is the time to do that 
+so we supply the width we supply the 
+height and then we supply the type of 
+the image 
+let's go to the constructor of this 
+image to see what this image type means 
+so this image type can be basically the 
+type of the created image which 
+comes from the color space so whether 
+it's an rgb image or a rgb image or bgr 
+image or a bite gray image there are 
+multiple different types of images in 
+the media space 
+and whatever type of image you have you 
+need to basically supply that image type 
+in this particular argument so in my 
+case it was an argb image so i supplied 
+that particular 
+if you click on this you will see that 
+currently it's inside java 
+an 8-bit rgba image basically has a 
+static constant which is 
+denoted by 2. you can read more about 
+this inside the buffered image class 
+documentation is 
+as well so once i've supplied that my 
+buffered image object is ready 
+which has all the details dimensions and 
+the types of the image 
+now the next thing is that you need to 
+fill this image object 
+with the file so you basically need to 
+read the file 
+and store the output of this read 
+operation into the 
+buffered image object then what will 
+happen that along with this information 
+whatever is present here will also be 
+added to the same 
+buffered image object so to read a 
+image or simple a file java provides an 
+
+
+
+i o utility which is called image i o 
+and there is a read method available 
+which is a static method on this 
+particular class as you can see i am 
+calling the class dot method 
+name here and then you supply the sample 
+file name once you have done that 
+then it will basically be reading the 
+whole image into a 2d byte array and 
+copying that over into this buffered 
+image 
+object once that is done if this 
+particular line is successfully executed 
+then you will get this message which 
+will say reading complete and it will 
+try to print 
+some hash code of the image object and 
+after that if if there's any exception 
+in this block 
+for example this particular line may 
+raise an exception or this particular 
+line may raise 
+an exception if the file does not exist 
+then you need to have 
+the i o exception caught remember i o is 
+a checked exception 
+so if you are using these operations 
+file new file and imageio.read you need 
+to catch 
+the i o exception because it's a checked 
+exception so either you need to catch it 
+or you need to re-throw it these are the 
+only two options you have with the 
+checked exception so once we have done 
+all of that if everything goes 
+fine if everything is happy till line 35 
+then we just return the image object 
+and our read from file operation will be 
+done going back to the main method 
+once the read operation is done the next 
+thing i'm going to do is 
+writing this image object to a new 
+destination file 
+so let's see what is happening in this 
+write to file method because this is the 
+method 
+which is responsible for writing this 
+image to a new destination location 
+so i've created a public static void 
+void method inside the same 
+class where the public static void main 
+method is present as you know that 
+static methods can only call other 
+static methods 
+that's why this has this had to be 
+static and i'm supplying the same 
+image object which was returned from the 
+read operation 
+that goes in as the argument of this 
+particular method 
+and again i'm using a file object and 
+this time i'm providing a destination 
+location 
+where i would like to write this image 
+so this is the destination location i've 
+chosen which is 
+
+
+
+f drive java tutorials folder and the 
+image should be stored with the name 
+out dot jpg so this is the location 
+there's already 
+already an out.jpg here so let me just 
+remove it so that we can observe the 
+output 
+so we create the file object after that 
+we again use the image i o utility uh 
+we call our static method static utility 
+method called write 
+we supply the whole image object we 
+supply 
+the image type extension and we supply 
+the output location 
+again if i take you to the signature of 
+this you take the rendered image 
+you take the format name which is jpg 
+and the output location so these are the 
+three things which you need to supply 
+once you call the right method on the 
+image io utility class 
+image io is a very handy class and do 
+remember this class whenever you are 
+dealing with 
+uh the image handling operations it will 
+provide lot of static convenience 
+methods 
+so we write this file write this image 
+object to a file to a destination 
+location 
+and if everything goes fine in these two 
+lines we will get this message which 
+will say writing complete 
+if anything goes wrong we again catch 
+the i exception and the exception will 
+be printed here that's all is happening 
+in this particular program where we are 
+reading from file 
+and we are writing to the file reading 
+it from here and writing it 
+on this particular location so let's run 
+this program and see if we are able to 
+read from file successfully and also 
+write it to the specified location 
+so run as java application it's a 
+slightly memory heavy operation so it 
+takes a bit of time because 
+the whole image needs to be loaded into 
+memory be very careful about that it 
+might eat up your 
+large portion of your ram if the image 
+is too heavy so here it says reading 
+complete 
+and then it prints the hash code details 
+of this particular object 
+and then it also executed the write to 
+file method 
+and it said writing complete so just to 
+show you the reference back again this 
+is what we read sample.jpg 
+and c drive and if i go to the f drive 
+java tutorials where i provided the 
+output location 
+i do see an outdoor jpg here which which 
+was not there earlier 
+
+
+
+and if i double click on this it's 
+exactly the same image 
+so java was able to read the image and 
+render the exact same image 
+by converting that 2d byte array 
+representation back to an image exactly 
+the same 
+for there's no change in this image so 
+this was a very 
+short enlightening tutorial for you to 
+show you how you can use 
+image handling classes for example the 
+image io class and the buffered image 
+class 
+to do basic image handling operations 
+obviously you can do more complex 
+operations with it as well 
+but for the demonstration purpose i've 
+just kept it simple 
+and that's all i want to cover as part 
+of this session and in the next session 
+we are going to talk about 
+the concurrency utilities in java if you 
+like this video 
+a thumbs up would be massively 
+appreciated and please don't forget to 
+subscribe to simply code for more 
+programming related videos 
+thank you and we'll meet again in the 
+next session 
+you

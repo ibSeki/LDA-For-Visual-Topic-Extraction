@@ -1,0 +1,505 @@
+﻿e Fala galera beleza sejam bem-vindos aí 
+a mais um vídeo do olho ficou dar eu sou 
+Matheus Batista e hoje o vídeo é super 
+especial a gente vai desbravar o disson 
+vai ser basicamente minicurso para 
+entender tudo sobre esse tipo de dado aí 
+que domina Hoje em dia as entre as então 
+é de suma importância saber trabalhar 
+com ele como criar converter objeto para 
+ver som de São para objeto são ações 
+fundamentais do dia a dia e 
+desenvolvedor web então bora lá aprender 
+um pouco sobre teoria e depois vou 
+trabalhar na prática aí de som para a 
+gente entender tudo sobre esse cara 
+nesse vídeo Bora lá então agora vamos 
+para um pouco de teoria primeiro Tá mas 
+essa eu queria pedir para tu se 
+inscrever no canal deixar o seu like no 
+vídeo compartilhe com amigos aí que tem 
+um pouco de dificuldade de um de som tem 
+que aprender melhor elas faz muito 
+sentido principalmente para quem 
+desenvolve web beleza e também né 
+aqueles que são que vai conta 
+o Tapete como os cursos dó de cortar 
+Valeu direito naquele precinho bacana tá 
+eu vou lá o que que disso primeiramente 
+a gente tem que entender de onde vem 
+esse acrômio o Jackson vende JavaScript 
+Object notation então é basicamente uma 
+forma de escrever objetivo é inscrito só 
+que pode né ser interpretada por outras 
+linguagens e ela é transportada via 
+texto Ok então até uma grande 
+similaridade a sintáxi dos objetos de 
+JavaScript ou seja resultado escreveu um 
+objeto JavaScript provavelmente sabe 
+escrever injeção também claro que ele 
+tem um algumas regras a mais mas ainda 
+tirar todas as suas dúvidas nesse vídeo 
+aqui eu boto o teu formato e 
+representação de dados ou seja é isso 
+que eu falei antes a gente vai tá 
+trabalhando com ele em diversas 
+linguagens a gente pode tá trabalhando 
+aqui no Free Fire com Java script né mas 
+tá enviando para um backing de entrega a 
+p o back-end node um beck and em Gol 
+enfim independente da linguagem ela vai 
+tá conseguindo interpretar esse da 
+em Deus que ele é universal tá tão ele é 
+muito utilizado hoje em dia para essa 
+questão aí e tá transferindo informações 
+e eu boto também que ele é mais simples 
+que o XML é utilizado para fins 
+parecidos Então a gente tem uma forma de 
+se comunicar entre aplicações digamos 
+assim muito mais simples do que o mais 
+utilizado anteriormente que era o XML é 
+que já trabalhou um pouco parecido com 
+HTML que abertura fechamento tag também 
+bem rígido na questão de formato 
+maldição também tem essa rigidez mas ele 
+acaba sendo mais simples e construir por 
+isso é mais interessante que esse cara 
+
+
+
+aqui tá e o nosso também que ele utiliza 
+o formato sai o valor como os objetos 
+JavaScript né gente vai ter a chave por 
+exemplo nome é a chave o nome: e o valor 
+para ver com Mateus estão chave nome 
+valor Mateus né é assim gente vai 
+trabalhar e o separador delas que nas 
+variáveis é um igual né gente atribui o 
+valor com igual aqui vai 
+os dois pontos tá igual nos objetos eu 
+boto queria leve para ser enviado por 
+requisições tá devido a sua simplicidade 
+né ele tem menos caracteres 
+desnecessários digamos assim entrar em 
+vendo basicamente podado para o servidor 
+então ele acaba sendo uma ótima escolha 
+por causa disso também e eu volto aqui 
+por fim que ele é muito utilizado para 
+apis então na maioria das vezes vocês 
+vão estar encontrando esse cara nesse 
+sentido na cara enviar lado do Map ou 
+receber o da de mapei tanto para 
+imprimir algo front-end para cadastrar o 
+beck no banco de dados né parece as suas 
+ações que ele serve pra gente poder se 
+comunicar de maneira fácil e também 
+arquivo de configuração alguns arquivos 
+que a gente trabalha de alguma linguagem 
+o Freio que pode ser configurados via 
+Jackson como antigamente também e 
+tivermos 15 ml para isso tá basicamente 
+seu Dilson agora vou entender aí sobre 
+os tipos de dado tá 
+e como falei Jackson é parecido com o 
+objeto java script a entrada de dizer 
+para enviar informações então ele vai tá 
+enviando dados né Então quais tipos de 
+dados os dias só aceita bota aqui gente 
+só aceita diversos tipos de dado como 
+Strings né então gente vai envolver 
+algum conteúdo entre aspas esse 
+caracterizado no spring ainda poder 
+utilizar números e não há diferenciação 
+entre inteiros ou photos né Bota aqui 
+para ser o número um ou número 12.50 e 
+quatro um detalhe importante as Strings 
+como a Chaves precisam estar em volta de 
+"e os números não número vai colocar o 
+valor normal mesmo tá gente vai aceitar 
+Reis né vistas a gente vai poder colocar 
+qualquer tipo de dado e ele também 
+aceita outros objetos da gente vai 
+colocar um objeto dentro de um objeto de 
+som dá para dizer sim e aqui em segue a 
+mesma lotação ele colocar a chave e o 
+valor e como coloca aqui a chave e valor 
+Einstein eles são determinados por" e 
+Voltas dele tá isso 
+é primordial mas tem que seguir essa 
+convenção senão ele não funciona 
+corretamente e tempo último dados nos né 
+são utilizados para dizer que a essa 
+chave existe mas por enquanto tem o 
+valor nulo Então eu só quero enviar essa 
+chave tá Deus para marcação a gente pode 
+já tá mandando como uma resposta de as 
+
+
+
+tu tiver algum valor preencher essa pe 
+digamos assim Aceita esse valor também 
+ok galera então esses são os tipos de 
+dados aceitos pelo Jackson agora a gente 
+Ah entendi o que que é tipo de dado que 
+aceita uma bola na prática aqui na onde 
+eu só para entender isso Melhor ainda 
+então Galera tô aqui com uma série de 
+arquivos abertos tu quiser me acompanhar 
+aí também é possível tá a gente vai ter 
+uma estrutura bem básica de html java 
+script e o arquinho.de som só para gente 
+trabalhar com assim táxi dele consegui 
+formar um desçam válido mas se tu quiser 
+abrir até houvesse cuide fica à vontade 
+ta a ideia aqui é tentar explicar o 
+melhor possível para 
+e de forma prática como se cria intenção 
+primeiro e depois em grave na prática as 
+conversões né lá direto no navegador 
+entender como é que a gente pode 
+trabalhar com esse dado também tá tô 
+correndo aqui na onde eles são ele vai 
+inicializar ele como um objeto java 
+script abrindo e fechando aí chata OK aí 
+aqui dentro ainda colocar Chaves e 
+valores então a chave que eu digo é o 
+nome da propriedade se eu tivesse um 
+objeto que tem uma propriedade chamada 
+nome então entre aspas eu coloco o nome 
+e depois entre aspas eu coloco o valor 
+que representa esse nome então assim 
+ainda terminou aí uma propriedade de 
+texto com o nome do propriedade nome né 
+não ficou meio redundante Mas tudo bem 
+só que isso aqui ó eu entendo tentar 
+entre as não vai ter de corretamente 
+aqui no vs code a gente tem uma xícara 
+gente Impacto então a gente pode errar 
+aqui e o que que determina tudo daqui a 
+um nome Matheus olha só e deixa 
+vermelhinha aqui por quê 
+é descascar as pessoas tapete bebo posts 
+ou seja ele precisa utilizar "e volta 
+dela vocês voltaram também não tem que 
+colocar" duplas Eu não coloco "simples 
+porque não é um disso Vale olha aqui ele 
+também reclama se eu colocar" simples 
+tudo isso aqui para fazer parte de como 
+não de som vai conseguir ser 
+interpretado pelo servidor que eu tenho 
+que nem o programador tem que enviar um 
+de som válido E essas duas regras aqui 
+tem que ser seguidas as chaves preciso 
+estar em outras de aspas e também Elas 
+têm que ser "duplas é uma comissão um 
+padrão que a gente obrigado a seguir 
+outra coisa interessante também é que eu 
+não posso colocar mais, e não tem outra 
+chave depois olha só ele não eu também 
+essa última chave né Por mais que seja 
+apaga Vou colocar aqui ó idade 30 que é 
+uma chave vários é o número que eu falei 
+que você de Aços hoje eu converso eu 
+converso com tu não reclama né 
+E aí colocar uma vivo aqui e às vezes é 
+
+
+
+bem comum gente escreve objeto Coloque 
+uma vida vou deixar ela sobre e pronto 
+mas aqui no dia são ela ele não aceita 
+isso a gente tem que tirar a última, é o 
+Senhor piedade Então é bom entender isso 
+que pode gerar um erro a futuramente em 
+injeção que for criar Beleza então bora 
+continuar aqui eu vou querer agora uma 
+propriedade com bullying botar só está 
+trabalhando ou no tio eu preciso aqui 
+ele tem o nome de Mateus uma idade de 
+trinta e ele está trabalhando porque tá 
+com tio da chave se eu tivesse essa 
+informação poderia muito bem botar no 
+ele aceita também esse tipo de lado tá 
+agora vou trabalhar aí com uma rei como 
+é que funciona para botar assim hobbies 
+aqui entre colchetes eu escrevo meus 
+itens onde ele vai aceitar qualquer tipo 
+de dados entre os vários pelo de som eu 
+vejo aqui que isso aqui não faz nenhum 
+sentido por hobby mas ele aceitou 
+normalmente aqui esses três telas que a 
+gente botou ele qual 
+é diferente que inocente ele já vai 
+marcar que vai dizer que o valor 
+esperado Hudson isso aqui em casa dele 
+não deixa faltar é outra coisa eu não 
+posso também colocar os valores com 
+"simples eu tenho que trabalhar com 
+direção sempre com as duplas ao vejo 
+aqui que ele não deixou Então se eu 
+botar aqui o hobby por exemplo tem que 
+ser com" duplas programar aí outro Hobby 
+correr outro Hobby ler estou tentar sem 
+problema da convenção dele tanto nas 
+propriedades nome da propriedade quanto 
+o valor da propriedade e agora por 
+último queria mostrar para vocês um 
+objeto de som vou dar mais detalhes da 
+profissão do usuário Tá eu vou tá aqui ó 
+detalhes profissão por exemplo né e aqui 
+eu inicio o novo dyson basicamente 
+porque é um objeto né Bota vídeo aqui 
+para separar as chaves né E lembrando né 
+até isso daí não JavaScript né então é 
+um padrão do Jackson mas olha só se eu 
+tirar uma chave aqui do meio né que uma 
+vivo aqui do meio 
+se separa a chave também vai me dar um 
+erro que ele não entendeu que 
+acontecendo aqui eu tenho que separar 
+com todas as propriedades por Bíblia tá 
+então aqui eu botei detalhes profissão é 
+um novo objeto é basicamente novo de 
+sonda tem que botar uma chave entre 
+aspas duplas e um valor entre as suas 
+dúvidas tá se eu fosse colocar outra eu 
+voltar a empresa empresa x tá E assim eu 
+sigo o mesmo padrão de som do Jair 
+Sampaio digamos assim tá eu também posso 
+enviar um Array de objetos que é uma 
+rede de som né com mais itens para esse 
+servidor entender por exemplo só tem 
+aqui uma rede Externa ele continua 
+entendendo que é um de sol tá eu poderia 
+
+
+
+colar para uma cima você para nós ir por 
+uma, e mandar mais um objeto aqui aí ele 
+entenderia que eu tô enviando uma rede 
+objetos ou seja duas informações 
+diferentes do mesmo jeito sol tá então 
+isso aqui é um dia que são válidos 
+relembre as regras está com as 
+propriedades com "duplas em voltas né a 
+gente também tem 
+a separação de valores por dois pontos 
+cada propriedades e para uma, algumas 
+propriedades não precisam de "com os 
+números e os bulas né mas como é triste 
+precisa tem que ser" duplas também nem a 
+propriedade eu não posso colocar aqui 
+na, se eu não tenho uma outra 
+propriedade seguindo e nem uma, se não 
+tem um outro e tem seguindo o meu Deus 
+homem ele tem que ter sempre há algo 
+além quando eu coloco uma Vigo que isso 
+é bem interessante entender a gente 
+escreveu aqui uma rei né que a ficar 
+tipo de dado entre os assentos de que a 
+gente colocou um objeto que segue 
+novamente padrão direção a gente tá 
+colocando o gestor ninguém só dá para 
+entender assim fica até mais fácil 
+Beleza então é assim que a gente escreve 
+de som agora vamos um teste prático aí 
+porque eu nem só do Jason aqui vai ver o 
+problema dor né geralmente tá aí tem que 
+transformar esse dado para enviar para 
+uma Play ou receber cidade transformar 
+por um objeto né para conseguir utilizar 
+uma aplicação e se vai fazer agora 
+um toque agora eu vou ter um HTML e 
+basicamente liga mais tipo de água 
+escrito para mim aqui está aqui dentro 
+dessa pasta e o que a gente vai tratar 
+agora dele tá então como é que eu vou 
+fazer aqui eu tô com glitter instalado 
+Tá eu vou pegar esse digestão Wagner 
+aqui eu vou colocar ele uma variável só 
+para a gente entender qual formatação 
+seria possível né fazer com JavaScript 
+Kiko Jackson não não ser possível então 
+vou criar um Array de objetos aqui eu 
+vou colocar aquele nosso som lá já 
+criado tá com sono tá assim direto o 
+responde ele vai aceitar né isso aqui eu 
+já vi esse tipo de vale mas se a gente 
+trabalha com JavaScript puro né eu não 
+preciso tratar os dados o nome das 
+propriedades entre aspas né eu posso ter 
+uma, e não tem uma outra propriedade 
+tudo isso é liberado porque eu salvo 
+aqui como tu desligado ele já 
+simplifica-se táxi um pouco né ele vai 
+tirar as " 
+a entender elas melhor está atrapalhando 
+a leitura e troca as "duplas por simples 
+e ele até insere né uma outra, após as 
+propriedades e eu nem tenho mais outra 
+propriedade aqui nem mais um item aqui 
+então Digamos que os objetos eles 
+aceitam a mesma rotação de Array Mas 
+
+
+
+eles são mais simplificadas no que você 
+tá trabalhando aquele padrão rígido ar 
+assim já é o suficiente só precisa 
+entender errado lado a lado Qual é a 
+diferença de um textão para objetos aqui 
+não aonde estão vai meu objetivo Street 
+e que eu vou colocar um outro item para 
+a gente entender é melhor essa ideia 
+também de trabalho com Greyson e vou 
+simplesmente copiar as propriedades vou 
+preencher com outros dados aqui tá eu 
+vou botar aqui nome João vou botar aqui 
+na idade de 25 vou dizer que ele não tá 
+trabalhando então ele não tem dados de 
+detalhe da profissão ou tá aqui ó no 
+o hino tá assim dados 
+e os hobbies dele é jogar ele gosta de 
+ir para academia tá eu achei que o João 
+beleza um outro objeto tem o meu Array 
+de objetos aqui e vamos ver que agora eu 
+preciso enviar esse cara né lá para mim 
+Happy eu não posso enviar ele assim né o 
+de idade que eu falei para vocês que a 
+gente pode compartilhar é uma convenção 
+seria o Deison como é que então eu vou 
+transferir e vou transformar um objeto é 
+descrito um Array de objetos em 
+Jacksonville é simples Eu tenho acesso a 
+um objeto chamado Jackson Aquino jovens 
+criticam os métodos para lidar com isso 
+tá então eu vou só abrir ficar no 
+navegador para a gente entender melhor 
+Hobby esse cara aqui eu dei um print lá 
+na rede objetos ele normal para mim um 
+Array de objetos aí conforme eu creio Ok 
+então agora eu vou imprimir esse cara 
+como diz o mas primeiro tem que realizar 
+a conversão eu vou dizer que ficaram 
+deixam tá o melhor de Jackson data né e 
+e eu vou utilizar do objeto de só que eu 
+falei para vocês para comentar aqui ó 
+converter objeto para de utilizar o 
+mestre Fairy Ou seja quando o Jackson 
+ele é transferido lá para pe letras 
+ficou no texto mas esse método aqui vai 
+garantir que ele seja um texto com um 
+deles são vasos daqui eu boto o meu 
+objetos na que foi constante eu criei 
+com os objetos lá em cima agora se a 
+gente ver esse cara aqui nada mais é do 
+que um texto Olha só porém se vocês 
+perceberam aqui já tá trabalhando um 
+padrão vale do Jackson ele colocou 
+"duplas entre as propriedades entre os 
+valores ele tá separando com, mas só até 
+a última né quando não tem mais item não 
+coloca nem no item nem um objeto todo o 
+que é diferente desse cara que então ele 
+conseguiu converter com sucesso um 
+objeto ou melhor uma rede objeto para 
+o presente ver aqui é um texto simples 
+vocês viram ali que não tem formatação 
+nenhuma diferente do objeto seu dono 
+typeof de som deita aqui ele vai me 
+entregar o mestre então isso aqui para 
+JavaScript é considerado o texto ele não 
+
+
+
+tem um tipo chamado de sol mas a gente 
+viu pelo que a gente aprendeu que isso 
+cara aqui é sim Jackson vaso né então e 
+agora como é que a gente faz né ao 
+contrário você que seria eu enviando 
+para play eu vou enviar o dado né via 
+digital mas ao contrário como é que eu 
+vou fazer para receber cidadão de som e 
+tá transformando ele em uma rede objetos 
+novamente já que o JavaScript não lida 
+com Dias sombra então vou até agora a 
+segunda parte do nosso problema daqui é 
+converter de som para objetos e lembra 
+desse aqui ou se imposto já tô querendo 
+seres usuário no sistema e agora tô 
+dando um jet eu tô recebendo esses 
+usuários querem imprimir na minha tela 
+bom é simples também vou trabalhar com o 
+mesmo objeto de som 
+eu vou botar se o objeto da tá que essa 
+constante aqui vou utilizar objeto de 
+som eu tenho medo parte vai converter de 
+som para um objeto vai nesse caso o 
+texto me deixou no vácuo né Para um 
+objeto valioso script Então vou botar o 
+dinheiro não dá para Claro que é que eu 
+tô trabalhando com algo está no seu 
+próprio computador né eu criei os dados 
+tudo bocado mas a ideia para trabalhar 
+capim é a mesma não muda nada ainda 
+enviar texto com Hudson e vai receber um 
+texto como deixam que a gente vai 
+transformar objeto em 
+e agora data convertido eu não consegue 
+logo em data tá que acontece aqui ele 
+vai mostrar novamente aqui objeto que a 
+gente tinha lá em cima que é o dado 
+original porque ele e conseguiu pegar 
+esse dado Aqui é onde são vários 
+transferir novamente por objeto 
+JavaScript tanto que eu dou typeof aqui 
+também para chegar o tipo agora aqui 
+objeto de novo Então agora eu posso 
+utilizar vejo o objeto posso utilizar 
+ele como se fosse um JavaScript 
+normalmente posso te dar um map que é um 
+método comum para percorrer a Reis né de 
+objeto e tá fazendo essa impressão de 
+dados na tela né Ele é muito em ex por 
+exemplo eu vou botar aqui ó o Big Data 
+vou utilizar o método map né aqui eu vou 
+te atacar dado com uma pessoa tá Eu vou 
+executar uma uma função aqui alguma ação 
+em cada uma das pessoas e quem só vai 
+fazer a impressão do nome né mas só para 
+você entender ele 
+e tem acesso objeto normal comenta aqui 
+em cima então eu posso imprimir cidade 
+na minha viu se eu quisesse né olha só 
+imprimir o Mateus e imprimir o João 
+também então eu já tive a teste 
+novamente a objetos de forma normal sem 
+muitos problemas Então galera chega no 
+objetivo nesse vídeo né entendeu que 
+ajeitou a gente viu o que é esse tipo de 
+dado né O que a gente consegue fazer com 
+
+
+
+ele porque ele é utilizado os tipos de 
+dados que ele aceita e de criou um dia 
+de som na prática para entender também 
+como é assim Impacto dele que ele aceita 
+que ele não aceita depois trabalhamos 
+com ele no JavaScript realizando a 
+conversão de um objeto para Adson e de 
+injeção para objetos que é basicamente O 
+fluxo vai fazer no teu dia-a-dia Beleza 
+então mais uma vez que eu pedi para ti 
+se inscrever no canal está escrito 
+chegou rede de paraquedas e cai quase 
+que diariamente postando vídeos cursos 
+gratuitos deixe seu like também muito 
+importante ativa a sineta para receber 
+as notificações dos próximos vídeos 
+e dá uma olhadinha aqui na descrição que 
+vai encontrar os nossos cursos Aline 
+aquele precinho bacana para prender 
+várias tecnologias Super Beleza então 
+agora vou ficando por aqui e te espero 
+no próximo vídeo valeu

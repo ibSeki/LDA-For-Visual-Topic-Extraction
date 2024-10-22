@@ -1,0 +1,243 @@
+﻿in this video we're going to talk  all about unit testing in java   
+do you ever write a complicated piece of code  and you think you've got it all coded correctly   
+but you're just not 100 percent sure you can use  unit tests to prove that your code is doing   
+exactly what it's supposed to do we'll  go over exactly what unit testing is   
+how it works and how you can implement them in  your own java programs i also have a full java   
+course available in a link down in the description  so go check it out first just what exactly is   
+What is Unit Testing 
+unit testing unit testing is a type of software  testing where one individual piece of code or unit   
+is being tested by itself so a unit test isolates  one single piece of code and verifies that that   
+piece is working correctly usually for java that  single piece of code is going to be a class or   
+even a method inside a class so unit tests are  just code that you write also in java that hit   
+that individual method that you want to test and  verify that it's doing exactly what it should do   
+we're going to be using the junit test framework  to write our unit tests all you have to do in   
+order to use junit is to add it as a dependency in  whichever dependency management tool you're using   
+so here i'm using maven so here i'm pulling in the  dependency for the most recent version of junit as   
+of this recording if you're using gradle instead  it's the same kind of thing we're going to start   
+with a super simple method to write unit tests for  so here i have a class called simple calculator   
+Creating Unit Tests 
+and all it has is a single method called add that  just takes in two ins number a and number b and   
+adds them together and returns the sum first how  do we even go about creating a unit test if you're   
+using intellij there's a shortcut all you have to  do is have your cursor somewhere inside the class   
+that you want to create a test for and hit ctrl  shift t that will give you a little pop-up and you   
+can just click create new test it's automatically  using a certain pattern for the test class names   
+that it creates since this will be testing the  simple calculator class it names the test file   
+simple calculator test and that's totally fine  that works for us so let's go ahead and click   
+ok what that will do is automatically create a  test class for you you can see at the top here   
+that it automatically imported everything in this  assertions package and we'll talk more about that   
+later also it's important to note exactly where it  created this test file so if you go over into your   
+project view we can see that our simple calculator  class is under source main java and the unit test   
+file that it created is under source test java  and that's exactly the convention that you'll see   
+any test that you create is going to be in  the exact same package structure as the file   
+that you're testing only it'll be under source  test instead of source main okay so let's go and   
+write our first unit test in junit a unit test  is just a method that you label with the at test   
+annotation so just type in at test and this is  the dependency you want org.junit.jupiter.api.test 
+so now we have to decide what exactly we want  our first unit test to be in general you want   
+to make it so the unit tests that you write are  only testing one thing one single scenario the   
+method that we want to test is just adding two  numbers together so maybe a simple test can just   
+be verifying that two plus two results in four so  let's go over here and write our method to do that   
+Creating a Simple Test 
+as long as you're using junit five your test  methods don't need to be public and they don't   
+need to return anything so your return type is  just going to be void next you want to come up   
+with the name of your test and it can be whatever  you want it's just the name of your test method   
+but it should be something that's very descriptive  of the exact scenario being tested here and what   
+the result should be here we're just testing  that two plus two should equal four so let's   
+make that our method name a two plus two should  equal four this method won't take any parameters   
+so we can just have an open and close parentheses  here inside this test method we want to call this   
+simple calculator's add method so first let's  go ahead and create a simple calculator object   
+that we can actually call this method on so simple  calculator calculator equals new simple calculator   
+as a quick tip ever since version 10 java has  what's called local variable type inference   
+which basically means that when you're creating  a local variable like this instead of using the   
+entire class name here java can infer what the  type of this variable is supposed to be so you   
+can actually just put var here so now we want  to call the add method on this calculator object   
+so calculator dot add and we want to test adding  two plus two so we'll send in two and two this   
+add method is going to return a result and here we  want to verify that it's returning four so how do   
+we do that in junit and in pretty much every unit  testing framework when you want to do that type   
+of verification you use what's called an assert  statement so here we want to verify we want to   
+assert that the result of this method call equals  four to do that we can use a method built into   
+junit called assert equals and that method gets  two parameters passed into it the first parameter   
+is the value that you expect the result should  be so we expect that two plus two should equal   
+four the second parameter that you pass into  assert equals is the actual result of your test   
+so the actual result of our test will be whatever  calculator dot add returns when we send in two   
+plus two so let's just close our parentheses and  add a semicolon so we're saying that the result   
+of calling this add method with two and two should  equal four and if it doesn't our test will fail so   
+now we have our first unit test how do we run it  and make sure that it passes in intellij there's   
+a couple of ways probably the simplest is next to  each test method you'll see this icon here in the   
+margin this allows you to run that particular test  and when you click it it'll give you a couple of   
+
+
+
+options this first option will just run your test  so let's go ahead and click it and see what we get   
+all right so it's telling us all of our tests  passed so this test seems to be working great   
+but what would we have seen if this test failed  so what if our code was doing the wrong thing   
+and instead of adding these two numbers it was  subtracting them so now because the code isn't   
+doing the right thing our test should fail so  let's go ahead and run it again okay so now   
+we see that our test failed and if we click the  result of that test it shows us exactly the line   
+in which that failure happened which is simple  calculator test line 10 right here on our assert   
+equal statement and it also tells us exactly what  the problem with the assertion was it's telling   
+us that the expected result was 4 but the actual  result it received was 0. so this assert equals   
+statement fails failing our test and in this case  that's good our test should be failing if our code   
+is doing the wrong thing so if we change this back  to addition and re-run our test we should see it   
+pass again and we do everything past everything's  green all good virtually all the unit tests that   
+you write are going to have one or more assert  statements and there are a lot of different types   
+of them that assert different things assert equals  is the one we've already used that's probably one   
+you're going to be using pretty often however if  you want you can also call assert not equals so   
+with assert not equals your test will only pass if  the two parameters that you pass into that method   
+don't equal each other and if they do equal each  other your test will fail you also have assert   
+true and that will just take in as a parameter  some kind of expression that evaluates to a   
+boolean true or false if that expression evaluates  to true your test passes and if it evaluates to   
+false your test fails you can also use assert  false which will do the opposite it'll pass   
+the test when the expression that you send in  evaluates to false you also have assert null   
+which will only pass the test if the expression  that you pass in is null and you have assert   
+not null which will only pass the test if the  expression that you pass in is not null now you   
+might be thinking well there's a whole bunch of  different ways we could use these assert methods   
+to prove that this method is doing the right thing  right so here we just happen to be using assert   
+equals but we could just as easily have said  uh you know assert true and then we could pass   
+into this assert true method the result of calling  this method with two and two double equals four   
+so using assert true like this is totally valid  and will work fine we can see that everything is   
+still passing there are potentially some problems  with just having one single unit test scenario   
+even for a method as simple as this one for  example if we go back into our simple calculator   
+and mess up our code in some way let's say  instead of doing addition we accidentally   
+did multiplication so now we're returning number  a times number b well if we go back to our test   
+and rerun it our code is now bad it's doing the  wrong thing it's not actually adding both numbers   
+but of course this test still passes because 2  times 2 does equal 4. one of the goals of the   
+unit tests that we write should be that whenever  the code is not doing the right thing at least   
+one of our unit tests should fail right now our  code is bad it's doing multiplication instead of   
+addition but we don't have any unit tests  that are failing our unit tests are saying   
+everything's great so that doesn't mean that  this unit test is bad this is a valid scenario   
+but it does mean that it's probably a good idea to  add more scenarios to our unit test suite so what   
+you can do is just copy that test method that  we made and change it to verify another test   
+scenario so let's say it was something like 3 plus  7 should equal 10. we'll send in the values 3 and   
+7 and the value that we expect when we call this  method with 3 and 7 is of course 10. now we could   
+just run this new single test that we just wrote  but we can also just have it run all the tests in   
+this class by going up to the class declaration in  the margin here and clicking this to run all tests   
+all right so it's telling us one test failed and  one test passed of course as we saw before our two   
+plus two should equal four test is still passing  but now we have a failing test as well which we   
+should because our code's bad it's telling us hey  we expected this value of 10 but i got the value   
+21. so you hop over to this add method in your  calculator class and see ah some doofus uh changed   
+this to multiplication instead of addition let's  go ahead and click this first one to rerun all of   
+our tests and make sure our code is good and  they all pass and they do we're looking good   
+Creating a More Complex Test 
+now let's try and create some unit tests for  a little bit more complicated of a method   
+this method is called determine letter grade and  all it does is take in the number grade you know   
+the percentage generally zero to a hundred and  then it returns the letter grade as a character   
+that matches that number first anything less than  zero is negative and just isn't really a valid   
+number grade so we throw an illegal argument  exception in that case if it's less than 60   
+we return an f for the grade otherwise if it's  less than 70 we return d less than 80 we return c   
+less than 90 we return b otherwise we know it's  greater than or equal to 90 so we just return   
+a first we need to go ahead and create our unit  test class so we'll hit ctrl shift t as the   
+shortcut and it's creating a class called greater  test and let's hit ok in this method we have a   
+Creating a Greater Test 
+bunch of pretty clear separate scenarios that will  need to be tested each separate scenario that we   
+come up with should be tested in their own test  method you should never combine multiple scenarios   
+into one single test method so for example one  good scenario that we might want to test is that   
+if we send in a 59 as the number grade we should  get an f as the letter grade so let's go ahead and   
+create that let's create a new test method that  we label with at test here we're just verifying   
+
+
+
+Creating a Test Method 
+that 59 should return f so let's just call our  test method 59 should return f first let's create   
+our greater object so we can call that determine  letter grade method on it equals new greater so   
+similar to before we want to assert that when we  call greater dot determine letter grade and pass   
+in the value 59 that we get a result of f let's  go ahead and run our test and make sure it passes   
+Testing with Coverage 
+and it does great you may have noticed that over  here in addition to just running our test normally   
+we also have an option to run our test with  coverage when we run our test with coverage   
+intellij will show us exactly which lines of code  were executed when our tests were run so let's run   
+this same test but with coverage okay so our tests  run they pass as normal but then it also pops up   
+this chart with coverage information it's telling  us that we're only hitting 33 percent of the   
+execution lines in that class 4 out of 12 lines  and if we look over here at the actual class in   
+the editor here you'll see different colors green  or red depending on whether the unit test that we   
+just ran hit that particular line or not one of  our goals for the unit test that we write for this   
+More Unit Tests 
+method should be that we eventually get to hitting  100 of the lines inside of it let's go ahead and   
+do that let's write more tests to cover each of  these other scenarios so maybe another good test   
+would be that a 69 should return a letter grade  of d 69 should return d run greater test with   
+coverage okay it's complete our tests pass now  let's look at the coverage over in greater test   
+and it shows that yes we are now hitting lines  10 and 11 because they're showing as green so   
+let's go ahead and do the same thing for c b and  a 17 9 should return c c 79 89 should return b b   
+89 99 should return a a 99 run greater test again  with coverage and it's looking good all of these   
+situations f d c b and a are all green now because  we're hitting all of those scenarios the only line   
+left where it's still showing red is line five  here where when we send in a negative number   
+it throws an exception we'll talk more about how  to handle this exception scenario in just a moment   
+first we want to make sure that our tests are  handling all of the possible edge cases in all of   
+these simple scenarios let's say i went over into  our determine letter grade method and change the   
+criteria for getting a letter grade of c to being  instead of less than 80 i changed it to less than   
+81. right now if you pass in a number grade of 80  it will hit this condition and return the value   
+of c when an 80 should be a b instead so we have  a situation where our code is wrong but if we go   
+back and run all of our unit tests they all pass  and say that everything is okay again this doesn't   
+necessarily mean that our test scenarios are bad  it just probably means that we need more of them   
+Test Scenario Example 
+so for example we should have a test scenario  that validates that edge case where if we pass   
+in an 80 it returns a b as it should so let's  go ahead and create that test case so 80 should   
+return b so if we send in a letter grade of 80  it should return b let's rerun all of our tests   
+and now we do get one failing test and this test  failure is good our code is currently wrong it's   
+not doing what it should do and so we should have  at least one failing test and now we have a test   
+scenario to cover that edge case that an 80 should  return a b so now if we go back and fix our code   
+to change this back to an 80 and re-run our tests  and they all pass but now with that added scenario   
+Test Edge Cases 
+our unit tests are that much stronger and more  strictly guarantee that our code is doing exactly   
+what it should so let's go back into our tests  and add some other edge cases a 90 should return a   
+a 90 70 should return c c 70 60 should return d  d 60 finally zero should return f f and zero okay   
+Changing Edge Cases 
+so they all pass but now our unit tests are even  stronger than they were before so we can go in   
+and mess around with any one of these numbers and  just change it by one like we can change this 90   
+to a 91 and run all our unit tests again and at  least one of them is going to fail so here we go   
+and 90 should return a is failing because now  a 90 is returning b so that's really great we   
+have a really strict set of unit tests that are  guaranteeing the proper functionality of our code   
+Unit Test Example 
+okay so let's get back to this scenario  here where if you send in a negative number   
+it throws an illegal argument exception so in  our unit test we do want to have a scenario where   
+if we send a negative number we verify that  it's throwing an exception as it should but   
+how do we do that so first let's hop back over  to our test class and just try it out so let's   
+go ahead and copy this test method and we can  say negative one should return illegal argument   
+exception and let's just verify what happens  if we call this determine letter grade method   
+with a negative number and right now the test  fails under normal circumstances if the code that   
+assertthrows 
+you hit throws an exception it will automatically  fail your unit test instead there's a certain   
+assert statement that you can use in junit 5 that  asserts that an exception was thrown and that   
+assert is called assert throws now this assert  throw method also takes a couple of parameters   
+but it works a little bit differently the first  parameter that it takes is the name of the class   
+of the exception that you expect to be thrown  so here we expect an illegal argument exception   
+to be thrown so our first parameter is going  to be illegal argument exception dot class   
+the second argument that it takes is actually the  executable piece of code that you need to call   
+
+
+
+to get that exception to be thrown you can do  that by using what's called a lambda now lambdas   
+themselves are a whole other topic for an entire  other video so i'll just show you what you need   
+to know to get them to work for this particular  use case so to pass in your lambda as your second   
+parameter you would first just do an open and  close parenthesis then space hyphen and greater   
+than so it kind of acts like an arrow and then you  want to open a curly braces and then inside those   
+curly braces is where you want to put the code  that executes your test so in our case the code   
+that we want to run that will make this exception  get thrown is calling this determine letter grade   
+method with a negative one as the parameter  so we'll just paste that on in here and put   
+our semicolon here after the closed parenthesis so  what this assert throws is doing is it's verifying   
+that when this piece of code is executed it throws  an illegal argument exception so let's go ahead   
+and run our test and make sure it passes and it  does if calling this piece of code wouldn't have   
+thrown an illegal argument exception then our test  would have failed so for example we could go back   
+into our grader class here so what if it didn't  throw an exception and instead returned a letter   
+grade of f so when we run our test we would expect  this to fail and that's exactly what it does it   
+says we expected an illegal argument exception to  be thrown but nothing was thrown so that leads us   
+Conclusion 
+to the reasons why it's a good idea to write  unit tests for your code first and foremost   
+is the obvious reason it ensures that your code  is actually correct you don't have to be pretty   
+sure that your code is correct you can write a  bunch of test scenarios to be absolutely sure   
+that your code is correct and i even often find  myself making changes and improvements to code   
+as i'm thinking up new unit test scenarios so it  makes my code better when i write unit tests once   
+you have a comprehensive suite of unit tests in  place that guarantee that your code is working the   
+way that it should you can refactor that code any  way you want with absolute confidence because you   
+know that if you refactor in such a way that you  mess up the code a little bit one of your tests is   
+going to fail and tell you that there's something  that you need to fix so for example in this class   
+we now have a comprehensive set of unit tests that  covers all of our edge cases technically we don't   
+need the elses in all of these else ifs so i can  go in and delete them all get rid of that one that   
+one so now we've made some changes into this class  that might scare you if you don't have a complete   
+set of unit tests ready to hit your code really  hard and make sure that it's doing what it should   
+so we can go back to our grader test and run  all of them again and here they go they all pass   
+and so we know that even with the changes  that we made our code is still doing exactly   
+the right thing the subject of unit testing is a  really really deep one and we've just scratched   
+the surface here as always if you enjoyed this  video or learned something please let me know   
+by leaving a like and hit the subscribe button  so you don't miss each new java tutorial and   
+don't stop here keep up your learning momentum by  checking out one of the other videos below thank   
+you so much for watching i really do appreciate  you being here with me i'll see you next time

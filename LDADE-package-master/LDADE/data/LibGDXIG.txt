@@ -1,0 +1,314 @@
+﻿hello this is Mike again from scratch welcome back to our ongoing libgdx tutorial series today we are going to be  
+taking a look at animation in libgdx there are two ways you can animate things at least out of the box when it  
+comes to libgdx the first one is traditional frame based animation that's what we're actually going to be taking a look at today there's 
+also a bone based 
+animation option it's using a third party product called spine but it works a little bit differently it takes your  
+images and basically transforms them or morphs them based off a skeleton that 
+you provide that's something I will probably cover separately it's not built directly into Lib GT while it kind of 
+isn't it kind of is omits a purchase product that you have to actually buy today we're actually looking at this frame animation frame 
+animation if you 
+ever did any drawing it's a kid where you in the top right corner of a book 
+put frame after frame of you know stickman walking or whatever that is basically frame based animation you show 
+a series of images one after the other at a certain time that a certain frame rate and it recreates an animation  
+that's exactly what we're going to look at today it's quite simple to be honest but sometimes a little bit less than  
+intuitive first offering a start by demonstrating my incredible artistic skills here and what I'm going to create  
+is just a four by four frame so a four frame animation of a stickman walking so 
+first I need to actually plug my mouse let's go up to new here and create and I 
+want to create four images to 56-piece like so this is the first one and let's 
+draw there alright so save that as it's 
+create a new folder stickman 
+okay so there is our first animation and what I want to do is do another one oops 
+let me copy that guy new paste 
+new pastes new oops tastes a little too 
+early there and paste alright so we got our four frames right here as we go so 
+first guy let's finish him off and let's just do paintbrush and 
+all right frame that one leg in a bit the other 
+one or it a bit are this is we're just walking animation ever and this one we 
+will put the front leg back a bit and the other one or two all right that's 
+just awful the one forward brought one back so and 
+their arms a bit like yay and for this last guy we will actually go back to our 
+first frame so there's your basic steps those are your animal obviously you would probably use something better than 
+stickman to illustrate but here are your four frames of animation of a simple walk cycle alright that one looks  
+strangely like that one it's going to be a very bad animation but c'est la vie so now we've got our four different images 
+what I want to do now is create one sheet to hold them all so 512 by 512 
+will hold for 426 of 256 images I mean so let's take the first one and we'll 
+paste it right there we'll take the second one and we will paste it right 
+they're the third one and we will paste 
+it right 
+there and finally our fourth one and bottom right 
+all right there you go so we got a very basic sprite sheet we created from scratch here and this is our walking 
+animation it will loop forever it's just four frames it's very lousy let's go ahead and save this guy I screwed this 
+entire thing up crap I don't want to background alright this going to look a little bad 
+you I wanted transparencies alright that's a 
+little bit better so now let's go ahead and save this guy call it walk cycle dot  
+PNG transparencies and everything alright so there we have our basic animation that we're going to work with 
+let's bring this into our project I've already gone ahead and created one all right here just get out of presentation 
+mode and we need to copy our file in so 
+let's grab that out of Nik man walk 
+cycle and just drop it in our assets folder like so I get rid of the logo so 
+first things let's go with walk cycle that PNG instead order the ugly red so 
+that should work let's go ahead and create a run configuration here we've 
+done this a thousand times so I know you're going to bother explaining what I'm doing anymore that is desktop and that runs out of 
+core assets so and we want to run the 
+desktop launcher ah so now when I run this we should see our stickman graphic 
+there you go looks a little weird because what I did with the transparencies but there are the four frames of our animation now what we 
+want 
+to do obviously is just display one of those at a time so as the character walks we will update which frame is  
+currently being shown I'm going to go ahead and I'm going to actually show you two ways to do this in this video the 
+first one is we actually used texture regions which basically is a rectangle within an existing texture then the 
+other way we're going to do very quickly because we covered this in the past but I'm also going to show you how to use a texture atlas 
+which if I'm honest is 
+probably how you are going to go ahead and use this in the future but first let's start off with the the texture 
+region approach so let's modify this guy a bit we still on our sprite batch we want our texture 
+so next we need a texture region array 
+hold our animation frames like so and we are going to need an animation the 
+animation is a very handy guy it's pretty much the heart of this tutorial so I will show you it a little bit later 
+in a bit more detail but basically that's the animation controller that's what handles adding time and flipping 
+
+
+
+from one frame till next alright so we load our texture like normal yeah now 
+that we've got the texture we go ahead and create our texture we can create a temporary region of texture so what we want to do is we 
+want to load all the 
+frames up but we're going to use this little handy gap that's going to split it out to an array of arrays and that is so we create a 
+temporary extra region 
+two dimensional array like so I'll call it temp frames and equals texture region 
+dot split now what that does is it takes an image file like in our case we have a 
+512 by 512 image and we're going to say we've got tiles that are 256 by 256 and 
+it's automatically going to take all of those and spit them back to us as a two-dimensional array so it kind of 
+makes a grid of texture regions for us from an existing texture very handy so first thing we do is pass in our image  
+and then as I said that the dimensions of our individual textures within that 
+image so this is going to return us a 2x2 grid of frames for our animation and 
+then what we want to do is actually this is going to be somewhat overkill because we've only got four but I'm going to  
+loop through them so oops int index 
+equals zero 
+so you rose yes this massive overkill for an array 
+columns like so and then for each one we 
+basically want to go ahead and add it to our animation frames oh I actually 
+didn't create that suit I missed something we also have to allocate our animation frames so our animation frames  
+equals new texture region array this is gonna actually just be a 2d array though 
+so what we wanna do is the width times the height or in plain English for like 
+so alright so we have to allocate space for all four of our frames because we actually don't want to store them in the  
+grid like this we actually and create them in a straight 2d array so here we're actually just copying them over so 
+at index plus plus equals and then temp 
+frames at ahh I think it's J and I I 
+might get that backwards I'm gonna have to come back and revisit this if my frames seem out of order this is why but I think you want 
+to do columns and then 
+rows but this logic may be reversed so if your things come out working weird just swap these two iterators are these 
+two indexes right here oh one second sneeze coming on ah perfect made the  
+pause button in time okay so that's what we've done we copy to our 2d grid of temporary frames we took the now instead 
+of made them a 1d grid of frames window views so basically this is a four element array of texture regions within 
+this texture so no new memory is really being allocated here it all points back to this original texture these are just 
+references into the existing texture so this is kind of like this part starts at 0 0 and goes to 256 256 this one starts 
+at 0 comma 256 and goes to you know 512 comma so etc so all they all really are 
+is the texture region is simply just dimensions within an existing texture so 
+the real memory is being allocated here so don't worry over much about this so what we've done here is we've basically 
+created an array of texture regions that represent our animation ok so now that 
+we've got that guy let's go back and now use our animation 
+so I'm at the end of tie yep alright so now we need animation equals new 
+animation and there's a couple things you pass in here the first one is the 
+frame duration this is how long you want a frame to last so if you're if your 
+frame rate so you've done 30 frames and you want to run it at 30 frames per second you would set this value to that 
+or zero point should know this this 
+isn't hard math or 0.03 one quick quote 
+word of caution here you might notice in the past that I always always always for my floating-point values postfix number 
+than F this is what you're telling the compiler to say this is a float so when 
+it's trying to figure out what kind of type it is this forces it now this is one of those examples where it's perfect 
+why I do it because if you come here and I do this that value is not what you 
+think it is and your animation will not play because it'll turn these into integers so you will effectively end up 
+with the value of zero so this is exactly why I do put the F all the time 
+so there you go this is saying we want our duration per frame to be 30 times  
+per second or 30 Hertz or 0.3 in this case we since we've only got four frames we want to say play the entire animation  
+at all four frames per second so we're going to do one over four here or point 
+zero to five so I could also of course put in that value there as well and it's  
+exactly the same so just something to be aware of I find this version a bit more legible 
+to be honest but whichever one you want to go with is it's it's equally the same 
+thing just realize that this first value is the amount of time in fractions of a 
+second for or the frame each individual frame to last and then next we just pass in our 
+animation frames array like so so basically we have this created a new 
+animation using this array of animation frames now to actually use it is super 
+simple first we're going to need a new variable it's just a floating point value called elapsed time the animation  
+system itself will track how much how much to move by it does so as you see 
+here it knows to update at 0.25 seconds per frame but you do have to pass in how 
+long is the left you have to basically be the clock keeper for the animation class so to do that in our render loop  
+we simply just keep a counter so you elapsed that's time plus equals G DX dot 
+graphics dot get Delta time so every frame the amount is elapsed since the last frame we simply just keep a running 
+
+
+
+total of this this will give us the amount of time that's elapsed since the program started you might want to if you  
+have if you have pause logic in here obviously you want to stop incrementing 
+the counter if your game is paused and then finally instead of passing in the 
+image like so we just instead call to our walk animation also our animation 
+and then there's a couple key values here the key one we're going to use 
+today is get sorry pun wasn't intended is to get keyframe and this is going to 
+get basically the next frame that we want but you have to pass in the amount 
+of time so like so and then otherwise it's just like normal so you pass in the dimensions etc so this will return a  
+drawable item based on the current frame in the animation you can also set if an  
+animation loops or not we should probably go ahead and do that so that's actually right here so when 
+you call get keyframe you pass in a second value of looping so all that 
+saying is after we get to our fourth frame in our animation for the fifth frame go back to the first one 
+then continue forever you know what you know what looping is and that's basically it so if I've done this correctly and it no  
+promises that I have we should now have our very crappy stickman animation there 
+you go that was a really crappy stickman animation but that is animation in libgdx it's very very simple it's just 
+honestly as a sync with a sequence of of 
+images shown back-to-back the complexity in this particular example is because we used this texture region approach we 
+also could have used a texture atlas I'll look at that in a second bottle I'm 
+not gonna cover it in much detail because I already covered this in the past the texture atlas is covered I forget the exact name of 
+tutorial flip 
+back through a couple previous ones there was one on I think it's called texture atlases and sprite sheets be sure to watch it if you 
+need more information it covers this in much more detail but in this case it's also shows how you can just use an image 
+split the image up into individual cells and then just use that entire thing as 
+your frames of animation now this guy is little troublesome on the fact that if 
+my image wasn't a grid of same size so if it wasn't fit so I had to 256 images 
+side by side so obviously I had a 512 image but if my image source was actually say 675 pixels wide with a  
+bunch of white space at the end this approach simply wouldn't have worked you would have ended up with with garbage 
+results so this approach doesn't work necessarily as well as the texture out of this approach but that's kind of the  
+extent of it now we will quickly take a look at that animation class there's not a whole lot to it I'm actually surprised there aren't a couple 
+of listeners and 
+such but what you've got here you've got a couple key ones you can see you can return up how long the total animation  
+I'll take and theory this should return one second how long a frame will take which is our value right here you can 
+also set that later on so that again play mode is let me show you the options 
+here play mode dot so you how you loop it or you can play things back in 
+Reverse I don't see a lot of value or sorry not value use I don't know why you would often play it in  
+animation in Reverse but your option is there ping-pong I think loops it but it 
+goes beginning to end and to beginning beginning to end at the beginning again I'm not really sure why you would do  
+that and again you can loop in Reverse so if you want to change up the values you set here or the value you set here 
+you can after the fact calling individual methods otherwise the 
+only other guy here that's really kind of that useful to you is is your animation finished and this again you pass in your elapsed time and 
+it will 
+tell you if the animation has reached its end and perhaps you want to queue up so a lot of times what you probably have is a single 
+character kind of parent 
+class that held seven or eight or nine or ten animations like walking jumping dying shooting etc it would have all 
+these different animations and then in your draw method you would be flipping between whichever animation is active so 
+you'll probably have like an active animation and then what this would do is probably you would be polling to see 
+okay it's the current animation done because then you want to probably queue up another one after the fact and this  
+is the extend what's there unfortunately there is no ability to set a callback for animation ended although you could 
+probably hack that in but otherwise that's that's literally it that is animation and libgdx very simple stuff 
+very cool that way now let's do it again let me save this guy yo because I'm 
+going to need the source code for github but that means I need to go and create a 
+new class another key part is since we're going to be using the texture Atlas so I also need to bring in the 
+tools so a quick reminder I call this one a TA that's pretty bad 
+texture atlas animation demo how that 
+game from scratch I can't type today and 
+texture Atlas and animation demo so don't care about 
+Android don't care what I don't care about HTML but I do care about the tools because that's where our texture maker  
+comes in from so bring that one in and I'll go in here and I wanted to create an idea project for me and see libgdx  
+and then we'll put this one in animation too so generate now since watching this 
+I'll see you in a second back in IntelliJ with this load hello and welcome back so we've created a new 
+project we've included the tools etc so now we're going to do is actually create a slightly more realistic sprite sheet  
+my stickman wasn't exactly the best example so what I've gone ahead and I've loaded up an existing a blender project 
+here this is actually created with a protocol mixable fuse if you go through my my tutorials or go back to gey from  
+scratch comm you'll see very very in-depth preview of how to actually use this guy so if this looks interesting to 
+you and you want to use it yourself I have documented it quite well it's a very cool tool especially if you 
+have very little animation abilities so what I'm just going to do is come in here and change my camera oh I want to 
+
+
+
+be each frame at say 256 squared so 256 
+by 256 and we want to 100% of that so right my camera side view so --is-- 
+player animation see if we cut it all 
+perfect so we stopped at m120 set my end accordingly now I don't 
+want a hundred twenty frames of animation that is just going to be way too big so when I go ahead and render  
+this out I'm actually going to go to I'm going to say render every third frame 
+like so and for our output then let's go 
+ahead and save this right into our projects folder so libgdx animation - 
+core assets a new directory and we'll call this raw sprites so all right so we 
+will save them here we've set our 256 by 256 that's last thing we want to do is 
+turn on transparency which I always fight to find but I believe it's in shading yeah transparent and then just 
+render those frames so it's flipping through the 120 frames rendering every 
+third one buh-buh-buh-buh-buh butt butt butt butt butt butt butt butt 
+butt-butt-butt ba ba ba duck so now we head back to our project over here and 
+in theory if I go to the core assets folder I now have a raw sprites and 
+there are each frame of animation so a 
+bit more like what you would see in a real game as opposed to my stickman so now what we got to do is we got to take those those raw 
+frames and convert them 
+into texture atlas for us so let's go ahead here and create a new directory 
+and we will call this a sprite sheet so 
+okay and again I covered this in another tutorial so I'm going to run through it very quickly but now we're going to use the texture Packer 
+tool if you need more 
+information go back through the earlier video you will see a lot more instruction on what I'm about to do  
+basically it's in the tools folder here and put the wrong thing 
+tools extra Packer texture Packer I'm going to do is make a run configuration 
+for that let's see here I wanted to run in the core and assets folder it runs 
+under the desktop module it's that folder and the last thing we got to do is we have to pass in a source directory  
+in the destination directory so that was raw sprites and then it was fright 
+sheets and then we'll call and then the name my write sheet I believe that's the 
+right parameters so go ahead and apply and run that and it is packing that into 
+I it ended up creating five sprite sheets because I used a rather large sprite to start with each one's going to 
+be 1024 by 1024 don't worry the atlas actually takes care of any of the thought process behind dealing with 
+multiple though there could be some performance gain performance issues on here so I'm actually using a rather 
+large sprite in this particular example which is why it resulted in so many sheets you passing parameters that 
+control the output you can create a single 24 20 by 2048 by 2048 sheet for 
+example that's again covered in the other tutorial go back and see it if you want more but now if we come back here  
+to our assets you'll see I have a single dot Atlas and then it's created me five 
+PNG files of all of my animations like so okay so now that we have this this 
+atlas in these these things create let's go ahead and now create our code to do animation the end process is very very 
+similar to what we were working with before I'm just gonna remember assets sprite cheats my sprite sheet Atlas 
+totally going to forget that all right so switching the presentation mode sorry if I forgot to do that 
+earlier I'm not sure if I did or not so now we need to do basically the same 
+thing we need private tick tick yeah I 
+can't type Atlas and we'll call this that we need a animation we've been down 
+this road I'm going to bring in the right one like that we need so why am i 
+doing this time it didn't before no particular reason I just kind of forgot last time to be honest you should probably screw  
+up your variables it doesn't really make a difference because this is an a very elaborate class but I'm being a little  
+bit more proper today so now we got to go ahead and load in our texture atlas 
+so texture atlas equals new picture atlas and it's GDX dot files the 
+internal and it was I told you I'd 
+forget all right 
+shop so that is sprite sheets my sprite 
+sheet oops atlas yeah okay so load our 
+texture atlas in once again again Atlas is like a code of a table of contents 
+two different images within image file because you saw it made five of them different different locations within  
+each of those let's just treat them as a one giant hole again grouping all of 
+your images together into a single image is a very good performance item and we create our image exact same logic as  
+before to our frame rate as we got a lot 
+more frames of animation so we'll do a 30 frames event 30 updates per second of 
+animation and then we just pass in our texture Atlas and we're going to get all 
+of them like pass it in as as an entirety light animation to its thing you can actually have passed in say the 
+first six frames were a walk in emission then the next five frames were jump  
+animation etc you can actually pass that in you create this way but we're going to use the entire Atlas as our animation  
+because it's just one singular walk sprite sheet by the way technically 
+texturizer should be disposed of here all I should be I'll be good for once and implement dispose 
+and we want to be the batch needs to be dispelled that she needs to be dipped 
+
+
+
+disposed and texture Atlas supposed I know I I don't do that half the time I 
+do have the time I leave it to you as an exercise to the viewer to figure out when you should be coming disposed or 
+not basically if it's got a dispose method you should call it small examples we're not really leaking memory but best 
+practices you should get in the habit let's get rid of this god-awful red clear color and then our batch simply go 
+note we need to update our elapsed time same logic as before lapse time plus 
+equals GTX traffic's dot get Delta so 
+and finally that step draw and then 
+texture atlas dot get oops no animation my bad same logic animation dot get keyframe 
+elapsed I'm looping true and then once 
+again we'll just draw it the origin like so and in theory that's it so let's go 
+up here create a run configuration so we've only got one for our texture Packer so we need one for our  
+application so application run desktop 
+and it is desktop we are running is our 
+core assets directory that we run from and desktop launchers are our main 
+alright so in theory big theory there's a lot of code written there but this 
+should there you go that is animation in libgdx it's very 
+very very very very simple to do and the result to come out pretty solid looking 
+now as you can see he's he's going a little fast so let's say we want to slow that down a bit so instead let's do that  
+by about half the speed so 15 updates per second go ahead and run that and that looks a little bit more realistic  
+that's it that that is how you animate GDX a very very powerful system but very 
+very simple it's just like you show an image after an image after an image after an image after an image and all  
+those images combined go together to make your animation you probably 
+real-world situation you would have multiple animations and you start getting into a little weird situations 
+like I need to move from a walk to a jump and I'm midway through the walk 
+cycle how do I blend this into a jump and that's either something your artist solves or you bring yourself to a  
+complete walk like to your end of your walk cycle before the jump which often isn't acceptable or this is where bone 
+skeletal animation actually comes in very handy because then you can do something called a blend in between two sets of keyframes 
+different topic for a 
+different day I'll probably cover that in a different later point but if you're dealing with it with this pure sprite 
+drawing thing what you often would want to do is create a couple of transitory sprite animations so something that is 
+somewhere in between the walk and the jump so you can use that as your transition or you could actually write 
+some code that would actually do a bit of a takes the the final animation the 
+first animation the second animation it doesn't blend between them but getting that to not look like crap is probably going to be a bit of 
+a challenge but 
+simple animation super easy literally it's just like this you could have multiple animations as many as you need 
+so what we'd often do is create like a character class to hold all this stuff and then switch between what the current 
+active animation is in that update or draw function but that's it I hope you 
+enjoyed that thank you very much goodbye

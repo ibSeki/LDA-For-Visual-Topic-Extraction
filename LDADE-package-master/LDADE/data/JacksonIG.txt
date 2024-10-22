@@ -1,0 +1,174 @@
+﻿Hey guys. So in this tutorial we will 
+be learning how to parse JSON in Java. We'll be parsing JSON objects into Java objects, 
+and Java objects into JSON objects. 
+JSON is an open, standard format file that's human readable. 
+So if you look at your screen, this is a JSON file. 
+Let me just give you a quick introduction. 
+So JSON stands for JavaScript object notation, 
+and it's basically attribute value pairs. 
+The attributes can be of these following types. 
+They can be strings. These two are string attributes. 
+They can be booleans. This one is a Boolean attribute. 
+They can be in numeric attributes, 
+and it doesn't matter if it is an integer or floating point. 
+They can also be arrays. This is an array attribute. 
+It's an array of string, but it could be an array of any 
+other kind of basic types, 
+and this is an object attribute, which is JSON object. 
+So to start off, I've got a clean project here. 
+We'll be using Maven just to manage the dependencies. 
+We are going to be using the Jackson Library. 
+In my opinion, it's one of the easiest ones to use, 
+and it's the one used in the play framework that I really like. 
+And I like the implementation that they've done there. 
+So I'll do something like that. 
+It's basically what I use for all of 
+my projects that needs to deal with JSON. 
+Well, the first thing is to add some dependencies, 
+the dependencies that we are going to want 
+to add are the Jackson core, like this. 
+The version is 2.9.9, which is the latest one available. 
+And we'll also add the Jackson databind 
+So I'll use 2.9.9.3, which is the latest one available. 
+So these 2 are for Jackson. 
+Now we are going to create a package. 
+And I'm going to create a util class that I'm gonna name Json. 
+This class is what we're gonna use 
+to process the parsings that will be doing. 
+So, the first thing that we need is an ObjectMapper from Jackson. 
+I'll make it private. 
+I'll import that map like this. I'll also make it static 
+because I'm only gonna need one ObjectMapper ever in my project. 
+And also I'm instantly creating it like this. 
+But I don't really like it because the ObjectMapper can be configured. 
+So I'm going to create a private method. 
+That's going to be static as well 
+Is going to return an ObjectMapper. 
+I'm gonna call this getDefaultObjectMapper. 
+This takes nothing as input. 
+It's going to return an ObjectMapper. 
+I'm gonna name this defaultObjectMapper return defaultObjectmapper. 
+And instead of creating a new ObjectMapperlike 
+this instantiating it over here. 
+I'm going to call this method,  
+and I'm gonna create it based on this method. 
+The reason why I'm doing this is because ObjectMapper can be configured. 
+And later on, I'm gonna do some configurations over here. 
+I'll leave it like that. The first method that we want to 
+write is one that will parse a string which 
+will be a JSON string, into a JsonNode. 
+The JsonNode is part of the Jackson library,  
+and it's basically the base class to 
+represent a tree mapping of the JSON object. 
+So you'll understand more as you see it. 
+So public static. I'm gonna make it 
+static because I want to be calling it without 
+creating a new JSON object all the time. 
+
+
+
+And I'm going to be using the ObjectMapper that 
+we've got in this class. So it needs to be static. 
+I'm gonna make it return a JsonNode, 
+which is part of the Jackson Databind. 
+So it's going to take in a source, a string basically, aJSON String. 
+And I'm gonna return node. For that, I'm going to use the objectMapper. 
+I'm gonna say readTree src, like this 
+And this is going to return it, JsonNode, 
+and I'm going to return it straight away. 
+And it also generates an IoException, 
+which I'll make my method do throw as well, for the time being as well. 
+So to test this out, going to create a driver class 
+Going to create the main method 
+A normal one. 
+And I'm going to call this util class. I'm gonna parse. 
+I'm going to give it a string. 
+It's going to return JsonNode. Everything went well. 
+And I'm gonna surround. 
+Try catch for the time being as well. 
+So, jsonSource, I'm just going to create a very, 
+very simple one over here for us to test. 
+And now I'm going to access this attribute title 
+Using the get I'm going to read that attribute as text, 
+and I'm gonna system out print line. 
+Just so that we see, let's give it a run just to see how it goes. 
+So, yeah, we are reading this JSON string, but I don't really like 
+to have a lot of driver classes around here to test stuff out with. 
+So one thing I'm gonna do is, I'm going to 
+create JUnits to do the testing for us, 
+so I'll go over here and want to create a Junit for the past. 
+So, push generate. I'll do test. I'm not using JUnit 5. 
+I haven't imported their library on the prompt, so I'll just fix that now. 
+And it does that for me, and I'll select this method that 
+I want to create a test case for, and I'll just press OK 
+And here we go. 
+So in here, I'll do... 
+In fact, I'll just copy this. 
+I'm going to call this a simple, simpleTestCase. 
+And in fact, I'll delete this class right now. 
+I don't want to have it here. Delete...and okay, 
+I'll just do this as well, I'll parse the simple test case. 
+I'm gonna add the exception to the method's signature, 
+and instead of printing it out, I'm going to do assertEquals this. 
+And Coder from scratch. 
+I'll run the JUnit class...and everything went well. 
+So, test passed. One of one, we only have one. So it passed. It's good. 
+Now, since we already have this test case 
+and this method the passed method that 
+basically converts a string into JsonNode. 
+Let's create a method that not only parses, uh, let's create a method that 
+parses a JsonNode into an object that represents that JSON file. 
+So for the test case that we are using, you have title. 
+We just have an attribute, and it is a string, 
+so I'm going to create here. 
+A package for the test objects. 
+In fact, I won't do it here because we are already using JUnit. 
+I'll just go over here inside JUnit and I'll 
+create here the package for the POJO objects. 
+So POJO, let's go, 
+and I'm going to call it. Simple test case, 
+JSON POJO, like this, and I know that it 
+only has one attribute, which is title. 
+So this POJO, this simple test case, JSON POJO. We'll actually, 
+we'll actually be able to convert this JSON into that object, 
+but for that we need to create another method, 
+and that method is going to call it fromJson. 
+
+
+
+Okay, So going to make it public, static as well. 
+Because we don't know which type of case,  
+which type of class we are going to be converting to 
+We'll just leave that open. 
+And we make the input JsonNode. 
+And the class that type that we want to return. 
+We are also gonna use again the ObjectMapper, 
+and we're going to do tree to value and the tree node we parse it. 
+It is the note. And the time is going to be the class, like this. 
+And we make it return, and we surround with try catch for the time being. 
+No, actually, I'll just make it return like this. 
+Okay, Let's create a method from JSON, over here. 
+void fromJson. I'll say that it is a test. 
+And just clean this up a little bit. 
+Like so. Now we want to do exactly the same thing as before. 
+And I'll add the exception to the method signature. 
+Now, I'll use our new method. I give it the node. 
+And I passed the simple test case Json POJO. 
+And now I let's do a system out before we do the asserts. 
+So pojo.title. Let's give it a go. 
+Test case that we have here, the pojo object. 
+We left the variable as public, but we really don't want to do this. 
+We want to do the normal normal bean notations, 
+so I'll create a getter and a setter for it. 
+So, we have a getTitle and a setTitle. 
+I'll just modify this, I getTitle. 
+And if I run it, it will run perfectly as well. 
+The library, the Jackson Library will take care of 
+using in case there are no public attributes or 
+actually public variables to assign the value to 
+It will use the setters and getters, will use the getters. 
+But it will use the setters to set the values in. 
+So we'll leave it like this for the time being. 
+On the next video, we'll do parsing from object to JSON String. 
+Don't forget to subscribe,  
+if you want to get notified of when new videos come out

@@ -1,0 +1,681 @@
+﻿what's up guys welcome back to another 
+video 
+today we'll be creating our very first 
+crud restful api using java 
+mysql spring boot jpa and maven be sure 
+to like this video and subscribe to the 
+channel so you guys can see all of the 
+new content i've been posting 
+it's much appreciated so to actually do 
+this tutorial you'll need 
+java maven and mysql workbench installed 
+on your machine 
+i'll provide all of the links in the 
+description box so please check it out 
+and once you're done with that you can 
+come back here and resume the video 
+so once you're all set with all the 
+things we need let's go ahead and start 
+so now let's get started let's start 
+with an api so basically an api stands 
+for application programming interface 
+an api is a set of rules and mechanisms 
+by which one application or component 
+interacts with 
+others so what exactly is a restful api 
+then 
+rest is an architectural style restful 
+is basically the interpretation of it 
+so essentially the design of a rest api 
+will look like this 
+you have a client a ui for example this 
+ui calls an api the api will perform 
+operation on the database like creating 
+data deleting data 
+updating data and reading data so a rest 
+api has four major operations 
+receiving data in a convenient format 
+creating new data 
+updating data and deleting data so this 
+is exactly where the crud acronym come 
+from 
+in crud the c stands for create the r 
+stands for read 
+u is update and d is delete so how do 
+apis actually exchange 
+data json is something that's used to 
+exchange data with restful apis 
+json stands for javascript object 
+notation we can send json to the server 
+to create 
+update and delete data when we read data 
+we can also get it in a json format 
+this is great because json is compatible 
+with all programming languages meaning 
+that 
+when we're using restful apis we can 
+communicate with any application no 
+matter what the app was actually written 
+in 
+so this is awesome rest also relies 
+heavily on the http protocol 
+each rest operation uses its own http 
+method 
+and http get request is when you are 
+receiving any kind of data 
+for example when you simply browse to 
+
+
+
+any url you are actually performing a 
+get request 
+this corresponds to the reading crowd an 
+http pulse request is usually the 
+creation of data so submitting a form on 
+the user interface 
+or any other client would be considered 
+a post this corresponds to the create in 
+crowd 
+an http put request is when you're 
+updating data so for example 
+updating the name of a user in a 
+database would be considered a put 
+this corresponds with the update in the 
+crowd and finally an http delete request 
+is when you're deleting data so deleting 
+your account from a website or say 
+deleting a tweet from twitter would be 
+an example of a delete request 
+this corresponds to the delete in crud 
+whenever you make an http request a 
+status code gets returned these are the 
+five major types of status codes 
+one xx would be informational two xx 
+would be success three xx will be 
+redirection 
+four xx will be a client error and 5xx 
+is generally a server error so like i 
+said before we'll be creating this api 
+using spring boot 
+maven jpa and mysql so in case you're 
+not familiar springboot is an open 
+source java based framework used to 
+create a microservice or any kind of 
+service 
+maven is a build automation tool used 
+primarily for java projects 
+maven can also do other things like run 
+automated tests package our app in a jar 
+or war file so we can deploy to 
+any server and also maven gets all of 
+our dependencies that will need like 
+bring boo 
+jpa et cetera jpa stands for java 
+persistence api it's a collection of 
+classes and methods to persistently 
+store data in a database 
+jpa is great because it saves us from 
+writing some boilerplate code that we 
+usually have to write 
+because jpa can do things like create 
+tables for us and columns automatically 
+lastly mysql is an open source 
+relational database management system 
+used to manage databases the mysql 
+client i'll be using 
+personally is my sql workbench i've also 
+included a link to this in the 
+description if you'd like to use it as 
+well 
+so now that all the background is out of 
+the way let's actually get started in 
+writing our first restful api 
+go ahead and open any browser and browse 
+to start.spring.io 
+this is a spring initializer spring 
+
+
+
+initializer 
+generates a spring boot project for you 
+without you having to do 
+anything so prior to actually generating 
+a project you'll be able to do things 
+like add dependencies 
+so let's go ahead and configure our 
+project so at the top keep maven project 
+selected 
+keep java selected for the language and 
+for the spring boot version you want to 
+keep whatever version is selected by 
+default now let's move on to the project 
+metadata for the group name i'm going to 
+type com.johnson.app 
+you can name this whatever you'd like 
+i'm using johnson for my last name but 
+it's mainly up to you 
+for artifact i'm just going to call it 
+rest then for the name 
+i'm just going to say rest api and then 
+for the description i'll just say 
+sample crowd rest api we can leave the 
+package name as 
+is we can leave the packaging as is 
+we'll keep it as jar 
+the version of java you need is eight so 
+select eight now we can add our 
+dependencies 
+go ahead and search for web add spring 
+web and that is all we need for now you 
+can go ahead and generate your project 
+once it's generated you can unzip the 
+folder now once the folder is unzipped 
+you can go ahead and open up your 
+favorite ide we can close out of chrome 
+now i'm going to go ahead and open up 
+intellij next i'm going to import a 
+project 
+select import project now browse for 
+that extracted folder 
+next we want to keep it as import 
+project from external model 
+select maven click next click next again 
+we'll keep all the defaults next next 
+and then click finish 
+so now we have our first spring boot 
+project actually generated let's go 
+ahead and expand the folder 
+in our package you see we have a rest 
+api application class let's go ahead and 
+open that 
+in here we have a very simple class 
+within the class we have our main method 
+and then within that main method we're 
+calling one function we're also 
+annotating this class with the spring 
+boot application 
+annotation so this annotation is 
+basically telling the ide that this is 
+indeed a spring boot app it's that 
+simple guy spring boot makes things 
+very easy for us let's go ahead and open 
+up the palm.xml file the palm xml files 
+where maven puts all of their 
+dependencies 
+
+
+
+as you see we have dependency section 
+and then within that we have each 
+dependency so we don't need to know too 
+much about this guys 
+i'm going to be doing a maven tutorial 
+in the future so stay tuned for that but 
+for now just know that this is where 
+maven keeps the dependencies and other 
+metadata go ahead and exit that out and 
+let's run this to see what happens 
+in the console we get started rest api 
+application in 1.472 seconds 
+and then above that we can see that 
+tomcat has started on port 8080. 
+basically tomcat is just an app server 
+that you can deploy 
+applications to so let's go ahead and 
+open up our browser again and browse to 
+localhost 
+colon 8080. so as you see we get this 
+error that says white label error page 
+this might look like it's bad but this 
+is actually great that means spring boot 
+is indeed running so we're seeing this 
+error basically because we don't have a 
+get endpoint 
+there's nothing to really show so this 
+is just a default error that spring boot 
+provides for us because we don't have a 
+slash 
+error mapping so let's go ahead and go 
+back to intellij and let's create our 
+first 
+actual endpoint i'm going to create a 
+new package called controller a new 
+class called 
+api controllers within that let's create 
+a new method called 
+get page okay so this method has a 
+return type of string and it's called 
+get 
+page now in this method let's just 
+return welcome 
+okay we have a very simple method okay 
+so now let's annotate this class with 
+the annotation called 
+rest controller make sure you guys 
+import that from the spring framework 
+that tells the ide that this class is 
+indeed a rest controller and that we're 
+going to have some type of endpoints in 
+here now let's go ahead and annotate the 
+method with at get mapping 
+after that add some parentheses and we 
+can add a value here for the actual 
+endpoint that we'd like 
+let's go ahead and just set it to a 
+forward slash the forward slash is the 
+default endpoint that gets hit when 
+accessing an application like when we 
+hit localhost 8080 by default it hits 
+the forward slash so now we have a value 
+of forward slash now let's go ahead and 
+run this and see what happens so in the 
+console we see that our app has started 
+on port 8080 once again now let's go 
+
+
+
+back to the browser and see what's 
+different let's refresh this 
+and as you see we see welcome congrats 
+guys so basically we really do have our 
+first api created but it's not a crud 
+api just yet because we're not creating 
+or updating or deleting anything just 
+yet we're just really reading and all 
+we're reading is welcome we're not 
+reading from the database we're not 
+really doing 
+anything fancy all we're doing is 
+returning welcome but as you see 
+guys it is indeed working so far now 
+let's go back to intellij let's create a 
+new package called 
+models so within that new package right 
+click and create a class called user so 
+moving forward 
+this user object is what will be 
+creating reading deleting and updating 
+so now let's go ahead and add some 
+attributes to this user class 
+okay so now we have our attributes 
+created so user will have an id 
+a first name a last name an age and an 
+occupation 
+so this id attribute is actually going 
+to act as a primary key in the database 
+all right now let's generate some 
+gutters and setters 
+okay great now we have all of our 
+getters and setters generated okay guys 
+now let's go ahead and go to our palm 
+and add the dependencies for jpa in 
+mysql 
+okay guys as you see we have our two new 
+dependencies we have a dependency for 
+jpa and a dependency for mysql 
+great okay now let's go back to our user 
+class and add some annotations to it we 
+have an entity annotation at the top 
+that tells mysql that this user class 
+will indeed be a table within the 
+database so for the id 
+attribute we have id and generated value 
+annotated 
+this tells my sql that id will be unique 
+for each user 
+next we have column annotated for each 
+value that tells my sql 
+that each one of those attributes will 
+be a column in the database so now let's 
+go back and create another package 
+called repo 
+next you want to create a new interface 
+within that package right click go to 
+new 
+select class and then in the drop down 
+change it to interface call this 
+interface 
+user repo next within that repo we want 
+to extend the jpa repository 
+next we want to pass in the brackets a 
+user and a long 
+awesome and that's all we need to do to 
+
+
+
+this class now let's go ahead and open 
+up the resources folder 
+and browse to your 
+applications.properties file 
+so the application.properties file is 
+the file that spring looks for when 
+doing configurations or setting various 
+properties 
+so we can even set things like the port 
+that we want to deploy to whenever we 
+run this application so we can set 
+something like server.port equals 9000 
+let's go ahead and try that so if i were 
+to run this application 
+instead of deploying to localhost 8080 
+when we run it would actually use port 
+9000. 
+so this is an example of something that 
+we can do within a properties file so 
+let's go ahead and delete this because 
+we actually don't want that 
+now i'm going to add some properties for 
+our database connection 
+okay so now i have the database 
+properties first we have a url for our 
+database 
+the name of the schema that we'll be 
+using is crud users will create that 
+after this and then i'm using the 
+default root username as well as my 
+password 
+when you first installed my sql 
+workbench you should have created a root 
+username 
+as well with a password so just use 
+yours okay so now you want to save that 
+and open up my sql workbench 
+so within mysql workbench you want to 
+click the plus next to my sql 
+connections 
+and create your first connection let's 
+name this restful api 
+as you see in the username we have root 
+and then we're going to use our password 
+so now let's hit test connection at the 
+bottom and enter your password 
+awesome it says successfully made the 
+mysql connection 
+great that's exactly what we wanted so 
+now click ok and then 
+click ok and get out of here now you 
+want to open up that connection that we 
+just created restful api 
+now on this left hand side in the schema 
+section you want to right click and 
+click 
+create schema now we're going to name 
+this schema exactly what we named it 
+here 
+crowd users click apply click apply 
+again 
+now we're all set we have crud users 
+created awesome now let's go ahead and 
+go back to intellij 
+let's run our application awesome 
+everything worked as expected 
+
+
+
+so now we have the project started up on 
+port 8080 once again 
+now let's actually go back to my sql 
+workbench expand the crowded users 
+schema 
+and as you see we have a users table 
+generated if you don't see a user's 
+table try right clicking on the crud 
+user schema and refreshing 
+let's right click on users and just do 
+select rows as you see we have an id 
+age first name last name and occupation 
+column these are all 
+of the properties from our model 
+as you see we never had to create the 
+table by hand or the columns 
+itself this is awesome this saves us so 
+much time so now let's actually persist 
+some of these users let's actually save 
+some users to the database 
+get some users from the database update 
+some users and delete them so now let's 
+go back to our controller package and 
+open up api controller 
+so now what we want to do is inject our 
+repository now you want to annotate that 
+declaration 
+with auto wire basically the auto wired 
+annotation handles all dependency 
+injection for us 
+now let's create a new method so now we 
+have a new method called get users of 
+type void so what's great about the jpa 
+database is it comes with a whole bunch 
+of pre-built methods 
+some of the methods are things like 
+getting a list of your object from the 
+database 
+getting an individual object from the 
+database updating an object in the 
+database deleting an object in the 
+database and so on 
+so let's go ahead and return one of 
+those methods in our get 
+users function so we're going to return 
+this user repo dot find all what this 
+will do is return 
+all of our users from the database so 
+let's change our return type to actually 
+be 
+a list of users import that list now 
+next we need to annotate 
+our method with get mapping let's give 
+it a value of users 
+let's save this and run it and see what 
+happens okay so as you see 
+we browse to localhost 8080 we still get 
+welcome now let's force slash 
+and go to users as you see we get an 
+empty array 
+this is because we don't have any users 
+in the database but we actually see that 
+this endpoint 
+is indeed working great so now go back 
+to the code now let's actually create a 
+function for saving a user 
+
+
+
+now we'll utilize another one of the 
+repo functions this function will take 
+in an object of type user 
+next we want to annotate this method 
+with post mapping because this is a post 
+method remember 
+whenever we're saving something to the 
+database it'll be a post let's give it a 
+value of save 
+next we need to annotate our user 
+parameter with at request body because 
+this is what will get sent through the 
+requests using json 
+we're going to send a user through json 
+next we need to annotate our user 
+parameter with at request body because 
+what will get sent through the request 
+in the body is an actual user object the 
+user object will be written in json 
+since we don't have a user interface to 
+actually submit this user 
+to save we're gonna have to use another 
+client there's a whole bunch of other 
+clients you can use 
+or json tools that you can test post and 
+puts and delete 
+we're going to go ahead and use a tool 
+called postman i'll provide a link in 
+the description box 
+so you guys can check out postman and 
+use that and what we want to do is 
+utilize another function on the repo so 
+now we're calling the save method on the 
+repo and then we're going to pass in 
+that new user and save it to the 
+database the jpa repo handles all of 
+this and will actually save it to the 
+database without us having to type any 
+other things after we do that let's just 
+go ahead and say something like save 
+awesome so once you have postman 
+downloaded go ahead and open that 
+okay so now that we have postman open 
+click new in the top left corner click 
+request 
+and let's name this api get then click 
+save now let's test our existing get 
+endpoint to get a list of users now 
+click send and as you see we get our 
+empty list in the response body 
+great this is exactly what we wanted now 
+let's go ahead and test our new 
+save endpoint create a new request and 
+let's name this api post click save now 
+let's change 
+this to a post and for the url enter our 
+new endpoint we created 
+now select body then go to raw then 
+change this from text to json now let's 
+create our user object okay so now we 
+have our user object we're going to save 
+john doe to the database he has an age 
+of 25 and he's a developer 
+of course okay now let's go ahead and 
+send this request to the server and see 
+what happens as you see we get saved we 
+
+
+
+get saved because this is exactly what 
+we put as the return 
+in our controller now let's go back to 
+postman let's do the request to get a 
+list of our users again to see if that 
+did indeed save so now we're back at our 
+get request 
+now let's send this again and as you see 
+in the output we indeed get our john 
+doe user that we just saved awesome now 
+we see that we are actually persisting 
+data in our app now let's check the 
+database to see if it's saved there as 
+well open up mysql workbench now let's 
+do a select from the table and see what 
+happens as you see we do 
+get the john doe user in here okay so 
+now let's move on to the update 
+functionality of our api okay so we're 
+in our controllers class what you want 
+to do is create a new method we're going 
+to call it update user then we're going 
+to annotate it with request body 
+now let's annotate this method with put 
+mapping let's give it a value of update 
+then a forward slash with the user id so 
+now since we're passing in the id in the 
+url we need to also take in that 
+parameter in the function okay so now 
+we're taking in an id of long to the 
+function 
+now we need to annotate that id with the 
+annotation of path variable now within 
+our method body let's actually find that 
+user 
+we can find the user by using another 
+function on the user repo 
+okay so we're going to call this find by 
+id method on the user repo and pass in 
+the id that was in the path then we're 
+going to call this get function on that 
+to actually get the user now let's set 
+the user attributes from the parameter 
+to the updated user we just created now 
+let's call that save method on the user 
+repo again to save this user 
+now let's just return something that 
+says something like updated now let's 
+rerun our app okay so there were no 
+issues now let's go ahead and go back to 
+postman to create a new request click 
+new let's name this request 
+api put now let's change it from get to 
+put and put in our newly created 
+endpoint okay so now in the url we're 
+putting in localhost 8080 forward slash 
+update forward slash one we're putting 
+one because the user that's currently in 
+the database 
+has an id of one the id we put in the 
+url will be the user that gets 
+updated okay so now let's select body go 
+to raw then change it from text to json 
+okay now let's go ahead and copy our 
+user from our post request let's paste 
+that in the put request and let's change 
+
+
+
+something let's change them from 
+developer to a senior developer now 
+let's send this as you see we get 
+updated now let's call our 
+get request again and see if it actually 
+updates john doe awesome so now john doe 
+is a senior developer 
+so now we currently have a get request a 
+post request and a put request all 
+working 
+so now we have the c working and crud 
+the r working in crud the u working in 
+crud and now we just have to work on d 
+finally so let's go back to intellij 
+okay now let's create a new function and 
+let's call it something like delete user 
+okay so this function will take in 
+another long path variable of id we're 
+going to annotate this class with delete 
+mapping and let's give it a value of 
+forward slash delete then the id okay so 
+now let's call that find by id method on 
+the user repo to get the user now let's 
+call the delete method on that user repo 
+okay so we're calling the delete method 
+on the user repo 
+and we're passing in the user that we 
+want to delete now let's go ahead and 
+return something like deleted user with 
+id 
+then id now let's rerun the app okay so 
+now let's go back to postman and create 
+a new request go to new in the top left 
+let's call it api 
+delete now let's change this from a get 
+to a delete and pass in your newly 
+created endpoint 
+okay so we're passing in localhost 8080 
+for slash delete forward slash the id we 
+want to delete okay so let's go ahead 
+and send this and see if it works okay 
+now we get deleted user with the id one 
+let's go back to our get request and see 
+if it actually deleted awesome so we no 
+longer have any users in the database 
+our delete functionality is indeed 
+working so awesome guys we have a get 
+working a post working a put working and 
+a delete so congrats guys you guys have 
+really created your first fully 
+functioning crud restful api 
+awesome guys congrats i hope you guys 
+enjoyed this video and remember 
+subscribe to the channel guys it helps 
+me out a lot and remember to like the 
+video 
+alrighty have a good one guys have a 
+great rest of your day i'm out of here 
+seeing in the next video 
+peace

@@ -1,0 +1,458 @@
+﻿o que vai univap te esperar split e tava 
+querendo and my heart on fire on 
+e o pessoal de fora matheus hoje vou 
+mostrar a vocês como utilizar uma 
+biblioteca java com o pigelli para 
+realizar desenho no caso a biblioteca de 
+estar utilizando vai ser a lwjgl sal 
+biblioteca para desenvolver jogos na 
+linguagem java 
+eu vou estar feliz na versão 2.9.3 para 
+baixar seven aqui ó usual location 
+o download abrir sou se forje e só 
+clicar aqui ó download last version 
+certo ou é só pessoal aqui será que 
+deixar que ele vai iniciar o download eu 
+não vou baixar você já tenho baixado só 
+abrir aqui achar vocês aí vai vir limpar 
+daqui ó lwjgl essa nessa pastinha 
+se fosse para a cidade duas coisas vamos 
+precisar de todos os arquivos que estão 
+no ponto já que está pastinha já todos 
+seus arquivos aqui é a biblioteca no 
+caso do lwjgl e vamos precisar aqui 
+também dos arquivos que estão inativas 
+certo só posta aqui na tive na pastinha 
+o windows no caso dessas dll sac 
+e eu já tenho extraído adiantar acha que 
+eu fiz peguei de todos os pontos já tem 
+lá certo só tinha já e peguei o daqui vi 
+windows somente ajuda a l l a 
+eu vou abrir aqui o eclipse 
+um clips black lips on 
+já tá perto do mercado criar o diretório 
+create na área de trabalho 10 top 1 
+oi gente vai tirar aqui certo ok esperar 
+ele carregar 
+o quanto isso vou trazer 
+e após tinha horário de trabalho 
+e aí 
+e aí 
+a foto carregou aqui o eclipse fechar 
+aqui quer que eu falei vou criar um 
+projeto new fire new né ouvir vou ter 
+futuro o aplicativo java frozen e vou só 
+o nome do artigo caso do projeto usando 
+um 
+eu quero saber jrs jrs 
+a raiz fosse fins ele vai perguntar se 
+quer abrir no modo de perspectiva vou 
+dizer que sim 
+e pronto ele abriu aqui criou um forte 
+com o projeto padrão certo e quer que eu 
+vou ter que fazer vou ter que ir agora 
+passar essa festinha aqui que tem uns as 
+bibliotecas do wesley wgl para dentro do 
+meu arquivo né diferente no projeto no 
+caso recortar aqui e coloque dentro 
+certo projeto é 
+e aí vai atualizar aqui ó 
+e não refresh esse botão direito 
+e se refresh a pastinha apareceu aqui ó 
+pastinha certo hoje ponto já e as dll 
+sac 
+é aquele que eu tenho que fazer 
+um clique aqui da afasta fronteira 
+imposta padrão principal o botão direito 
+
+
+
+viu de perto conseguiu o dia de festa e 
+hoje eu vim aqui em são iguais a 
+e aí vou clica na opção 
+me add jar vou lá na pastinha a pasta 
+lib lwjgl vou selecionar todos os pontos 
+altos e 
+boa sorte nem todos vocês aí ok aí aqui 
+nós configuramos os pontos já agora 
+falta fosse ligar somente as dlls para 
+configurar o iis você vai selecionar o 
+arquivo principal fino cabo esse daqui ó 
+lwjgl outro de arquivo principal foi 
+expandida que horas a setinha 
+ó e vou nessa opção aqui ó native livro 
+e location tá perguntando onde está as 
+bibliotecas negativa né no caso da 
+biblioteca nativa do windows dll né 
+assim acesso ao sistema fica aqui é dit 
+e aquele tá perguntando onde é que tá a 
+pastinha que tem as dll chevrolet 
+apontar no caso né não está as dll foi 
+isso aqui externa ao fundo aqui é clips 
+work flow face é 
+na live e aqui após tinha hálito as 
+ideias já tive ruim bruxas isso aí ok ok 
+então agora já está configurado nosso 
+eclipse causar o lwjgl após isso né 
+vamos vir a partir a força e clique em 
+criar agora nossa faça só se galo 
+eu vou dar o nome dela de ir 
+um triângulo 
+o tragus 
+eu vou marcar aqui pede para aquele 
+freio método principal bem 
+é aguardar jardim próprio ele criou que 
+é que nós vamos precisar fazer aqui vou 
+criar o método zinho status por aqui 
+está tudo aqui 
+oi polly vou chamar ele de lwjgl 
+o underline tirando o 
+é só esse método zinho aqui e vou 
+champanhe ele já dentro do meio 
+a utilização 
+e eu criei no caso estático né pra que 
+eu não preciso de ficar distanciando né 
+e se é uma instância aí que é que nós 
+vamos precisar fazer aqui dentro do 
+desse método triângulo o criar logo 
+control at casa do fogão um erro 
+basquete 
+esse é o filme frete vou colocar uma 
+exceção genérica mesmo sério 
+o show 
+g1 
+e eu só vou colocar aqui está o frank 
+e para que ele exiba 
+e as mensagens no tava com algum erro né 
+no console em 
+e aí 
+o certo é 
+e aí 
+o sexo se eu tivesse isso aqui pronto 
+antes de basquete e quer que eu quero 
+criar dentro do outro aqui no caso vou 
+precisar criar uma janela certo para 
+criar uma janela usando lá o lwjgl tem 
+
+
+
+um local display display 
+ó e vou colocar é chamar né um método 
+ponto 7 displaymode será que eles 
+cremoso site diz cremoso e ele recebe né 
+pô recebe como parâmetro uma instância 
+de um módulo de display no cada um tem 
+que colocar new display 
+de modo que 
+e ele foi moço 
+a taxa de recebe display bozo eu 
+displaymode eles possuem né no caso dos 
+parâmetros ele tá ele tá me dando um 
+irmãozinho aqui ó tá dizendo que eu não 
+importei tem que importar aqui a 
+biblioteca do lwjgl aqui querendo 
+importar já 
+eu quero ter mais alguma coisa para 
+importar pronto aí aqui no caso né que 
+aquele rack ele vai quer que eu defina o 
+tamanho de janela no caso aqui para 
+colocar 800 viva 600 vai ser agilidade 
+800 por 600 é após isso também vamos 
+precisar definir o título para nossa 
+janela puxar aqui embaixo display 
+em biscuit ponto 7 
+o peito 
+o e colocar que eu mostrei é fonte 
+títulos chamativos lwj a 
+oi geli sexo o frete valor e 
+o mateus tá 
+e definir também agora 
+quem é zé fini agora para ele criar a 
+janela aqui não falo você que chama aqui 
+de spray 
+o ponto crack sep aí no caso para criar 
+chinelos exames do cliente e para cada 
+destruir a janela usamos usamos né 
+destrói a 
+e com isso aqui nós já criamos nossa 
+janela se norte o seu rock no caso e 
+tentar executar 
+e ele abriu aqui a janela e fechou bem 
+rápido porque ele fechou porque 
+e ele simplesmente executou essa esse 
+esse método né e saiu dele para que a 
+gente eu acho que sempre aberta temos 
+que dizer para ele ficar atualizando o 
+conteúdo desta janela no caso do tem que 
+querer aqui né mostra por enquanto vale 
+e vou colocar comparando aqui nela de 
+teste né e falta disso foi quero que ele 
+verifica o display eu se o que se ouve 
+es guloso ver se o que é requests for 
+you 
+a parte de cima os 36 
+o sequestro 
+e espere salto rack display próprio aí 
+ele vai ficar verificando se houve uma 
+requisição né para fechar a tela se não 
+ouvir mais requisição vou ter que 
+colocar aqui ó para negar eu quero que 
+ele continue repetindo vai ficar 
+repetindo certo sendo que eu também 
+preciso que ele atualize o conteúdo da 
+janela no caso pra atualizar o conteúdo 
+da janela eu vou ter que usar o display 
+
+
+
+a foto update para atualizar controle da 
+janela e em baixo aqui o têm que definir 
+também a taxa de atualização né faixa de 
+sincronia 
+em avançar um que fosse que a quantidade 
+de fps que eu quero que ele é falso já 
+tela colocar 60 60 fps e 
+o seu salvar e executar aqui o arquivo 
+né ele vai criar uma janela essa janela 
+vai estar lá preta aqui né não tem nada 
+dentro dela 
+e no caso é digamos que eu queira criar 
+aqui uma linha tá primeiro foi o criar 
+uma linha aqui no l w d l l w jgl eu vou 
+ter que me chá alisar o ingere que até 
+agora sofre uma janela para iniciar 
+utilizada no caso vou preencher ele aqui 
+antes do ai eu vou ter chamava jl11 jl11 
+e é ponto gl 
+e aí 
+o que é matriz gosta na frente força 
+para você e para sua esposa pronto 
+matriz mude e aqui é você que informava 
+esse é o modo da matriz 1 
+e onde fósforo foto josé ac 
+eu quero foto g&l g&l g&l lá 
+oi geli projection pronto aquele definir 
+uma matriz de no modo de projeção esses 
+comandos aqui esses parâmetros vocês 
+podem estar olhando no caso na 
+documentação no caso esse site aqui ó 
+o doc ponto g lgl2 travessão 2 que ele 
+trouxe exemplo aqui tem explicando como 
+funciona o gelli matrizmolde certo aí 
+tem os parâmetros naquele recebe por 
+padrão 
+e que horas que ele recebe o meu fio são 
+elenco 
+o site secando aqui tudinho já de marcos 
+modem não funciona vamos também utilizar 
+esse daqui já vou ali tem que ele foca 
+uma matriz identidade as eu me lembro um 
+o que temos o horto 
+o zé fini já o jardim matrimônio e 
+a festa 
+é só moto da matriz somos também tem que 
+definir 
+oi geli 
+e é gerar iludir em tente certo é o davi 
+que o da matriz identidade 
+é só colocar isso também vamos precisar 
+e colocar o horto 
+o outro essa sujeira na frente jesus 
+curto mas ele recebe esses parâmetros 
+aqui ó esquerda direita baixo cima e 
+esses dois aqui no final aqui eu vou 
+dizer onde a janela né no caso golf gl a 
+taxa de atualização né aí atualizações 
+da janela quantos vamos começar dizer 
+que eu vou querer na coordenada zero da 
+esquerda né esquerda zero se não são 
+janela tem quanto de no caso comprimento 
+dela tem 800 de comprimento e 6 m de 
+altura era coloquei que vai começar a 
+zero certo no pixel zero e eu quero que 
+ele vá até agora 
+
+
+
+há 800 quero que ele vá até 800 a 
+e como eu tô com uma resolução baixa vou 
+mudar esse daqui também em colocar aqui 
+para 
+a foto é que 640 am 
+com 640 por 320 já que eu estou te levar 
+a revolução agradeço mas foi muito 
+grande na tela 
+e você sempre linda sempre admitiu os 
+caracteres 480 forma 600 próximo a minha 
+resolução vai ser da janela né de 640 
+por 480 certo aí eu vou dizer que eu 
+quero que começa em 0 e vai até 640 
+beleza 
+ó e aqui eu até que definir quando 
+vencer que eu quero agora eu quero aqui 
+como que vai funcionar é como se tivesse 
+um plano cartesiano né o x eo y aí aqui 
+vai começar 10 e vai até 640 né a 
+largura e aqui vai ser no caso altura aí 
+no caso aqui o botton vai ser até onde 
+vai né de cima para baixo no caso o top 
+aqui vai ser zero e o botão vai ser 
+agora 480k 
+ó e aqui eu vou colocar aqui para o 
+padrão e menos um 
+o primeiro só e em baixo aqui pronto 
+daqui definir também sugerem jesus 
+celebrar mas triste fim de uma coisa que 
+a gente ela disse assim vai mudar eu 
+terminei vai mudar de de projeção para 
+para para para o modo de visualizações 
+micaele modelview pronto postei que eu 
+tiver esse daqui também aqui nós 
+a iniciamos iniciamos né sim open jesus 
+foi certo 
+em open gl e aqui no caso do 
+e é unido a janela aqui nós temos da 
+janela e aqui o objeto né me chama um 
+objeto beleza aqui verificamos que a 
+gente melhor tem requisição para ser 
+fechada se tiver ele vai sair do 
+enquanto se não tiver ele vai ficar 
+repetindo por enquanto beleza e 
+atualizando a janela e agora quer que 
+vamos precisar fazer nós ensaiamos um 
+singelo sempre que você executar aqui ó 
+aqui é só para abrir a janela e ela vai 
+ficar preta aqui né porque porque nós 
+não desenhamos estado ainda nela para 
+desenhar o dia que eu vou desenhar deve 
+desenhar dentro do enquanto fresca 
+atualizando o conteúdo da janela aí aqui 
+dentro do enquanto 
+e eu vou colocar o que eu vou precisar 
+casa seu filé escreveu precisando open 
+gl vamos utilizar esse como é que eu 
+gl11 7l usei uma constância e já ligado 
+o pdf que ela já chama aqui ó desse 
+porte daqui certo marcou a se lá que ele 
+tá chamando pronto aí eu vou colocar 
+aqui ó ponto gl 
+um bejim 
+e foi isso vou iniciar aqui caso é um 
+iniciar que eu faço um desenho certo 
+feliz a louco jelly e vou passar por 
+
+
+
+parâmetro é que tipo de dezembro que eu 
+quero fazer tanto que ele é desenhar uma 
+linha eu vou ter que colocar aqui ó gl11 
+ponto gl underline lines acho que tem 
+aqui uma perspectiva da próprio 
+oi michele andrade sandro highlight 
+choque vai ser esse como ali ok vou 
+passar para o parâmetro essa constante 
+no caso gl underline underline nunca 
+parecendo é mais tarde gelli underline 
+likes eu quero escrever uma linha pronto 
+aqui eu quero escrever uma linha e o 
+início né a criação de uma linha e aqui 
+embaixo eu tenho que ir dizer que eu 
+quero terminar a linha vou usar o g1glo 
+tô indo aí 
+e aqui o índice uma linha e aqui eu 
+termino a minha cara se eu salvar e 
+executar acho que continuar não é uma 
+tela preta porque porque eu não disse 
+aqui no caso onde que eu quero que 
+comece e não determine a linha ela tem 
+que passar as coordenadas de criação da 
+linha são porque os diversos temos os 
+vértices e arestas né aí eu vou ter que 
+colocar aqui ó gl11 ponto gl vertex 
+ó e aqui nós temos tanto ele inteiro 
+quanto do vou só se vou precisar um 
+perfil aí aqui ó temos a coordenada do 
+primeiro ponto da linha né primeiro 
+vertis 
+e aqui tá pedindo onde vai começar a 
+linha certa aqui é o xy vou dizer que eu 
+quero começar a linha em vou dar um 
+exemplo aqui sem e sem querer que 
+comecei no pontos em 1x sem e noivos ou 
+segue 
+oh e vamos precisar também dizer eu acho 
+coordenados de término do brasil vou 
+colocar aqui ó quero que termine no 
+x200e noivos ou 200 certo salvei 
+executei aí ele criou a linha aqui o que 
+começa no x certo no x100e no y sem e 
+terminou onde no y 200 nx 200 beleza 
+pronto para criar o triângulo quer que 
+eu vou precisar vou precisar de três 
+linhas as três listras descoordenado 
+redação 
+e vou duplicar isso daqui 
+o fator especial de 3 linhas 
+e no caso quer que nós vamos com esse 
+áudio vamos precisar somente alterar as 
+coordenadas eu vou dizer agora que eu 
+quero conversar a primeira linha né 
+criar uma linha que seja nesse sentido a 
+senhora ver se sentido aí eu vou colocar 
+aqui que eu quero que comece no fosso é 
+no x 320 320 e vá até 160 160 
+ó e aqui vai começar a dentro calo no 
+x320 e no y160 e eu quero que seja uma 
+linha aqui sem fique nesse sentido no 
+caso vou ter que alterar aqui né que vai 
+terminar e agora eu quero que termine 
+novo 160 x 160 e no y 320i 
+é só comentar essa juninho daqui de 
+baixo pra vocês entenderam que tá 
+
+
+
+acontecendo 
+o seu salvar e até tá aqui ó ele criou 
+uma linha aqui ó começa aqui ó nos 320 
+certo x320 e no y160 certo e aqui ele 
+fez em contrário ele terminou a linha 
+pode no x 160 x 160 e no y320 beleza 
+y320 
+e agora eu vou precisar fazer a mesma 
+coisa para as outras linhas cada um 
+o que é que eu vou fazer agora eu vou 
+vir aqui ela terminei aqui no 160 320 
+agora vou precisar criar outra linha no 
+final dessa acorde lado aqui daqui a 160 
+320 eu vou colocar aqui ó 160 320 eu vou 
+dizer que a minha próxima linha deve 
+começar nesse foto aqui nessa coordenada 
+que a outra terminou beleza 
+ó e aqui vai ser essa daqui vai começar 
+aqui e vai terminar aqui certo essa 
+linha daqui eu vou dizer a coordenada 
+que eu quero que ela termina aí eu vou 
+colocar aquilo 
+a 480 por 320 
+e aí 
+e o salvar e atualizar aqui ó 
+e aí ficou assim ó aqui tá aqui tá 160 
+320 aqui ficou 160 320 beleza essa daqui 
+também né fica uma coisa e essa daqui 
+ele é do o x passou a ser 481 y320 e 
+agora falta somente fazer a última linha 
+né para finalizar o triângulo que no 
+caso vai ser o que vai ser o que o x 480 
+certo e o y é 320 e a única mudança vai 
+ser no ponto final daqui é para chegar 
+aqui que aqui ó aqui é o que vai ser 
+320d x eo y de 7 60 beleza 
+e aí 
+e colocar aqui ó 480 no x1 
+há 320.000 y e para fechar o triângulo 
+aqui ó vai ser o que vai ser 320 por 160 
+essas coordenadas notícia disse terminar 
+queda xy beleza salvei executei lá ele 
+fechou meu triângulo beleza por hoje é 
+só pessoal se aproximar ao saber que

@@ -1,0 +1,545 @@
+﻿salve rapaziada Marcos aqui já faz um 
+tempo que eu postei nas redes sociais um 
+vídeo mostrando um mini jogo 2D feito 
+com Java e Lib gdx e algumas pessoas me 
+perguntaram como fazer Então nesse vídeo 
+Vamos iniciar uma série que mostrará 
+todos os detalhes e passos que eu usei 
+para fazer aquele joguinho se você já é 
+programador semanas mais Muito 
+provavelmente você já sabe Java e talvez 
+nem saiba disso ou aprenderá agora as 
+partes essenciais do Java pois quem sabe 
+ser mais mais aprende facilmente 
+qualquer outra linguagem de programação 
+por isso que eu bato tanto na tecla de 
+ser mas que é uma linguagem que serve 
+para você hackear o conhecimento em 
+qualquer outra linguagem de programação 
+por isso é muito importante aprender 
+essa série terá aproximadamente 4 ou 5 
+vídeos talvez mais e hoje veremos 
+ferramentas do Java e como instalar 
+primeiros passos com Java veremos também 
+procedimentos para o Windows e no Linux 
+Mas você pode adaptar para qualquer 
+outro sistema operacional tais como 
+makiose freebsd ou PSD hiku e entre 
+outros 
+Java na verdade é uma linguagem de 
+programação interpretada ou seja ela 
+transforma seu código em outro código 
+chamado bite code através do processo de 
+compilação e esse bite code é 
+interpretado por uma máquina virtual na 
+memória em tempo de execução esse 
+processo é chamado Jay Haiti que foi uma 
+tecnologia adotada por muitas outras 
+linguagens de programação para 
+programarem Java precisaremos 
+inicialmente de quatro ferramentas que 
+são elas O jdk que é o kit de 
+desenvolvimento em Java do mesmo jeito 
+que em ser mais precisamos das 
+Ferramentas gemas mais ou se lembrem 
+mais mais 
+entre outros o jdk seriam essas 
+ferramentas para Java que são elas o 
+Java C que transforma o nosso código 
+embate code criando um arquivo ponto 
+Class o comando Java que interpreta o 
+Bart code enviando para a máquina 
+virtual e entre diversas outras mas 
+essas duas são as principais que 
+precisamos saber e utilizar vamos 
+precisar também do jvm que a máquina 
+virtual do Java uma curiosidade é que 
+ela é escrita em cemas mais o jre que é 
+o ambiente de execução de Java nele está 
+incluído a jvm e a biblioteca padrão Ou 
+seja do mesmo jeito que em cenas mais a 
+biblioteca padrão que inclui aí o 
+estranho e entre muitos outros arquivos 
+no caso do Java as ferramentas 
+essenciais estão no pacote Jr e lógico 
+um editor de códigos ou IDR apesar de 
+haver ideais totalmente completos como 
+
+
+
+Eclipse getbrens Android Studio e entre 
+outros Eu particularmente recomendo você 
+usar editores como vsco hoje vim pulsar 
+que é o novo átomo pois os ideais ou 
+fuscam muita coisa que você precisa 
+entender como iniciante os ideais são 
+mais indicados para programadores Java 
+que já sabem o que estão fazendo no 
+máximo utilize um lsp ou extensões para 
+java do vscode ou plugins para o vinho 
+ou neovin mas o bom mesmo é escrever do 
+zero para ir fixando e memorizando o 
+conceitos fundamentais essas ferramentas 
+podem ser obtidas de diversas Fontes 
+tais como diretamente da orku que a 
+empresa que detém os direitos sobre o 
+Java mas adquirir através dela pode lhe 
+trazer muita dor de cabeça por conta de 
+problemas relacionados à direitos 
+autorais pode ser também através do Open 
+jdk que são ferramentas desenvolvidas 
+pela comunidade e que funcionam 
+igualmente as da oferecida pela órgão um 
+detalhe é que a órgão utiliza essas 
+ferramentas da comunidade como base para 
+as suas você pode adquirir também do 
+projeto guinu que seria o gcc para Java 
+ou gcj existe também um IBM jdk e entre 
+muitos outros nesse caso utilizaremos o 
+open jdk 
+se você está no Windows Muito 
+provavelmente você já possui todas essas 
+ferramentas instaladas no seu sistema 
+para ter certeza Abra o Windows terminal 
+se você tiver instalado ou powershell ou 
+até mesmo CMD e ródio os comandos Java C 
+somente um traço version se a saída for 
+similar a essa que aparece é porque você 
+já tem instalado para ter certeza pode 
+também o comando 
+java-verso sem ser no final caso não 
+tenha vou deixar alguns links na 
+descrição que mostre de forma bem fácil 
+como instalar mas na própria página da 
+Microsoft a pacotes que você pode baixar 
+descompactar e instalar executando o 
+arquivo ponto e xn Se você estiver em 
+Sistemas baseados em Linux basta 
+pesquisar a palavra Open jdk com 
+gerenciador de pacotes do seu sistema e 
+em seguida instalá-las no Ubuntu por 
+exemplo o comando para instalar seria 
+primeiramente atualize todos os sistemas 
+PT update e em seguida 
+ele tem install Open 
+jdk-19-jdk-head Lembrando que existe o 
+mesmo nome só que ao invés de jdk no 
+meio tjri nesse caso instale o jdk que é 
+instala tudo o jre o jvn Entre várias 
+outras ferramentas se para a sua versão 
+do Ubuntu não houver a versão 19 do Open 
+jdk tente números inferiores como 18 17 
+e assim por diante Lembrando que a 
+versão para o que iremos fazer é que não 
+é importante a partir da versão 11 já é 
+suficiente atualmente o Java está na 
+
+
+
+versão 20 se eu não me engano 
+[Música] 
+uma via dito eu recomendo você utilizar 
+o vscode com a extensão de pacotes para 
+Java tanto no Windows como em 
+distribuições que no Linux Mas se você 
+quiser usar um ide e o recomendaria o 
+eclipse que é mais raiz e mais fácil de 
+adaptar nesse caso eu vou utilizar o 
+vinho aqui no canal há um vídeo 
+mostrando como eu preparei o vim o 
+título fala para 6 semanas mais mas há 
+uma parte do vídeo que você pode 
+compilar o you completamente para 
+diversas linguagens de programação 
+incluindo Java basta usar a Flag traço 
+traço alto quando você assistir o vídeo 
+você vai entender melhor Lembrando que 
+para o LSD funcionar você precisa 
+incluir a linha Let's G2 pontos sem 
+teste que underline Java underline 
+checkers igual ao dicionário vazio ou 
+abre e fecha colchetes isso no seu vrc e 
+ainda assim só auto completará seu 
+código se seu arquivo Estiver dentro de 
+um projeto Green mazel e etc veremos 
+mais detalhes esses nomes quando 
+instalarmos a biblioteca libid GX pra 
+criar o nosso game tudo que iremos fazer 
+aqui no terminal você deve fazer no 
+terminal embutido do vscode ou no 
+Windows terminal ou no powershell ou no 
+cmd o processo independente do sistema 
+operacional será o mesmo agora vamos lá 
+aos primeiros passos com a linguagem de 
+programação já 
+primeiramente Vamos abrir aqui um 
+terminal para a gente criar um arquivo 
+básico com Java Lembrando que se você 
+estiver no seu editor de códigos 
+preferido você deve criar um novo 
+arquivo com o nome por exemplo exemplo e 
+maiúsculo ponto Java primeira coisa que 
+você tem que fazer em Java tudo em Java 
+fica dentro de uma classe Então você tem 
+que utilizar a palavra chave classe 
+geralmente é bom você criar o mesmo nome 
+da classe do arquivo que você criou 
+veremos mais detalhes O porquê disso mas 
+para frente só que nesse caso eu vou 
+criar como minha classe porque aqui é 
+uma questão de didática basta você abrir 
+e fechar as chaves é diferente de ser 
+umas mais que você precisa do ponto e 
+vírgula No final a gente precisa ter no 
+mínimo uma função principal assim 
+comecei a ser mais chamada a função Man 
+e ela tem que ser do tipo voz tudo e 
+minúsculo ela Obrigatoriamente para 
+funcionar a gente precisa ter um tipo a 
+que um tipo string não é STD string e 
+sim string somente que é um S maiúsculo 
+e aqui é uma Raid Strings em Array em 
+Java a gente coloca colchetes no final e 
+você precisa informar o nome dos 
+argumentos que são aqueles argumentos o 
+
+
+
+mesmo que tem na função Mente sem ser as 
+mais 26 e chá verde só que como Java não 
+tem ponteiros você não precisa separar a 
+quantidade de argumentos do haway basta 
+você passar args aqui lembrando que toda 
+função manjava ela precisa ter dois 
+tipos especificadores primeiro publley 
+precisa sempre a gente vai ver mais 
+detalhes sobre o Public E também o 
+estérek do mesmo jeito que em ser mais 
+mais a gente tem um STD se Alt aqui a 
+gente utiliza o System com S maiúsculo 
+ponto alto ponto print LN conta e 
+vírgula no final é que dentro a gente 
+coloca o nosso hellow hoje ou polar 
+mundo em português nem sempre você 
+precisa do print LN você pode fazer 
+print somente ele aceita e colocar o 
+Barra n no final para não colar no 
+prompt mas geralmente em Java já você 
+utiliza já preenche a Aliene então seria 
+o código básico em Java saindo do nosso 
+programa para a gente compilar 
+transformar o nosso Bitencourt se a 
+gente dar um LS aqui ó veja que só tem 
+os meus diretórios padrão e de arquivos 
+só tenho esse exemplo ponto Java para a 
+gente compilar você vai utilizar JAVA c 
+e passo seu arquivo exemplo ponto Java 
+compilando a gente vai criar o arquivo 
+bite code que é o exemplo ponto Classic 
+nesse caso como a gente criou uma classe 
+de nome minha classe ele vai criar o 
+minha classe ponto Class LS aqui ó 
+perceba que agora ao invés do exemplo o 
+ponto Java somente a gente tem também ó 
+minha classe ponto Class esse aqui é o 
+Bitencourt pra gente interpretar esse 
+código Bitencourt que será enviado lá 
+pra memória que vai ser carregada jvm 
+por isso quando as pessoas falam que já 
+vai lento porque quando você executa 
+pela primeira vez ele faz todo o 
+processo de levantar jvn enviar pra 
+memória e executar Mas a partir das 
+próximas execuções já não é tão lento 
+quanto a primeira pra gente rodar É o 
+comando Java sem o ser lembra que o 
+compilador no final e o Java não e a 
+gente passa minha classe somente com 
+isso aqui dando enter vai aparecer o 
+nosso olá mundo Lembrando que se você 
+tiver aí no power Shaw no Windows Muito 
+provavelmente o powershell vai completar 
+assim ó isso aqui não vai rodar Vou 
+Colocar assim vai ter um erro você tem 
+que limpar o ponto cless somente o nome 
+minha classe antes do ponto cless do 
+arquivo que foi gerado Vamos abrir de 
+novo o nosso exemplo Java os tipos em 
+Java a gente já viu aqui string que 
+seria similaria STD string mas outros 
+tipos primitivos são iguais aos temas 
+mais por exemplo 20 x 
+= 0 por exemplo flood Y 
+= 
+
+
+
+0.5 por exemplo 0.5 você também tem um 
+tipo string né que a gente já viu lá 
+string nome por exemplo igual a Marcos 
+outro também diferente é o tipo Bull em 
+cenas mais você utiliza Bull e isso é 
+igual a true por exemplo em Java não 
+existe Bull é bullying então esses são 
+os básicos aí que você vai criar always 
+em Java do mesmo jeito que a gente 
+colocou lá string seria assim né my Away 
+e aqui você vai passar o seu Away do 
+jeito que você quiser né algo vírgula 
+que depois isso e assim por diante ou 
+você pode criar a rays multidimensionais 
+ou bidimensionais nesse caso dessa forma 
+aqui e aqui dentro você teria outro 
+complexo de Chaves aqui para você 
+colocar os seus tipos e aí você criaria 
+o seu Array multidimensional esses tipos 
+são iguaizinhos aí do ser mais mais uma 
+coisa que a gente precisa sempre saber 
+em Java que algumas pessoas confundem é 
+que Java não possui funções a gente 
+chama de funções por nomenclatura 
+popular do dia a dia todas as funções 
+desejavam são chamadas métodos por que 
+isso em cenas mais você consegue criar 
+uma função dentro da classe que é 
+chamada função membro e fora de uma 
+classe que é chamada função em Java como 
+não existe código fora de classe todas 
+as funções são membro e elas são 
+chamadas momento não tem como você criar 
+uma função aqui fora void minha com cão 
+por exemplo não tem como você criar aqui 
+não compila você Obrigatoriamente tem 
+que pegar sua função e colocar dentro de 
+nós não dentro aí do caso da mãe né que 
+é outra função em Java todas as funções 
+são métodos por isso que algumas pessoas 
+confundem alguma pessoa me perguntou 
+porque isso é umas mais não se chama 
+método porque ser mais mais foi 
+praticamente a primeira linguagem de 
+programação que colocou em prática de 
+forma tão expansiva o conceito de 
+orientação objetos na verdade o Java foi 
+baseado no c++ aí a pessoa pergunta 
+porque algumas outras linguagem de 
+programação tem funções e funções membro 
+mas ela chama as funções membros de 
+métodos porque essas linguagem de 
+programação foi que bagunçou tudo por 
+isso que fica difícil de você entender a 
+diferença de funções membro pra método 
+por causa das linguagem de programação 
+que vieram depois que misturou todos os 
+conceitos vamos até mudar o nome dela 
+Vamos colocar como print e ela vai 
+receber um parâmetro do mesmo jeito que 
+a gente passaria essa estria E a gente 
+passou esse trem aqui vamos chamar de 
+conteúdo por exemplo e esse conteúdo a 
+gente vai ter o nosso System print LN 
+aqui dentro e ele vai imprimir o 
+conteúdo que a gente passar se a gente 
+
+
+
+quiser chamar a nossa função e agora a 
+gente vai entender conceitos de 
+publiques aqui em Java se a gente quiser 
+chamar a nossa função Diferentemente de 
+cenas mais que quando tá na mesma classe 
+ser mais bastava a gente passar aqui 
+print e passar o conteúdo que a gente 
+quer aqui ó meu conteúdo em Java Isso 
+não funciona se a gente compilar aqui ó 
+vamos sair daqui e vamos rodar o nosso 
+Java né não compilou a gente precisa 
+indicar a nossa classe quem é a nossa 
+Classe A nossa minha classe Então seria 
+minha classe ponto print mas aí vai ter 
+um problema porque aí que entra o 
+conceito já de estérico a gente já vai 
+chegar em Publique já se essa função ela 
+tiver esse estéreo esse conceito 
+funcionaria se ela não é Ester que é o 
+caso dela eu preciso utilizar a palavra 
+igual em ser mais mais palavra-chave New 
+e preciso que a minha classe tenha um 
+par de que eu abre e fecha antes do 
+ponto o nome do método que eu tô 
+chamando esse jeito aqui funciona não 
+somente compila como também roda se a 
+gente sair daqui e compilar já vai ser 
+essa.java e agora rodar o Java minha 
+classe veja que vai aparecer o meu 
+conteúdo se eu voltasse lá tirasse o 
+Nildo daqui só isso aqui não rodou se 
+tivesse isso aqui sem os parentes 
+estivesse uniu aqui também viu e tentar 
+se compilar mote que também daria um 
+erro então essa combinação se tem mil 
+você precisa utilizar parênteses aqui se 
+você quiser se utilizar daquele método 
+lá bem simples igual você mas basta 
+passar aqui 100.000 ensinada você vem 
+aqui e colocava estérek por isso que a 
+função vem tem estéreo assim sendo 
+espere que o nosso void e isso já 
+funciona saímos aqui contra o l se a 
+gente compilar percebe compilou se eu 
+quiser rodar hoje Java a minha classe 
+vai lá e roda Então fique sempre atento 
+que algum erro que eu sempre vejo fora 
+de Java lembrando também que você pode é 
+um objeto e armazenar conteúdo do objeto 
+em uma variável entre aspas assim o tipo 
+já não será primitivo tipo será minha 
+classe vamos chamar de meu objeto e aí 
+seria igual ao Niu minha classe 
+parênteses no final e aqui ao invés de 
+utilizar o minha classe eu vou utilizar 
+meu o BJ se eu vim aqui agora e compilar 
+o nosso código e rodar com Java minha 
+classe continua funcionando então fique 
+sempre ligado nessas pegadinhas porque 
+uma linguagem de programação nada mais é 
+do que uma regra de sintaxe algumas 
+coisas são bem similares com sistemas 
+mas existem diversos particularidades aí 
+do Java por ser mais mais sobre os 
+especificadores pub em cenas mais a 
+gente sabe que a gente pode utilizar por 
+
+
+
+exemplo Private Public e protected aqui 
+é a mesma coisa você pode utilizar esses 
+três especificadores E aí você já sabe 
+aproveite você só consegue utilizar um 
+objeto na própria classe você não 
+consegue utilizar método nenhum ou o 
+Smart função para ficar mais fácil para 
+vocês em classes que vai herdar em Java 
+para você herdar não é dois pontos é 
+igual em PHP você utiliza a palavra 
+chave extende tivesse outra classe e 
+quiser ser dar a gente vai ver um 
+exemplo e utilizava extens Public a 
+gente sabe que pode na classe dada na 
+função Man entre outros e protected só 
+pode Nas classes herdadas você não 
+consegue utilizar no caso métodos 
+funções e propriedades uma observação de 
+Java para ser mais é quando você não 
+utiliza não você não informa ele 
+automaticamente ele já é Publique essa 
+classe já é Public esse método de Jair 
+pub em ser mais mais quando você não 
+Expressa de forma literal Tipo 
+especificador ele já é privado por 
+padrão aqui não ele já é público por 
+padrão outra coisa também que a gente 
+precisa saber é o seguinte em ser mais 
+mais se você passar por exemplo Pub dois 
+pontos você consegue utilizar vários 
+tipos aqui intim x ponto e vírgula pote 
+ah ponto e vírgula sei lá dois pontos 
+string você somente informando uma vez 
+você consegue tornar todos os tipos como 
+pubg em Java não se você quisesse criar 
+um tipo int público intx. Public float 
+sempre um de cada vez y e assim por 
+diante só que você consegue por exemplo 
+criar várias propriedades aqui ó e y 
+vírgula Z e assim por diante bom sobre 
+classes em Java se você tivesse outra 
+classe aqui por exemplo Class outra e 
+aqui dentro dessa outra a gente teria 
+por exemplo íntimo número igual a 42 se 
+você quiser utilizar imprimir esse 42 no 
+seu print aqui que que você faria aqui 
+em cima Por Exemplo irei indicar a sua 
+classe outra vamos chamar de o é igual a 
+new outra abre e fecha os parênteses 
+ponto e vírgula criamos objetos se a 
+gente quiser imprimir o número agora 
+basta a gente vem aqui ó e passar o 
+nosso O que é o nosso objeto ponto 
+número se a gente quiser colocar até lá 
+o número é com katerina com mais nesse 
+caso aqui a gente não vai precisar 
+converter para string Java já converte 
+automaticamente se a gente rodar aqui já 
+vai ser exemplo e imprimir com Java aqui 
+vai aparecer o número 42 se a gente 
+quiser herdar o 42 daqui exchanges outra 
+e aí a gente iria imprimir 
+automaticamente aqui o nosso conceito 
+não seria nem mais UOL né seria o nosso 
+minha classe pra gente conseguir 
+imprimir isso aqui a gente Lógico que a 
+
+
+
+gente precisa de estérek aqui senão a 
+gente vai ter que criar um New control L 
+se a gente rodar o nosso Java C Java 
+minha classe o número 42 do mesmo jeito 
+que você poderia ter também aqui ó vamos 
+supor string ou uma propriedade nome 
+igual a Marcos nesse caso Já estou aqui 
+dentro do nosso Se eu quisesse Agora 
+imprimir com o meu ou BJ ponto print o 
+nome é com katena aqui em cima eu 
+coloquei estérico aqui não se utilizar 
+do mesmo jeito a gente já viu que daí a 
+gente tem que colocar com o Niu minha 
+classe abre e fecha parênteses ponto o 
+nosso é uma cidade feia mais funciona se 
+a gente der um control L já vai ser e 
+rodar o nosso Java vai estar lá o nosso 
+nome outra coisa que a gente tem que ver 
+que é muito parecido com os temas mais 
+que aí você não precisa reaprender que é 
+o nosso look for do mesmo jeito de ser 
+mais mais of War do mesmo jeito igual a 
+zero intimax a gente não tem o Max Vamos 
+colocar aqui por exemplo 10 se a gente 
+quiser dar um sistem aqui dentro vamos 
+imprimir o nosso e vamos colocar 10 não 
+senão vai ficar muito grande né Vamos 
+colocar três semântica você começa do 
+zero vai imprimir zero um e dois contra 
+o l Java C Java rodar aqui ó vai 
+aparecer de zero um e dois no nosso look 
+do mesmo jeito o loop wirele da mesma 
+coisa vamos dar só um System preenche a 
+altinha aqui só pra gente separar pra 
+gente ver uai ele seria aqui wirele se x 
+for menor do que quatro por exemplo e 
+aqui a gente precisa ter um X né x é 
+igual a zero mesma coisa que ser mais 
+mais você pode incrementar mais mais 
+vírgula ou x + 
+que o System out Paint ADN eu quero que 
+você imprime o nosso x vamos lá rodar 
+agora Java C Java minha classe vai estar 
+lá a semântica que a gente colocou o 
+filme logo que 4 e aqui foi menor do que 
+três bom parece que é pouca coisa mas só 
+com essa introdução que a gente teve 
+aqui a gente já consegue fazer qualquer 
+coisa inclusive o nosso game que a gente 
+vai fazer no próximo vídeo aí que a 
+gente já vai ver como instalar a Lib gdx 
+e já os primeiros passos com a nossa 
+biblioteca para a gente criar aquele 
+gamezinho se você quiser se aprofundar 
+um pouco mais em Java eu sugiro você ir 
+lá na documentação oficial 
+docs.org.com/java espero que vocês 
+tenham gostado do vídeo se gostaram não 
+se esqueça de deixar o seu like nos 
+veremos no próximo vídeo da série eu vou 
+ficando por aqui um forte abraço até 
+mais

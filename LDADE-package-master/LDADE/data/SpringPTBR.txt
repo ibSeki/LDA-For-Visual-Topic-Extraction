@@ -1,0 +1,394 @@
+﻿Olá pessoal eu sou a Juliana Bezerra e 
+nesse vídeo eu vou trazer aqui um tema 
+que foi pedido no canal Por Um Dos 
+comentários que foi trazer um sistema 
+aqui de gerenciamento de arquivo com 
+springbuth Então a gente vai aprender a 
+fazer o upload do arquivo baixar o 
+arquivo inclusive listar os arquivos que 
+a gente já subiu né que já conseguimos 
+fazer upload por isso então vamos 
+começar aqui já com essa prática 
+Primeiramente vou criar um projeto aqui 
+do springboot 
+nome do meu pacote e eu vou chamar ele 
+de file 
+tor 
+vai ser o nosso S3 vamos dizer assim vai 
+ser um já já vai 17 a gente vai colocar 
+aqui nas dependências apenas o Spring 
+web 
+escolha meu diretório aqui vou mandar 
+gerar o meu projeto e 
+mandar Abrir 
+Prontinho projeto criado tudo OK agora o 
+que que a gente vai fazer aqui nessa 
+aplicação 
+como é uma aplicação de gerenciamento de 
+arquivos a gente tem que escolher um 
+diretório de onde vão ficar esses 
+arquivos o diretório do nosso da nossa 
+máquina Então a gente vai fazer isso 
+colocando uma propriedade que a gente 
+vai criar que vai ser file ponto upload 
+traço de ir então o nome da propriedade 
+é esse vai ser um lugar onde a gente vai 
+fazer o upload dos arquivos e aqui eu 
+vou criar um diretório local chamado 
+pilotos Então vai ser um diretório aqui 
+no meu projeto claro que isso aqui pode 
+variar por isso que tá no application 
+propriets é o lugar ideal para a gente 
+colocar propriedades que variam de 
+ambiente para ambiente aqui para 
+desenvolvimento normalmente local eu 
+posso usar essa configuração Agora eu 
+tenho que carregar ela então para fazer 
+isso 
+eu vou criar uma classe chamada Fire 
+pro português 
+e ela vai ter uma propriedade 
+configuration protect 
+que vai usar o prefixo Fael 
+então todas as propriedades que eu 
+colocar aqui que começam com file ponto 
+alguma coisa ele já vai carregar 
+automaticamente eu só preciso seguir 
+aqui o Kamel Case como eu coloquei o 
+upload traço de eu vou ter uma 
+propriedade chamada 
+upload 
+aí eu posso criar os gatos dela 
+tranquilo e já tenho aqui o arquivo de 
+propriedades agora vamos para a lógica 
+que todo mundo quer né a lógica do 
+controlador então vou ter um file Store 
+Controller 
+
+
+
+ele vai ser um Controller não o resto 
+Controller Tá então não necessariamente 
+precisa ser uma rest 
+Além disso as requisições vão ser para o 
+Andi ponte Ei traço filos 
+a gente vai ter aqui uma propriedade que 
+a gente precisa carregar 
+chamada do tipo pé e aqui a gente começa 
+a trabalhar com a page de arquivos do 
+Java Então você tá algumas coisas mas eu 
+não vou entrar em detalhes sobre essa aí 
+porque tem muita coisa nela tá então 
+primeiro propriedade que a gente usa 
+esse pé é exatamente para representar o 
+caminho do arquivo então vou ter aqui um 
+Fire 
+location Essa vai ser a propriedade E aí 
+no meu consultor 
+eu vou injetar aquele Fire Stories 
+propriet 
+e vou inicializar a minha propriedade de 
+Stories location Lembrando que o Story 
+tem um caminho relativo não é um caminho 
+absoluto Então eu preciso pegar o 
+caminhão absoluto na minha máquina por 
+isso que eu vou usar aqui 
+a classe Pets que tem alguns métodos 
+estáticos um deles Onde eu posso passar 
+a propriedade 
+que tem o diretório de upload que eu 
+acabei de injetar ali na minha classe 
+configuração transforma isso num caminho 
+absoluto saiu de relativo absoluto e 
+normalizo para tirar possíveis 
+ponto né nesse caminho aqui que foi 
+gerado é mais por segurança mesmo essa 
+normalização tá 
+Então já conseguiu lugar onde eu vou 
+salvar meus arquivos nesse tipo aqui pef 
+que vai facilitar minha persistência 
+agora a gente pode criar 
+uma aplicação Wing Point para upload 
+então vou ter aqui um método que retorna 
+um consciente do tipo 
+string Então o que eu vou retornar aqui 
+no upload Quando eu fizer é só um OK tá 
+depois a pessoa pode pedir para 
+consultar o arquivo eu também vou 
+retornar na mensagem de Ok o caminho o 
+link para ele baixar o arquivo caso eu 
+preciso usar isso aí posteriormente 
+então vou ter aqui uma piloto Fael por 
+isso que eu tô retornando string eu vou 
+receber aqui como parâmetro 
+da requisição e é um 
+arquivo então aqui é que eu vou passar o 
+binário por isso que eu vou usar o tipo 
+multipart 
+vou passar o arquivo direto na 
+requisição isso é bem comum quando a 
+gente trabalha com formulário no html 
+Então agora eu vou ter aqui que gerar o 
+nome do arquivo 
+a partir do arquivo que foi passado 
+quando a gente passa o arquivo na 
+requisição vocês vão ver a gente vai 
+
+
+
+informar o nome então a partir desse 
+arquivo aqui eu posso conseguir o nome 
+do arquivo que será salvo utilizando a 
+Springs 
+Clean pass E aí eu pego o nome original 
+Então esse Clean pé já é também para 
+normalizar Esse nome que vai ser gerado 
+Tá certo 
+evitando maiores problemas é uma boa 
+prática que a gente sempre normalizar 
+até por segurança né que pode ser 
+informada aqui um arquivo com o nome 
+malicioso para acessar um outro 
+diretório da nossa máquina e aí é o 
+seguinte agora a gente vai ter um tycat 
+aqui porque a gente vai trabalhar com 
+ayu então sempre tem uma Iowa 
+nessa situação Então vamos lá a gente 
+vai criar um pé com um lugar alvo da 
+transferência vamos pegar essa location 
+aqui que foi carregada 
+e resolver a partir do nome do arquivo 
+então tô gerando objeto 
+A partir dessa localização do diretório 
+de upload com catenando com o nome do 
+arquivo tá bom 
+com isso olha como fica fácil eu só uso 
+um filo ponto transfer e coloca a 
+localização alvo é isso fica bem mais 
+fácil Se a gente já fez o trabalho de 
+normalização aqui do nome do arquivo e 
+de carregamento do caminho que a gente 
+quer armazenar agora o que eu vou fazer 
+a mais aqui para deixar minha pele mais 
+interessante é informar 
+de download 
+então para isso a gente vai usar aqui a 
+classe servlet URI componentes builder a 
+gente está usando o Spring web então a 
+gente consegue usar essa essa classe 
+aqui pega o contexto atual da minha 
+requisição que eu tô mandando que eu tô 
+tratando aqui passo aqui o caminho que 
+vai ser de download que vai ser 
+api/files que é esse caminho aqui ó 
+depois eu vou criar uma de point chamado 
+download 
+barra e aí eu vou ter o quê o nome do 
+arquivo 
+para baixar então transforma isso aqui 
+no Auri e na minha resposta 
+Ok eu posso dizer upload com glitter 
+download 
+link E aí eu passo 
+a URI de download 
+tá bom poderia passar também só o RG 
+download isso aqui é você pode fazer de 
+várias formas Tá ok então já fiz o ponte 
+de upload a gente pode checar agora aqui 
+que caso dê um erro a gente pode mandar 
+uma mensagem e pede 
+só para dizer que deu errado é isso 
+upload tá pronto Agora vamos para o 
+próximo and Point Point download então 
+vou ter um gats 
+subir aqui que vai ser aqui no download 
+
+
+
+e aqui eu vou ter um nome do arquivo mas 
+esse nome ele tem ponto né Vai ser tipo 
+Teste Ponto TXT e eu preciso considerar 
+o ponto normalmente esses parâmetros 
+aqui não desconsidera um ponto então a 
+gente vai colocar esse dois pontos ponto 
+mais para ele considerar o ponto que for 
+passado aqui no caminho então se eu 
+passar download 
+E aí eu vou ter 
+esse paciente que vai responder agora o 
+resorts já vai ser o arquivo para baixar 
+então vou ter que um download file Esse 
+é o nome do método vou passar aqui no pé 
+o nome do arquivo 
+como eu tinha falado deixa eu importar 
+esse Resort É esse aqui do Spring tá 
+esse daqui ó por Stories e além do nome 
+do arquivo a gente vai injetar aqui 
+a request porque a gente vai colocar um 
+cabeçalho nessa resposta 
+Então vou gerar aqui um objeto com Fael 
+pass E aí a gente vai pegar esse mesmo 
+código na verdade aqui de cima esse 
+daqui 
+Na verdade eu vou pegar só essa parte 
+aqui o nome do arquivo vai ser o nome da 
+variável vai ser outro aqui a gente vai 
+normalizar tá já que a gente tá passando 
+esse nome do arquivo nos parâmetros E aí 
+vem a obtenção do recurso 
+que a gente pode criar com urls então 
+passa aqui o caminho do arquivo 
+que a gente vai transformar no ri e isso 
+aqui pode ocasionar uma exceção porque 
+como eu tô passando pelo parâmetro se a 
+pessoa passar aqui um cara que não 
+existe ou com uma sintaxe inválida vai 
+dar exceção então preciso tratar Então 
+vamos colocar aqui um try Cat 
+tá bom e agora a gente continua na nossa 
+lógica a resposta vai ter um conta de 
+Type específico 
+que eu vou 
+informar aqui pegando a riquest por isso 
+que eu injetei ela vou pegar o contexto 
+do servlet vou pegar o mine Type E aí se 
+eu passei um arquivo TXT eu tenho que 
+ter o TXT se eu passei um arquivo JPEG 
+eu vou ter que ter o jpg então preciso 
+montar um time a partir do resource que 
+foi obtido que foi passado 
+e nesse caso a gente pega o Resort get 
+Fire get Absolut Pet e a gente tem um 
+contactar e aqui pode ser que esse 
+arquivo não exista Então nesse caso a 
+gente pode até lançar uma exceção mesmo 
+aqui no método ou tratar isso aqui é 
+detalhe o importante é que a gente tenha 
+conseguido contra indicado do arquivo 
+que eu quero baixar E se ele não for 
+encontrado 
+aí eu coloco um genérico 
+que vai ser o application Barra Hotel 
+stream isso aqui é um tipo genérico 
+Coringa que a gente pode usar é um 
+
+
+
+arquivo binário genérico então se eu não 
+encontrei uma metade adequado para o 
+arquivo conhecido Eu uso esse aqui 
+E aí é isso só preciso agora retornar 
+uma responsiente vamos subir mais um 
+pouquinho aqui com o código Ok vou 
+passar o contente 
+Type que eu obtive ali aquela string né 
+então o tempo converter ela para uma 
+mídia Type E aí eu converso aqui 
+dessa forma 
+passa um header agora 
+para permitir aqui o download do arquivo 
+dizer que tem um anexo Então vou usar 
+aqui o http headers do Spring e aqui tem 
+um tipo contente 
+disposition tem um cabeçalho que tem 
+esse nome e aí a gente passa na parte 
+dois pontos Fael 
+com uma barra eu vou ter que colocar uma 
+barra invertida aqui porque aqui eu vou 
+ter um string vai ter que ter Fael name 
+e abre aspas duplas então aqui no final 
+também eu vou ter que fechar então eu 
+vou ter uma barra invertida para escapar 
+essa raspa dupla aqui 
+Tá certo 
+E aí eu passo no corpo da resposta 
+Então é isso caso a gente tem uma 
+exceção a gente pode fazer o mesmo 
+esquema lá retornar uma bad request 
+sem nada mesmo Tá bom então terminamos 
+já o método de download e agora só falta 
+um método aqui porque a gente está 
+fazendo extra na verdade que é caso a 
+gente precisa listar O que que tem nessa 
+pasta de uploads 
+então a gente pode ter 
+uma responsientes que retorna uma lista 
+de arquivos nomes de arquivo no caso 
+E aí eu vou ter essa lista aqui 
+que eu vou a partir do files listar 
+aonde na história de location Que Eu Já 
+carreguei Então posso mapear isso aqui 
+transformando 
+o pé pegando o pé na verdade e pegando o 
+nome dos arquivos depois pegando o pé e 
+transformando o nome em string 
+e finalmente coletando isso aqui 
+para uma lista 
+E aí eu tenho todos os arquivos sendo 
+listados é claro que essa lista aqui 
+como eu tô passando um lugar de arquivo 
+né se o lugar não existir pode ter uma 
+exceção sendo lançada Então eu preciso 
+também colocar o trolls aqui nesse 
+método e aí no final 
+eu retorno 
+Ayres consciente Ok passando os nomes 
+dos arquivos que foram carregados no meu 
+servidor Tá bom então a gente já pode 
+testar agora mas antes de subir eu quero 
+colocar mais duas propriedades aqui o 
+limite que de upload permitido é bem 
+pequeno então se eu quiser subir uma 
+imagem eu não consigo Então eu posso 
+
+
+
+informar essas duas propriedades para 
+colocar no limite maior no caso eu tô 
+colocando 20 megas aqui para eu 
+conseguir subir uma imagem tá certo e aí 
+sim agora a gente consegue testar Então 
+vamos subir aqui aplicação 
+Ok aplicação em pé para testar essa 
+aplicação eu tenho esses dois arquivos 
+que estão nessa pastinha que eu 
+carreguei um Hello E como você pode ver 
+tem apenas um conteúdo de texto e um 
+arquivo de imagem que tem a foto da 
+minha gatinha então a gente pode rodar o 
+post dessa forma passando um arquivo 
+E aí precisa desse arroba tá aqui você 
+passaria o diretório onde o arquivo tá o 
+caminho completo como eu tô no diretório 
+que ele está Eu só preciso passar o nome 
+com extensão para esse ind-ponte se a 
+gente dá um enter Ok e vamos ver se a 
+gente conseguiu fazer o upload aqui 
+vamos ver aqui atualizo na verdade a 
+gente esqueceu de criar pasta né Vamos 
+criar aqui a pasta upload 
+é esse cara aqui agora sim vamos fazer o 
+teste agora sim a gente fez o upload 
+vamos ver se tá aqui o arquivo 
+olha só tá aqui a gatinha então deu 
+certo a gente conseguiu a pilotar vamos 
+ver se a gente consegue baixar com esse 
+link agora aqui eu vou criar uma pasta 
+tape vamos mover para ela vamos baixar o 
+arquivo foi se eu abrir aqui veja que o 
+Léia foi baixado com sucesso e agora eu 
+também posso 
+listar os arquivos que eu tenho aqui que 
+eu tenho que eu fiz upload então se eu 
+fizer a lista eu vou ver que tem apenas 
+o Léia carregado aqui nos meus arquivos 
+na pasta uploads Ok então com isso a 
+gente conclui a implementação de um API 
+de armazenamento de arquivo com Spring 
+boot espero que vocês tenham curtido se 
+foi o caso deixa o like comenta o que 
+vocês acharam compartilha com os colegas 
+e se inscreve no canal para não perder 
+esses conteúdos mão na massa que eu devo 
+trazer mais e mais aqui para o canal 
+combinado ficamos por aqui até a próxima
